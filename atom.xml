@@ -47,14 +47,14 @@
     <link href="https://minning.github.io/2016/12/15/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AE%A8%E8%AE%BA%E8%AF%BE%E3%80%8A%E4%B8%80%E3%80%8B/"/>
     <id>https://minning.github.io/2016/12/15/数据挖掘讨论课《一》/</id>
     <published>2016-12-15T03:17:53.000Z</published>
-    <updated>2016-12-15T04:48:31.867Z</updated>
+    <updated>2016-12-15T04:50:12.993Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p></p><p>为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习</p>
 <h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><p></p><p>本次讨论课的题目及解答如下所示：<br><br></p>
 <p></p><h5>1、逻辑回归估计参数时的目标函数。[百度 2016 校招]<p></p>
 <p></p><h5>2、逻辑回归估计参数时的目标函数 如果加上一个先验的服从高斯分布的假设，会是什么样<p></p>
 <p></p><h5>3、SVM在哪个地方引入的核函数<p></p>
-<p></p><h5>4、如果用高斯核可以升到多少维 <p></p>
+<p></p><h5>4、如果用高斯核可以升到多少维?<p></p>
 <p></p><h5>5、什么是贝叶斯估计<p></p>
 <p></p><h5>6、k折交叉验证 中k取值多少有什么关系，bias，variance是什么？<p></p>
 <p></p><h5>7、逻辑回归的值表示概率吗？<p></p>
@@ -69,7 +69,6 @@
 <p>考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？<br>A.SVM的VC维大于高斯混合模型的VC维<br>B.SVM的VC维小于高斯混合模型的VC维<br>C.两个分类器的结构风险值相同<br>D.这两个分类器的VC维相同</p>
 <p><br><br></p>
 <p>下面说法正确的是？<br>A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。<br>B.ＳＶＭ对噪声鲁棒。<br>C.当训练数据较多时更容易发生过拟合。<br>D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。</p>
-<p><br><br></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p></p><p>通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础</p>
 <p></p></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5>]]></content>
     
@@ -86,19 +85,19 @@
   
   <entry>
     <title>hellohexo</title>
-    <link href="https://minning.github.io/2016/12/15/hellohexo/"/>
-    <id>https://minning.github.io/2016/12/15/hellohexo/</id>
+    <link href="https://minning.github.io/2016/12/15/Test/"/>
+    <id>https://minning.github.io/2016/12/15/Test/</id>
     <published>2016-12-15T02:41:32.000Z</published>
-    <updated>2016-12-15T03:16:15.502Z</updated>
+    <updated>2016-12-15T04:55:28.959Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="hi"><a href="#hi" class="headerlink" title="hi"></a>hi</h2><p>nice to meet you in this blog</p>
+    <content type="html"><![CDATA[<h2 id="hi"><a href="#hi" class="headerlink" title="hi"></a>hi</h2><p>Test File</p>
 <h3 id="what"><a href="#what" class="headerlink" title="what"></a>what</h3><p>This is blog is all about to story some interesting things in my daily life</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;hi&quot;&gt;&lt;a href=&quot;#hi&quot; class=&quot;headerlink&quot; title=&quot;hi&quot;&gt;&lt;/a&gt;hi&lt;/h2&gt;&lt;p&gt;nice to meet you in this blog&lt;/p&gt;
-&lt;h3 id=&quot;what&quot;&gt;&lt;a href=&quot;#what&quot; class=
+      &lt;h2 id=&quot;hi&quot;&gt;&lt;a href=&quot;#hi&quot; class=&quot;headerlink&quot; title=&quot;hi&quot;&gt;&lt;/a&gt;hi&lt;/h2&gt;&lt;p&gt;Test File&lt;/p&gt;
+&lt;h3 id=&quot;what&quot;&gt;&lt;a href=&quot;#what&quot; class=&quot;headerlink&quot; title=&quot;
     
     </summary>
     

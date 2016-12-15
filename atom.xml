@@ -1,24 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>minning</title>
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2016-12-14T01:49:16.903Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="https://minning.github.io/"/>
+  <updated>2016-12-15T02:43:49.589Z</updated>
+  <id>https://minning.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>minning</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>你好</title>
+    <link href="https://minning.github.io/2016/12/15/%E4%BD%A0%E5%A5%BD/"/>
+    <id>https://minning.github.io/2016/12/15/你好/</id>
+    <published>2016-12-15T02:43:49.000Z</published>
+    <updated>2016-12-15T02:43:49.589Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hellohexo</title>
+    <link href="https://minning.github.io/2016/12/15/hellohexo/"/>
+    <id>https://minning.github.io/2016/12/15/hellohexo/</id>
+    <published>2016-12-15T02:41:32.000Z</published>
+    <updated>2016-12-15T02:41:32.790Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/12/14/hello-world/"/>
-    <id>http://yoursite.com/2016/12/14/hello-world/</id>
+    <link href="https://minning.github.io/2016/12/14/hello-world/"/>
+    <id>https://minning.github.io/2016/12/14/hello-world/</id>
     <published>2016-12-14T01:49:16.903Z</published>
     <updated>2016-12-14T01:49:16.903Z</updated>
     

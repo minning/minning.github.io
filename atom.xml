@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2016-12-15T03:28:55.090Z</updated>
+  <updated>2016-12-15T03:29:58.700Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -20,15 +20,15 @@
     <link href="https://minning.github.io/2016/12/15/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AE%A8%E8%AE%BA%E8%AF%BE%E3%80%8A%E4%B8%80%E3%80%8B/"/>
     <id>https://minning.github.io/2016/12/15/数据挖掘讨论课《一》/</id>
     <published>2016-12-15T03:17:53.000Z</published>
-    <updated>2016-12-15T03:28:55.090Z</updated>
+    <updated>2016-12-15T03:29:58.700Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习</p>
-]]></content>
+    <content type="html"><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><pre><code>为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习
+</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h1&gt;&lt;p&gt;为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习&lt;/p&gt;
-
+      &lt;h1 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习
+&lt;/
     
     </summary>
     

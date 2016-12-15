@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2016-12-15T03:31:06.821Z</updated>
+  <updated>2016-12-15T04:09:44.035Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>Hello World</title>
     <link href="https://minning.github.io/2016/12/15/hello-world/"/>
     <id>https://minning.github.io/2016/12/15/hello-world/</id>
-    <published>2016-12-15T03:31:06.845Z</published>
-    <updated>2016-12-15T03:31:06.821Z</updated>
+    <published>2016-12-15T04:09:44.035Z</published>
+    <updated>2016-12-15T04:09:44.035Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
@@ -29,7 +29,7 @@
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div><div class="line">$ hexo deploy</div><div class="line"></div><div class="line">组合命令为：</div><div class="line">hexo deploy -g</div><div class="line">hexo server -g</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
     
@@ -47,15 +47,15 @@
     <link href="https://minning.github.io/2016/12/15/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AE%A8%E8%AE%BA%E8%AF%BE%E3%80%8A%E4%B8%80%E3%80%8B/"/>
     <id>https://minning.github.io/2016/12/15/数据挖掘讨论课《一》/</id>
     <published>2016-12-15T03:17:53.000Z</published>
-    <updated>2016-12-15T03:31:45.350Z</updated>
+    <updated>2016-12-15T04:07:54.097Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习</p>
+    <content type="html"><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p></p><p>为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习</p>
+<p>## </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h1&gt;&lt;p&gt;为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习&lt;/p&gt;
-
+      &lt;h1 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习&lt;/p&gt;
     
     </summary>
     

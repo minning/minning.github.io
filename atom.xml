@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2016-12-15T02:43:49.589Z</updated>
+  <updated>2016-12-15T03:24:34.061Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -16,16 +16,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>你好</title>
-    <link href="https://minning.github.io/2016/12/15/%E4%BD%A0%E5%A5%BD/"/>
-    <id>https://minning.github.io/2016/12/15/你好/</id>
-    <published>2016-12-15T02:43:49.000Z</published>
-    <updated>2016-12-15T02:43:49.589Z</updated>
+    <title>数据挖掘讨论课《一》</title>
+    <link href="https://minning.github.io/2016/12/15/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AE%A8%E8%AE%BA%E8%AF%BE%E3%80%8A%E4%B8%80%E3%80%8B/"/>
+    <id>https://minning.github.io/2016/12/15/数据挖掘讨论课《一》/</id>
+    <published>2016-12-15T03:17:53.000Z</published>
+    <updated>2016-12-15T03:24:34.061Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习"><a href="#为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习" class="headerlink" title="为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习"></a>为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习</h1>]]></content>
     
     <summary type="html">
     
+      &lt;h1 id=&quot;为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习&quot;&gt;&lt;a href=&quot;#为了增进对机器学习算法的学习，目前暂定一周一次的讨论课，这里主要对课上的讨论情况进行记录，以增进记忆，方便日后查看学习&quot; 
+    
     </summary>
     
+    
+      <category term="机器学习基础算法" scheme="https://minning.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   

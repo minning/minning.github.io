@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2016-12-16T04:37:03.474Z</updated>
+  <updated>2016-12-16T08:07:44.417Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>数据挖掘讨论课《一》</title>
-    <link href="https://minning.github.io/2016/12/15/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AE%A8%E8%AE%BA%E8%AF%BE%E3%80%8A%E4%B8%80%E3%80%8B/"/>
-    <id>https://minning.github.io/2016/12/15/数据挖掘讨论课《一》/</id>
+    <title>数据挖掘讨论课《二》</title>
+    <link href="https://minning.github.io/2016/12/15/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AE%A8%E8%AE%BA%E8%AF%BE%E3%80%8A%E4%BA%8C%E3%80%8B/"/>
+    <id>https://minning.github.io/2016/12/15/数据挖掘讨论课《二》/</id>
     <published>2016-12-15T03:17:53.000Z</published>
-    <updated>2016-12-16T04:37:03.474Z</updated>
+    <updated>2016-12-16T08:07:44.417Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p></p><p>为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习</p>
 <h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><p></p><p>本次讨论课的题目及解答如下所示：<br><br></p>
@@ -58,11 +58,11 @@
   </entry>
   
   <entry>
-    <title>数据挖掘讨论课《二》</title>
-    <link href="https://minning.github.io/2016/12/15/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AE%A8%E8%AE%BA%E8%AF%BE%E3%80%8A%E4%BA%8C%E3%80%8B/"/>
-    <id>https://minning.github.io/2016/12/15/数据挖掘讨论课《二》/</id>
+    <title>数据挖掘讨论课《一》</title>
+    <link href="https://minning.github.io/2016/12/15/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AE%A8%E8%AE%BA%E8%AF%BE%E3%80%8A%E4%B8%80%E3%80%8B/"/>
+    <id>https://minning.github.io/2016/12/15/数据挖掘讨论课《一》/</id>
     <published>2016-12-15T03:17:53.000Z</published>
-    <updated>2016-12-16T08:07:44.417Z</updated>
+    <updated>2016-12-16T04:37:03.474Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p></p><p>为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习</p>
 <h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><p></p><p>本次讨论课的题目及解答如下所示：<br><br></p>

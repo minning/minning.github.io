@@ -1,303 +1,187 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-  <meta name="description" content="数据挖掘讨论课《一》"/>
-
-
-
-
-  <meta name="keywords" content="机器学习校招," />
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="minning">
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.0.0" />
-
-
-
-<link rel="canonical" href="https://minning.github.io/2016/12/15/数据挖掘讨论课《一》/"/>
-
-
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.0" />
-
-
-
-  
-
-
-
-    <title> 数据挖掘讨论课《一》 · minning </title>
-  </head>
-
-  <body>
-    <div class="container">
-      <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">minning</a>
-</div>
-
-<nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item">
-          <a class="menu-item-link" href="/">
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item">
-          <a class="menu-item-link" href="/archives/">
-            Archives
-          </a>
-        </li>
-      
-      
-    </ul>
-  
-</nav>
-
-<div class="mobile-navbar">
-  <div class="mobile-header">
-    <div class="mobile-header-logo">
-      <a href="/." class="logo">minning</a>
-    </div>
-
-    <div class="mobile-header-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-  <nav class="mobile-menu">
-    
-      
-      <a class="mobile-menu-item" href="/">
-        Home
-      </a>
-    
-      
-      <a class="mobile-menu-item" href="/archives/">
-        Archives
-      </a>
-    
-  </nav>
-</div>
-      </header>
-
-      <main id="main" class="main">
-        <div class="content-wrapper">
-          <div id="content" class="content">
-            
-  
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          数据挖掘讨论课《一》
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Dec 15, 2016
-        </span>
-      </div>
-    </header>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     
-      <div class="post-toc" id="post-toc">
-        <h2 class="post-toc-title">Contents</h2>
-        <div class="post-toc-content">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目的"><span class="toc-text">目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主要内容"><span class="toc-text">主要内容</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">1、逻辑回归估计参数时的目标函数。[百度 2016 校招]      http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-Interview/
-2、逻辑回归估计参数时的目标函数 如果加上一个先验的服从高斯分布的假设，会是什么样
-3、SVM在哪个地方引入的核函数
-4、如果用高斯核可以升到多少维?
-5、什么是贝叶斯估计
-6、k折交叉验证 中k取值多少有什么关系，bias，variance是什么？
-7、逻辑回归的值表示概率吗？
-8、分类模型和回归模型的区别
-9、分类模型可以做回归分析吗？反过来可以吗？
 
-1、SVM的原理推导   [美团 2016 校招]       http://blog.sina.com.cn/s/blog_4298002e010144k8.html
-2、讲一下random forest 和 GBDT的区别
-3、特征选取怎么选？ 为什么信息增益可以用来选特征？
-4、倒排索引的原理
+    <title>
+      数据挖掘讨论课《一》 | minning 
+    </title>
 
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="minning">
+    
+    
 
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">2、逻辑回归估计参数时的目标函数 如果加上一个先验的服从高斯分布的假设，会是什么样
-3、SVM在哪个地方引入的核函数
-4、如果用高斯核可以升到多少维?
-5、什么是贝叶斯估计
-6、k折交叉验证 中k取值多少有什么关系，bias，variance是什么？
-7、逻辑回归的值表示概率吗？
-8、分类模型和回归模型的区别
-9、分类模型可以做回归分析吗？反过来可以吗？
+    <meta name="description" content="目的为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习
+主要内容本次讨论课的题目及解答如下所示：
+1、逻辑回归估计参数时的目标函数。[百度 2016 校招]    &amp;emsp;&amp;emsp;http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-In">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据挖掘讨论课《一》 | minning">
+<meta property="og:url" content="https://minning.github.io/2016/12/15/数据挖掘讨论课《一》/index.html">
+<meta property="og:site_name" content="minning">
+<meta property="og:description" content="目的为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习
+主要内容本次讨论课的题目及解答如下所示：
+1、逻辑回归估计参数时的目标函数。[百度 2016 校招]    &amp;emsp;&amp;emsp;http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-In">
+<meta property="og:updated_time" content="2016-12-16T04:37:03.474Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据挖掘讨论课《一》 | minning">
+<meta name="twitter:description" content="目的为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习
+主要内容本次讨论课的题目及解答如下所示：
+1、逻辑回归估计参数时的目标函数。[百度 2016 校招]    &amp;emsp;&amp;emsp;http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-In">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
 
-1、SVM的原理推导   [美团 2016 校招]       http://blog.sina.com.cn/s/blog_4298002e010144k8.html
-2、讲一下random forest 和 GBDT的区别
-3、特征选取怎么选？ 为什么信息增益可以用来选特征？
-4、倒排索引的原理
+</head>
+<body>
 
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
 
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">3、SVM在哪个地方引入的核函数
-4、如果用高斯核可以升到多少维?
-5、什么是贝叶斯估计
-6、k折交叉验证 中k取值多少有什么关系，bias，variance是什么？
-7、逻辑回归的值表示概率吗？
-8、分类模型和回归模型的区别
-9、分类模型可以做回归分析吗？反过来可以吗？
+    
 
-1、SVM的原理推导   [美团 2016 校招]       http://blog.sina.com.cn/s/blog_4298002e010144k8.html
-2、讲一下random forest 和 GBDT的区别
-3、特征选取怎么选？ 为什么信息增益可以用来选特征？
-4、倒排索引的原理
+<header class="panel-cover panel-cover--collapsed">
 
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
 
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">4、如果用高斯核可以升到多少维?
-5、什么是贝叶斯估计
-6、k折交叉验证 中k取值多少有什么关系，bias，variance是什么？
-7、逻辑回归的值表示概率吗？
-8、分类模型和回归模型的区别
-9、分类模型可以做回归分析吗？反过来可以吗？
+  <div class="panel-main">
 
-1、SVM的原理推导   [美团 2016 校招]       http://blog.sina.com.cn/s/blog_4298002e010144k8.html
-2、讲一下random forest 和 GBDT的区别
-3、特征选取怎么选？ 为什么信息增益可以用来选特征？
-4、倒排索引的原理
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
 
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
+        
 
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">5、什么是贝叶斯估计
-6、k折交叉验证 中k取值多少有什么关系，bias，variance是什么？
-7、逻辑回归的值表示概率吗？
-8、分类模型和回归模型的区别
-9、分类模型可以做回归分析吗？反过来可以吗？
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">minning</a></h1>
+        <hr class="panel-cover__divider" />
 
-1、SVM的原理推导   [美团 2016 校招]       http://blog.sina.com.cn/s/blog_4298002e010144k8.html
-2、讲一下random forest 和 GBDT的区别
-3、特征选取怎么选？ 为什么信息增益可以用来选特征？
-4、倒排索引的原理
+        
 
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
+        <div class="navigation-wrapper">
 
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">6、k折交叉验证 中k取值多少有什么关系，bias，variance是什么？
-7、逻辑回归的值表示概率吗？
-8、分类模型和回归模型的区别
-9、分类模型可以做回归分析吗？反过来可以吗？
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
 
-1、SVM的原理推导   [美团 2016 校招]       http://blog.sina.com.cn/s/blog_4298002e010144k8.html
-2、讲一下random forest 和 GBDT的区别
-3、特征选取怎么选？ 为什么信息增益可以用来选特征？
-4、倒排索引的原理
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
 
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
+            </ul>
+          </nav>
 
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">7、逻辑回归的值表示概率吗？
-8、分类模型和回归模型的区别
-9、分类模型可以做回归分析吗？反过来可以吗？
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
 
-1、SVM的原理推导   [美团 2016 校招]       http://blog.sina.com.cn/s/blog_4298002e010144k8.html
-2、讲一下random forest 和 GBDT的区别
-3、特征选取怎么选？ 为什么信息增益可以用来选特征？
-4、倒排索引的原理
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
 
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
+-------------------------------->
 
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">8、分类模型和回归模型的区别
-9、分类模型可以做回归分析吗？反过来可以吗？
+<!-- add social info here -->
 
-1、SVM的原理推导   [美团 2016 校招]       http://blog.sina.com.cn/s/blog_4298002e010144k8.html
-2、讲一下random forest 和 GBDT的区别
-3、特征选取怎么选？ 为什么信息增益可以用来选特征？
-4、倒排索引的原理
 
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
 
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">9、分类模型可以做回归分析吗？反过来可以吗？
-
-1、SVM的原理推导   [美团 2016 校招]       http://blog.sina.com.cn/s/blog_4298002e010144k8.html
-2、讲一下random forest 和 GBDT的区别
-3、特征选取怎么选？ 为什么信息增益可以用来选特征？
-4、倒排索引的原理
-
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
-
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">1、SVM的原理推导   [美团 2016 校招]       http://blog.sina.com.cn/s/blog_4298002e010144k8.html
-2、讲一下random forest 和 GBDT的区别
-3、特征选取怎么选？ 为什么信息增益可以用来选特征？
-4、倒排索引的原理
-
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
-
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">2、讲一下random forest 和 GBDT的区别
-3、特征选取怎么选？ 为什么信息增益可以用来选特征？
-4、倒排索引的原理
-
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
-
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">3、特征选取怎么选？ 为什么信息增益可以用来选特征？
-4、倒排索引的原理
-
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
-
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">4、倒排索引的原理
-
-考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？A.SVM的VC维大于高斯混合模型的VC维B.SVM的VC维小于高斯混合模型的VC维C.两个分类器的结构风险值相同D.这两个分类器的VC维相同
-
-下面说法正确的是？A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。B.ＳＶＭ对噪声鲁棒。C.当训练数据较多时更容易发生过拟合。D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。
-总结通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础
-</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
         </div>
+
       </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">数据挖掘讨论课《一》</h1>
+
     
 
-    <div class="post-content">
-      
-        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p></p><p>为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习</p>
+    <div class="post-meta">
+      <time datetime="2016-12-15" class="post-meta__date date">2016-12-15</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/机器学习校招/">机器学习校招</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p></p><p>为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习</p>
 <h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><p></p><p>本次讨论课的题目及解答如下所示：<br><br></p>
 <p></p><h5>1、逻辑回归估计参数时的目标函数。[百度 2016 校招]<br>    <br>&emsp;&emsp;<a href="http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-Interview/" target="_blank" rel="external">http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-Interview/</a><p></p>
 <p></p><h5>2、逻辑回归估计参数时的目标函数 如果加上一个先验的服从高斯分布的假设，会是什么样<p></p>
@@ -319,110 +203,58 @@
 <p>下面说法正确的是？<br>A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。<br>B.ＳＶＭ对噪声鲁棒。<br>C.当训练数据较多时更容易发生过拟合。<br>D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p></p><p>通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础</p>
 <p></p></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5>
-      
-    </div>
+  </section>
 
-    
-      <footer class="post-footer">
-        <div class="post-tags">
-          
-            <a href="/tags/机器学习校招/">机器学习校招</a>
-          
-        </div>
-
-        
-  <nav class="post-nav">
-    
-      <a class="prev" href="/2016/12/15/数据挖掘讨论课《二》/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">数据挖掘讨论课《二》</span>
-        <span class="prev-text nav-mobile">Prev</span>
-      </a>
-    
-    
-  </nav>
-
-      </footer>
-    
-  </article>
-
-
-          </div>
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-        </div>  
-      </main>
-
-      <footer id="footer" class="footer">
-  <div class="social-links">
-    
-      
-        
-          <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
-        
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    
-    
-  </div>
-
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
-  </span>
   
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
-  </span>
+  
+</article>
 
-  <span class="copyright-year">
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
     
-    &copy; 
-     
-      2015 - 
-    
-    2016
-
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">minning</span>
-  </span>
-</div>
-      </footer>
-
-      <div class="back-to-top" id="back-to-top">
-        <i class="iconfont icon-up"></i>
-      </div>
+</footer>
+        </div>
     </div>
 
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
     
 
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
 
     
 
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
 
-  <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
 
-    <script type="text/javascript" src="/js/src/even.js?v=2.0.0"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.0.0"></script>
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
 
-  </body>
+</body>
 </html>

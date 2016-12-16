@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2016-12-16T04:37:15.466Z</updated>
+  <updated>2016-12-16T04:37:03.474Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -14,22 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>数据挖掘讨论课《二》</title>
-    <link href="https://minning.github.io/2016/12/16/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AE%A8%E8%AE%BA%E8%AF%BE%E3%80%8A%E4%BA%8C%E3%80%8B/"/>
-    <id>https://minning.github.io/2016/12/16/数据挖掘讨论课《二》/</id>
-    <published>2016-12-16T04:36:00.000Z</published>
-    <updated>2016-12-16T04:37:15.466Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="机器学习校招" scheme="https://minning.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A0%A1%E6%8B%9B/"/>
-    
-  </entry>
   
   <entry>
     <title>数据挖掘讨论课《一》</title>

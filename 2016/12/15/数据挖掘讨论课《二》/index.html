@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>数据挖掘讨论课《二》 | minning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="机器学习校招" />
+    
+    <meta name="description" content="目的为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习
+主要内容本次讨论课的题目及解答如下所示：
+1、逻辑回归估计参数时的目标函数。[百度 2016 校招]    &amp;emsp;&amp;emsp;http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-In">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据挖掘讨论课《二》">
+<meta property="og:url" content="https://minning.github.io/2016/12/15/数据挖掘讨论课《二》/index.html">
+<meta property="og:site_name" content="minning">
+<meta property="og:description" content="目的为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习
+主要内容本次讨论课的题目及解答如下所示：
+1、逻辑回归估计参数时的目标函数。[百度 2016 校招]    &amp;emsp;&amp;emsp;http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-In">
+<meta property="og:updated_time" content="2016-12-16T08:07:44.417Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据挖掘讨论课《二》">
+<meta name="twitter:description" content="目的为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习
+主要内容本次讨论课的题目及解答如下所示：
+1、逻辑回归估计参数时的目标函数。[百度 2016 校招]    &amp;emsp;&amp;emsp;http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-In">
+    
+
+    
+        <link rel="alternate" href="/" title="minning" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Inici</a>
+                                </li>
+                            
+                                        
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'categories',
+            TAGS: 'etiquetes',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    Sense categoria
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-数据挖掘讨论课《二》" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        数据挖掘讨论课《二》
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/2016/12/15/数据挖掘讨论课《二》/" class="article-date">
+    <time datetime="2016-12-15T03:17:53.000Z" itemprop="datePublished">2016-12-15</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习校招/">机器学习校招</a></li></ul>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p></p><p>为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习</p>
+<h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><p></p><p>本次讨论课的题目及解答如下所示：<br><br></p>
+<p></p><h5>1、逻辑回归估计参数时的目标函数。[百度 2016 校招]<br>    <br>&emsp;&emsp;<a href="http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-Interview/" target="_blank" rel="external">http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-Interview/</a><p></p>
+<p></p><h5>2、逻辑回归估计参数时的目标函数 如果加上一个先验的服从高斯分布的假设，会是什么样<p></p>
+<p></p><h5>3、SVM在哪个地方引入的核函数<p></p>
+<p></p><h5>4、如果用高斯核可以升到多少维?<p></p>
+<p></p><h5>5、什么是贝叶斯估计<p></p>
+<p></p><h5>6、k折交叉验证 中k取值多少有什么关系，bias，variance是什么？<p></p>
+<p></p><h5>7、逻辑回归的值表示概率吗？<p></p>
+<p></p><h5>8、分类模型和回归模型的区别<p></p>
+<p></p><h5>9、分类模型可以做回归分析吗？反过来可以吗？<p></p>
+<p><br><br><br></p>
+<p></p><h5>1、SVM的原理推导   [美团 2016 校招]<br>    <br>&emsp;&emsp; <a href="http://blog.sina.com.cn/s/blog_4298002e010144k8.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_4298002e010144k8.html</a><p></p>
+<p></p><h5>2、讲一下random forest 和 GBDT的区别<p></p>
+<p></p><h5>3、特征选取怎么选？ 为什么信息增益可以用来选特征？<p></p>
+<p></p><h5>4、倒排索引的原理<p></p>
+<p><br><br></p>
+<p>考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？<br>A.SVM的VC维大于高斯混合模型的VC维<br>B.SVM的VC维小于高斯混合模型的VC维<br>C.两个分类器的结构风险值相同<br>D.这两个分类器的VC维相同</p>
+<p><br><br></p>
+<p>下面说法正确的是？<br>A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。<br>B.ＳＶＭ对噪声鲁棒。<br>C.当训练数据较多时更容易发生过拟合。<br>D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p></p><p>通过这次讨论课的学习，对这些常用的算法有了更深的理解，日后还会多准备这样的题目进行讨论，从而通过准备、讨论的过程更好的学习机器学习知识，巩固基础</p>
+<p></p></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://minning.github.io/2016/12/15/数据挖掘讨论课《二》/" data-id="ciwrinft50007c2wlp69z9mjl" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>seguir:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/12/15/数据挖掘讨论课《一》/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">antic</strong>
+        <p class="article-nav-title">数据挖掘讨论课《一》</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/15/数据挖掘讨论课《二》/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/12/15/数据挖掘讨论课《二》/" class="title">数据挖掘讨论课《二》</a></p>
+                            <p class="item-date"><time datetime="2016-12-15T03:17:53.000Z" itemprop="datePublished">2016-12-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/15/数据挖掘讨论课《一》/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/12/15/数据挖掘讨论课《一》/" class="title">数据挖掘讨论课《一》</a></p>
+                            <p class="item-date"><time datetime="2016-12-15T03:17:53.000Z" itemprop="datePublished">2016-12-15</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">arxius</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">etiquetes</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习校招/">机器学习校招</a><span class="tag-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">etiqueta cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/机器学习校招/" style="font-size: 10px;">机器学习校招</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2016 minning</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'https://minning.github.io/2016/12/15/数据挖掘讨论课《二》/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

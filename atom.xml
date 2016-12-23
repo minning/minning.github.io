@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2016-12-23T07:02:14.883Z</updated>
+  <updated>2016-12-23T07:04:39.400Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="https://minning.github.io/2016/12/15/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AE%A8%E8%AE%BA%E8%AF%BE%E3%80%8A%E4%BA%8C%E3%80%8B/"/>
     <id>https://minning.github.io/2016/12/15/数据挖掘讨论课《二》/</id>
     <published>2016-12-15T03:17:53.000Z</published>
-    <updated>2016-12-23T07:02:14.883Z</updated>
+    <updated>2016-12-23T07:04:39.400Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p></p><p>第一部分是之前搜集的一些题目，所以这次的标题就为《二》咯<br>这一部分主要是讲解线性回归、逻辑回归的原理和一些常见校招题。</p>
-<p>Logistic回归：<br>　　Logistic是用来分类的，是一种线性分类器，需要注意的地方有：<br>　　1. logistic函数表达式为：<br>　　<img src="http://chart.googleapis.com/chart?cht=tx&chl=\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" style="border:none;"><br>　　其导数形式为：<br>　　<br>　　2. logsitc回归方法主要是用最大似然估计来学习的，所以单个样本的后验概率为：<br>　　<br>　　到整个样本的后验概率：<br>　　<br>　　其中：<br>　　<br>　　通过对数进一步化简为：<br>　　<br>　　3. 其实它的loss function为-l(θ)，因此我们需使loss function最小，可采用梯度下降法得到。梯度下降法公式为:<br>　　<br>　　<br>　　Logistic回归优点：<br>　　1、实现简单；<br>　　2、分类时计算量非常小，速度很快，存储资源低；<br>　　缺点：<br>　　1、容易欠拟合，一般准确度不太高<br>　　2、只能处理两分类问题（在此基础上衍生出来的softmax可以用于多分类），且必须线性可分；</p>
+<p>Logistic回归：<br>　　Logistic是用来分类的，是一种线性分类器，需要注意的地方有：<br>　　1. logistic函数表达式为：<br>　　<img src="http://chart.googleapis.com/chart?cht=tx&chl=\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" style="border:none;"><br>  <img src="http://www.forkosh.com/mathtex.cgi? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}"><br>  <img src="http://www.forkosh.com/mathtex.cgi? 在此处插入Latex公式"><br>　　其导数形式为：<br>　　<br>　　2. logsitc回归方法主要是用最大似然估计来学习的，所以单个样本的后验概率为：<br>　　<br>　　到整个样本的后验概率：<br>　　<br>　　其中：<br>　　<br>　　通过对数进一步化简为：<br>　　<br>　　3. 其实它的loss function为-l(θ)，因此我们需使loss function最小，可采用梯度下降法得到。梯度下降法公式为:<br>　　<br>　　<br>　　Logistic回归优点：<br>　　1、实现简单；<br>　　2、分类时计算量非常小，速度很快，存储资源低；<br>　　缺点：<br>　　1、容易欠拟合，一般准确度不太高<br>　　2、只能处理两分类问题（在此基础上衍生出来的softmax可以用于多分类），且必须线性可分；</p>
 <p>　　线性回归：<br>　　线性回归才是真正用于回归的，而不像logistic回归是用于分类，其基本思想是用梯度下降法对最小二乘法形式的误差函数进行优化，当然也可以用normal equation直接求得参数的解，结果为：<br>　　<br>　　而在LWLR（局部加权线性回归）中，参数的计算表达式为:<br>　　<br>　　因为此时优化的是：<br>　　<br>　　由此可见LWLR与LR不同，LWLR是一个非参数模型，因为每次进行回归计算都要遍历训练样本至少一次。<br>　　线性回归优点：<br>　　实现简单，计算简单；<br>　　缺点：<br>　　不能拟合非线性数据；</p>
 <p>参考资料：<br>[1] <a href="http://blog.sciencenet.cn/blog-520608-745856.html" target="_blank" rel="external">http://blog.sciencenet.cn/blog-520608-745856.html</a></p>
 ]]></content>

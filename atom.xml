@@ -71,11 +71,11 @@
   </entry>
   
   <entry>
-    <title>leetcode 分类总结 二分查找</title>
+    <title>153、Find Minimum in Rotated Sorted Array</title>
     <link href="https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/"/>
     <id>https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/</id>
     <published>2017-03-07T11:27:15.000Z</published>
-    <updated>2017-03-07T13:50:34.013Z</updated>
+    <updated>2017-03-07T13:55:24.140Z</updated>
     
     <content type="html"><![CDATA[<p>Leetcode算法题 153<br>题名：Find Minimum in Rotated Sorted Array<br><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description</a></p>
 <p><strong>题目</strong>：<br>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
@@ -118,11 +118,11 @@
   </entry>
   
   <entry>
-    <title>leetcode 35 Search Insert Position</title>
+    <title>35、Search Insert Position</title>
     <link href="https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/"/>
     <id>https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/</id>
     <published>2017-03-07T08:16:31.000Z</published>
-    <updated>2017-03-07T09:02:25.305Z</updated>
+    <updated>2017-03-07T13:56:19.857Z</updated>
     
     <content type="html"><![CDATA[<p>Leetcode 算法题 35<br><strong>题名</strong>：Search Insert Position<br><a href="https://leetcode.com/problems/search-insert-position/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/search-insert-position/?tab=Description</a></p>
 <p><strong>题目描述</strong>：给定一个排序后的数组array和一个目标值target，如果target在array中出现的话，就返回其在array中的索引，如果没有的话就返回其在array中按顺序插入的话应该插入的位置。假定数组中没有重复的元素</p>
@@ -164,11 +164,11 @@
   </entry>
   
   <entry>
-    <title>leetcode 53 Maximumsubarray</title>
+    <title>53、Maximumsubarray</title>
     <link href="https://minning.github.io/2017/03/07/leetcode-53-Maximumsubarray/"/>
     <id>https://minning.github.io/2017/03/07/leetcode-53-Maximumsubarray/</id>
     <published>2017-03-07T07:18:03.000Z</published>
-    <updated>2017-03-07T08:40:35.445Z</updated>
+    <updated>2017-03-07T13:56:43.201Z</updated>
     
     <content type="html"><![CDATA[<p>leetcode算法题53：<br>求解最大连续子序列和<br><a href="https://leetcode.com/problems/maximum-subarray/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/maximum-subarray/?tab=Description</a></p>
 <p><strong>题目描述</strong>：找出一个序列的连续子序列元素相加最大值</p>
@@ -201,11 +201,11 @@
   </entry>
   
   <entry>
-    <title>leetcode 001 TwoSum</title>
+    <title>1、 TwoSum</title>
     <link href="https://minning.github.io/2017/03/07/leetcode-001-TwoSum/"/>
     <id>https://minning.github.io/2017/03/07/leetcode-001-TwoSum/</id>
     <published>2017-03-07T04:56:45.000Z</published>
-    <updated>2017-03-07T08:40:28.621Z</updated>
+    <updated>2017-03-07T13:56:02.768Z</updated>
     
     <content type="html"><![CDATA[<p>准备开始刷leetcode上的算法题，并对相关内容进行记录<br>今天记录的是leetcode上编号为1的题目TwoSum<br>leetcode链接如下：<a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="external">https://leetcode.com/problems/two-sum/</a></p>
 <p><strong>题目描述</strong>：给定一个只包含整数的数组，返回由数组中两个数相加之和为target的下标，假定该数组中有且只有一个解，且每个元素只能使用一次<br>举例： nums=[2, 7, 11, 15], target = 9,<br>      返回[0,1]<br><strong>解题思路</strong>：<br>思路一：暴力解法，两次循环，复杂度n^2，不能通过<br>思路二：新建一个字典，将元素放进去，查找target-x是否在字典中，复杂度n<br>    以下给出了思路二的解法</p>

@@ -160,7 +160,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>准备开始刷leetcode上的算法题，并对相关内容进行记录<br>今天记录的是leetcode上编号为1的题目TwoSum<br>leetcode链接如下：<a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="external">https://leetcode.com/problems/two-sum/</a></p>
-<p>题目描述：给定一个只包含整数的数组，返回由数组中两个数相加之和为target的下标，假定该数组中有且只有一个解，且每个元素只能使用一次<br>举例： nums=[2, 7, 11, 15], target = 9,<br>      返回[0,1]<br>解题思路：<br>思路一：暴力解法，两次循环，复杂度n^2，不能通过<br>思路二：新建一个字典，将元素放进去，查找target-x是否在字典中，复杂度n<br>    以下给出了思路二的解法</p>
+<p><strong>题目描述</strong>：给定一个只包含整数的数组，返回由数组中两个数相加之和为target的下标，假定该数组中有且只有一个解，且每个元素只能使用一次<br>举例： nums=[2, 7, 11, 15], target = 9,<br>      返回[0,1]<br><strong>解题思路</strong>：<br>思路一：暴力解法，两次循环，复杂度n^2，不能通过<br>思路二：新建一个字典，将元素放进去，查找target-x是否在字典中，复杂度n<br>    以下给出了思路二的解法</p>
 <pre><code>class Solution(object):
     def twoSum(self, nums, target):
         &quot;&quot;&quot;

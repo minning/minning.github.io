@@ -18,7 +18,7 @@
 <meta property="og:description" content="leetcode算法题53：求解最大连续子序列和https://leetcode.com/problems/maximum-subarray/?tab=Description
 题目描述：找出一个序列的连续子序列元素相加最大值
 解题思路：使用动态规划的思想，从左到右扫描序列，将新节点的值和之前的连续序列节点和相加与之前的连续节点和作比较，更大者作为最大值，如果相加后小于0,则将和设为0继续往后扫描，">
-<meta property="og:updated_time" content="2017-03-07T07:26:43.938Z">
+<meta property="og:updated_time" content="2017-03-07T07:29:57.040Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode 53 Maximumsubarray">
 <meta name="twitter:description" content="leetcode算法题53：求解最大连续子序列和https://leetcode.com/problems/maximum-subarray/?tab=Description
@@ -170,7 +170,22 @@
         <p>leetcode算法题53：<br>求解最大连续子序列和<br><a href="https://leetcode.com/problems/maximum-subarray/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/maximum-subarray/?tab=Description</a></p>
 <p>题目描述：找出一个序列的连续子序列元素相加最大值</p>
 <p>解题思路：使用动态规划的思想，从左到右扫描序列，将新节点的值和之前的连续序列节点和相加与之前的连续节点和作比较，更大者作为最大值，如果相加后小于0,则将和设为0继续往后扫描，即舍弃之前节点。<br>注意点：最开始初始化sum值时应设为系统表示最小值，预防序列内节点均为负产生错误结果</p>
+<pre>
+class Solution(object):
+    def maxSubArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
 
+        maxans = -1*(sys.maxint)-1
+        sum = 0
+
+        for index in range(len(nums)):
+            sum = sum + nums[index]
+            maxans = max(sum, maxans)
+            if sum<0: sum="0" return="" maxans="" <="" pre="">
+</0:></pre>
       
 
       

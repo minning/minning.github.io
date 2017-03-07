@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2017-03-07T08:40:41.638Z</updated>
+  <updated>2017-03-07T08:57:57.878Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -20,11 +20,12 @@
     <link href="https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/"/>
     <id>https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/</id>
     <published>2017-03-07T08:16:31.000Z</published>
-    <updated>2017-03-07T08:40:41.638Z</updated>
+    <updated>2017-03-07T08:57:57.878Z</updated>
     
-    <content type="html"><![CDATA[<p>Leetcode 算法题 53<br><a href="https://leetcode.com/problems/search-insert-position/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/search-insert-position/?tab=Description</a></p>
+    <content type="html"><![CDATA[<p>Leetcode 算法题 35<br><strong>题名</strong>：Search Insert Position<br><a href="https://leetcode.com/problems/search-insert-position/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/search-insert-position/?tab=Description</a></p>
 <p><strong>题目描述</strong>：给定一个排序后的数组array和一个目标值target，如果target在array中出现的话，就返回其在array中的索引，如果没有的话就返回其在array中按顺序插入的话应该插入的位置。假定数组中没有重复的元素</p>
-<p><strong>解题思路</strong>：这是一个典型的二分查找的问题，二分查找要求数组有序，二分查找的思想是每次查找指定数组中间节点的值，将其和target进行比较，如果命中则返回其索引，如果中间节点的值比target大，则将指定数组往左转移，即查找左边的数组，如果中间节点的值比target小，则查找右边的数组。<br>对于没有命中的情况，由于中止了循环，意味着指定数组的右指针往左偏移超过了左指针，因此可以返回右节点加1的值作为target的索引值。</p>
+<p><strong>解题思路</strong>：这是一个典型的二分查找的问题，二分查找要求数组有序，二分查找的思想是每次查找指定数组中间节点的值，将其和target进行比较，如果命中则返回其索引，如果中间节点的值比target大，则将指定数组往左转移，即查找左边的数组，如果中间节点的值比target小，则查找右边的数组。</p>
+<p><strong>Tips</strong>：对于没有命中的情况，由于中止了循环，意味着指定数组的右指针往左偏移超过了左指针，因此可以返回右节点加1的值作为target的索引值。<br>返回mid+1也可以，原因在于，通常在进行比较的时候比较到最后如果没有查找到的话只剩下一个元素则left=right，且nums[mid] 大于target，至于为什么大于，往上退一步到还剩两个元素时进行比较就知道了。此时right执行减一操作，而此时right的位置恰恰为target应该插入的节点的位置，因此返回时应返回right+1，同理返回mid+1或者left也可</p>
 <p><strong>Python代码如下</strong></p>
 <pre><code>class Solution(object):
     def searchInsert(self, nums, target):
@@ -51,7 +52,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;Leetcode 算法题 53&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/search-insert-position/?tab=Description&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https:/
+      &lt;p&gt;Leetcode 算法题 35&lt;br&gt;&lt;strong&gt;题名&lt;/strong&gt;：Search Insert Position&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/search-insert-position/?tab=Descr
     
     </summary>
     

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2017-03-07T07:44:43.208Z</updated>
+  <updated>2017-03-07T08:37:55.794Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -16,11 +16,56 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode 35 Search Insert Position</title>
+    <link href="https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/"/>
+    <id>https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/</id>
+    <published>2017-03-07T08:16:31.000Z</published>
+    <updated>2017-03-07T08:37:55.794Z</updated>
+    
+    <content type="html"><![CDATA[<p>Leetcode 算法题 53<br><a href="https://leetcode.com/problems/search-insert-position/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/search-insert-position/?tab=Description</a></p>
+<p><strong>题目描述</strong>：给定一个排序后的数组array和一个目标值target，如果target在array中出现的话，就返回其在array中的索引，如果没有的话就返回其在array中按顺序插入的话应该插入的位置。假定数组中没有重复的元素</p>
+<p><strong>解题思路</strong>：这是一个典型的二分查找的问题，二分查找要求数组有序，二分查找的思想是每次查找指定数组中间节点的值，将其和target进行比较，如果命中则返回其索引，如果中间节点的值比target大，则将指定数组往左转移，即查找左边的数组，如果中间节点的值比target小，则查找右边的数组。<br>对于没有命中的情况，由于中止了循环，意味着指定数组的右指针往左偏移超过了左指针，因此可以返回右节点加1的值作为target的索引值。</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def searchInsert(self, nums, target):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        &quot;&quot;&quot;
+        left = 0
+        right = len(nums) - 1
+        mid = (left + right) / 2
+
+        while left &lt;= right:
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] &gt; target:
+                right = mid - 1
+                mid = (left + right) / 2
+            elif nums[mid] &lt; target:
+                left = mid + 1
+                mid = (left + right) / 2
+        return right + 1
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Leetcode 算法题 53&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/search-insert-position/?tab=Description&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https:/
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://minning.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode 53 Maximumsubarray</title>
     <link href="https://minning.github.io/2017/03/07/leetcode-53-Maximumsubarray/"/>
     <id>https://minning.github.io/2017/03/07/leetcode-53-Maximumsubarray/</id>
     <published>2017-03-07T07:18:03.000Z</published>
-    <updated>2017-03-07T07:44:43.208Z</updated>
+    <updated>2017-03-07T07:51:30.323Z</updated>
     
     <content type="html"><![CDATA[<p>leetcode算法题53：<br>求解最大连续子序列和<br><a href="https://leetcode.com/problems/maximum-subarray/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/maximum-subarray/?tab=Description</a></p>
 <p>题目描述：找出一个序列的连续子序列元素相加最大值</p>
@@ -48,6 +93,8 @@
     </summary>
     
     
+      <category term="leetcode" scheme="https://minning.github.io/tags/leetcode/"/>
+    
   </entry>
   
   <entry>
@@ -55,7 +102,7 @@
     <link href="https://minning.github.io/2017/03/07/leetcode-001-TwoSum/"/>
     <id>https://minning.github.io/2017/03/07/leetcode-001-TwoSum/</id>
     <published>2017-03-07T04:56:45.000Z</published>
-    <updated>2017-03-07T07:45:13.081Z</updated>
+    <updated>2017-03-07T07:51:34.459Z</updated>
     
     <content type="html"><![CDATA[<p>准备开始刷leetcode上的算法题，并对相关内容进行记录<br>今天记录的是leetcode上编号为1的题目TwoSum<br>leetcode链接如下：<a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="external">https://leetcode.com/problems/two-sum/</a></p>
 <p>题目描述：给定一个只包含整数的数组，返回由数组中两个数相加之和为target的下标，假定该数组中有且只有一个解，且每个元素只能使用一次<br>举例： nums=[2, 7, 11, 15], target = 9,<br>      返回[0,1]<br>解题思路：<br>思路一：暴力解法，两次循环，复杂度n^2，不能通过<br>思路二：新建一个字典，将元素放进去，查找target-x是否在字典中，复杂度n<br>    以下给出了思路二的解法</p>

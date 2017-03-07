@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://minning.github.io">
-  <title>minning</title>
+  <title>Archives: 2017 | minning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="minning">
-<meta property="og:url" content="https://minning.github.io/index.html">
+<meta property="og:url" content="https://minning.github.io/archives/2017/page/2/index.html">
 <meta property="og:site_name" content="minning">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="minning">
@@ -141,157 +141,54 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-leetcode-35-Search-Insert-Position" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/03/07/leetcode-001-TwoSum/" class="archive-article-date">
+  	<time datetime="2017-03-07T04:56:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/leetcode-35-Search-Insert-Position/">leetcode 35 Search Insert Position</a>
+      <a class="archive-article-title" href="/2017/03/07/leetcode-001-TwoSum/">leetcode 001 TwoSum</a>
     </h1>
   
 
-        <a href="/2017/03/07/leetcode-35-Search-Insert-Position/" class="archive-article-date">
-  	<time datetime="2017-03-07T08:16:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Leetcode 算法题 53<br><a href="https://leetcode.com/problems/search-insert-position/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/search-insert-position/?tab=Description</a></p>
-<p><strong>题目描述</strong>：给定一个排序后的数组array和一个目标值target，如果target在array中出现的话，就返回其在array中的索引，如果没有的话就返回其在array中按顺序插入的话应该插入的位置。假定数组中没有重复的元素</p>
-<p><strong>解题思路</strong>：这是一个典型的二分查找的问题，二分查找要求数组有序，二分查找的思想是每次查找指定数组中间节点的值，将其和target进行比较，如果命中则返回其索引，如果中间节点的值比target大，则将指定数组往左转移，即查找左边的数组，如果中间节点的值比target小，则查找右边的数组。<br>对于没有命中的情况，由于中止了循环，意味着指定数组的右指针往左偏移超过了左指针，因此可以返回右节点加1的值作为target的索引值。</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def searchInsert(self, nums, target):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        &quot;&quot;&quot;
-        left = 0
-        right = len(nums) - 1
-        mid = (left + right) / 2
-
-        while left &lt;= right:
-            if nums[mid] == target:
-                return mid
-            elif nums[mid] &gt; target:
-                right = mid - 1
-                mid = (left + right) / 2
-            elif nums[mid] &lt; target:
-                left = mid + 1
-                mid = (left + right) / 2
-        return right + 1
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/07/leetcode-35-Search-Insert-Position/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
-
-
-
   
-    <article id="post-leetcode-53-Maximumsubarray" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/leetcode-53-Maximumsubarray/">leetcode 53 Maximumsubarray</a>
-    </h1>
-  
-
-        <a href="/2017/03/07/leetcode-53-Maximumsubarray/" class="archive-article-date">
-  	<time datetime="2017-03-07T07:18:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>leetcode算法题53：<br>求解最大连续子序列和<br><a href="https://leetcode.com/problems/maximum-subarray/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/maximum-subarray/?tab=Description</a></p>
-<p>题目描述：找出一个序列的连续子序列元素相加最大值</p>
-<p>解题思路：使用动态规划的思想，从左到右扫描序列，将新节点的值和之前的连续序列节点和相加与之前的连续节点和作比较，更大者作为最大值，如果相加后小于0,则将和设为0继续往后扫描，即舍弃之前节点。<br>注意点：最开始初始化sum值时应设为系统表示最小值，预防序列内节点均为负产生错误结果</p>
-<pre><code>class Solution(object):
-    def maxSubArray(self, nums):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: int
-        &quot;&quot;&quot;
-        maxans = -1*(sys.maxint)-1
-        sum = 0
-        for index in range(len(nums)):
-            sum = sum + nums[index]
-            maxans = max(sum, maxans)
-            if sum&lt;0:
-                sum = 0
-        return maxans
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/07/leetcode-53-Maximumsubarray/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/archives/2017/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span>
     </nav>
   
 
@@ -315,9 +212,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

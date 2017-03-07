@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2016-12-24T06:01:14.374Z</updated>
+  <updated>2017-03-07T05:10:40.400Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -16,11 +16,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode 001 TwoSum</title>
+    <link href="https://minning.github.io/2017/03/07/leetcode-001-TwoSum/"/>
+    <id>https://minning.github.io/2017/03/07/leetcode-001-TwoSum/</id>
+    <published>2017-03-07T04:56:45.000Z</published>
+    <updated>2017-03-07T05:10:40.400Z</updated>
+    
+    <content type="html"><![CDATA[<p>准备开始刷leetcode上的算法题，并对相关内容进行记录<br>今天记录的是leetcode上编号为1的题目TwoSum<br>leetcode链接如下：<a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="external">https://leetcode.com/problems/two-sum/</a></p>
+<p>题目描述：给定一个只包含整数的数组，返回由数组中两个数相加之和为target的下标，假定该数组中有且只有一个解，且每个元素只能使用一次<br>举例： nums=[2, 7, 11, 15], target = 9,<br>      返回[0,1]<br>解题思路：<br>思路一：暴力解法，两次循环，复杂度n^2，不能通过<br>思路二：新建一个字典，将元素放进去，查找target-x是否在字典中，复杂度n<br>    以下给出了思路二的解法</p>
+<pre>
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        ret = []
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    ret = [i, j]
+                    return ret
+        return ret
+</pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;准备开始刷leetcode上的算法题，并对相关内容进行记录&lt;br&gt;今天记录的是leetcode上编号为1的题目TwoSum&lt;br&gt;leetcode链接如下：&lt;a href=&quot;https://leetcode.com/problems/two-sum/&quot; target=&quot;_b
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://minning.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
     <title></title>
     <link href="https://minning.github.io/2016/12/24/20161123/"/>
     <id>https://minning.github.io/2016/12/24/20161123/</id>
-    <published>2016-12-24T06:01:14.374Z</published>
-    <updated>2016-12-24T06:01:14.374Z</updated>
+    <published>2016-12-24T08:27:57.204Z</published>
+    <updated>2016-12-24T08:27:57.204Z</updated>
     
     <content type="html"><![CDATA[<p></p><p></p>
 <p></p><h5>1、k折交叉验证 中k取值多少有什么关系（ML19.6)，bias，variance是什么(ML4.3)？<h5><br>    &ensp;&ensp;答：一般来说，对于机器学习任务，都会将数据集分为训练数据、验证数据。然而如何对数据集划分却要考虑很多方面的问题，如划分比例、数据成分统计特性等。这里提问中的K主要指的是划分比例的问题范畴。<br>    &ensp;&ensp;首先这里的K指的是将数据等分为k份，然后将其中的k-1份作为训练数据，一份做测试数据。<br>    &ensp;&ensp;然后，在对数据进行划分时得确保训练集和验证集的数据分布相同，即确保其统计特性一致。<br>    &ensp;&ensp;我们可以想象一下，一般来说，k越大训练数据越多，验证数据越少，即模型训练越充分,但是验证结果就越不精准，极端情况下k和样本数相同，即只留一个验证数据，leave one out。那样验证结果就很不精确了。所以k折交叉验证中验证结果好坏随着k增大而增大，然后再随着k增大而减小。<br>    &ensp;&ensp;在k折交叉验证中还有一种常见的方法就是，随机挑选出k-1份当训练、下次再随机挑选出k-1个做训练，这样经过多次k-1份的训练从而增加模型的效果。<br>    &ensp;&ensp;那么bias、variance又是什么呢，与此相对应的还有一个概念叫error，error指的是模型预测结果与实际值之间的误差，通常<br>error=bias+variance 。<br>Bias反映的是模型在样本上的输出与真实值之间的误差，即模型本身的精准度，Variance反映的是模型每一次输出结果与模型输出期望之间的误差，即模型的稳定性。<p></p>

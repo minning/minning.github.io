@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://minning.github.io">
-  <title>archive | minning</title>
+  <title>leetcode 001 TwoSum | minning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="archive">
-<meta property="og:url" content="https://minning.github.io/archive/index.html">
+  <meta name="description" content="准备开始刷leetcode上的算法题，并对相关内容进行记录今天记录的是leetcode上编号为1的题目TwoSumleetcode链接如下：https://leetcode.com/problems/two-sum/
+题目描述：给定一个只包含整数的数组，返回由数组中两个数相加之和为target的下标，假定该数组中有且只有一个解，且每个元素只能使用一次举例： nums=[2, 7, 11, 15],">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode 001 TwoSum">
+<meta property="og:url" content="https://minning.github.io/2017/03/07/leetcode-001-TwoSum/index.html">
 <meta property="og:site_name" content="minning">
-<meta property="og:updated_time" content="2016-12-16T08:11:33.169Z">
+<meta property="og:description" content="准备开始刷leetcode上的算法题，并对相关内容进行记录今天记录的是leetcode上编号为1的题目TwoSumleetcode链接如下：https://leetcode.com/problems/two-sum/
+题目描述：给定一个只包含整数的数组，返回由数组中两个数相加之和为target的下标，假定该数组中有且只有一个解，且每个元素只能使用一次举例： nums=[2, 7, 11, 15],">
+<meta property="og:updated_time" content="2017-03-07T05:10:40.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="archive">
+<meta name="twitter:title" content="leetcode 001 TwoSum">
+<meta name="twitter:description" content="准备开始刷leetcode上的算法题，并对相关内容进行记录今天记录的是leetcode上编号为1的题目TwoSumleetcode链接如下：https://leetcode.com/problems/two-sum/
+题目描述：给定一个只包含整数的数组，返回由数组中两个数相加之和为target的下标，假定该数组中有且只有一个解，且每个元素只能使用一次举例： nums=[2, 7, 11, 15],">
   
     <link rel="alternative" href="/atom.xml" title="minning" type="application/atom+xml">
   
@@ -140,25 +146,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-undefined" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-leetcode-001-TwoSum" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      archive
+      leetcode 001 TwoSum
     </h1>
   
 
-        <a href="/archive/index.html" class="archive-article-date">
-  	<time datetime="2016-12-16T08:11:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-16</time>
+        <a href="/2017/03/07/leetcode-001-TwoSum/" class="archive-article-date">
+  	<time datetime="2017-03-07T04:56:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>准备开始刷leetcode上的算法题，并对相关内容进行记录<br>今天记录的是leetcode上编号为1的题目TwoSum<br>leetcode链接如下：<a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="external">https://leetcode.com/problems/two-sum/</a></p>
+<p>题目描述：给定一个只包含整数的数组，返回由数组中两个数相加之和为target的下标，假定该数组中有且只有一个解，且每个元素只能使用一次<br>举例： nums=[2, 7, 11, 15], target = 9,<br>      返回[0,1]<br>解题思路：<br>思路一：暴力解法，两次循环，复杂度n^2，不能通过<br>思路二：新建一个字典，将元素放进去，查找target-x是否在字典中，复杂度n<br>    以下给出了思路二的解法</p>
+<pre>
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        ret = []
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    ret = [i, j]
+                    return ret
+        return ret
+</pre>
       
 
       
@@ -187,6 +210,11 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
+	</div>
+
       
 
       
@@ -237,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://minning.github.io/archive/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://minning.github.io/2017/03/07/leetcode-001-TwoSum/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -249,6 +277,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/24/20161123/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 
 
@@ -277,7 +315,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

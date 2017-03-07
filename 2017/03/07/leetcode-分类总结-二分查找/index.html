@@ -6,21 +6,48 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://minning.github.io">
-  <title>leetcode 35 Search Insert Position | minning</title>
+  <title>leetcode 分类总结 二分查找 | minning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Leetcode 算法题 35题名：Search Insert Positionhttps://leetcode.com/problems/search-insert-position/?tab=Description
-题目描述：给定一个排序后的数组array和一个目标值target，如果target在array中出现的话，就返回其在array中的索引，如果没有的话就返回其在array中按顺序插入">
+  <meta name="description" content="二分查找    Binary Search
+
+二分查找是一个很高效的查找算法，理论上其算法时间复杂度可以达到 O(logn), 同时也要求待查找序列为有序或者几近有序的序列。
+
+Binary Search 题目汇总：
+
+Search Insert Position
+
+Find Minimum in Rotated Sorted Array
+
+[难点,细节]Find Minimum in Rotat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 35 Search Insert Position">
-<meta property="og:url" content="https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/index.html">
+<meta property="og:title" content="leetcode 分类总结 二分查找">
+<meta property="og:url" content="https://minning.github.io/2017/03/07/leetcode-分类总结-二分查找/index.html">
 <meta property="og:site_name" content="minning">
-<meta property="og:description" content="Leetcode 算法题 35题名：Search Insert Positionhttps://leetcode.com/problems/search-insert-position/?tab=Description
-题目描述：给定一个排序后的数组array和一个目标值target，如果target在array中出现的话，就返回其在array中的索引，如果没有的话就返回其在array中按顺序插入">
-<meta property="og:updated_time" content="2017-03-07T09:02:25.305Z">
+<meta property="og:description" content="二分查找    Binary Search
+
+二分查找是一个很高效的查找算法，理论上其算法时间复杂度可以达到 O(logn), 同时也要求待查找序列为有序或者几近有序的序列。
+
+Binary Search 题目汇总：
+
+Search Insert Position
+
+Find Minimum in Rotated Sorted Array
+
+[难点,细节]Find Minimum in Rotat">
+<meta property="og:updated_time" content="2017-03-07T11:34:05.303Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 35 Search Insert Position">
-<meta name="twitter:description" content="Leetcode 算法题 35题名：Search Insert Positionhttps://leetcode.com/problems/search-insert-position/?tab=Description
-题目描述：给定一个排序后的数组array和一个目标值target，如果target在array中出现的话，就返回其在array中的索引，如果没有的话就返回其在array中按顺序插入">
+<meta name="twitter:title" content="leetcode 分类总结 二分查找">
+<meta name="twitter:description" content="二分查找    Binary Search
+
+二分查找是一个很高效的查找算法，理论上其算法时间复杂度可以达到 O(logn), 同时也要求待查找序列为有序或者几近有序的序列。
+
+Binary Search 题目汇总：
+
+Search Insert Position
+
+Find Minimum in Rotated Sorted Array
+
+[难点,细节]Find Minimum in Rotat">
   
     <link rel="alternative" href="/atom.xml" title="minning" type="application/atom+xml">
   
@@ -146,51 +173,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-leetcode-35-Search-Insert-Position" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-leetcode-分类总结-二分查找" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      leetcode 35 Search Insert Position
+      leetcode 分类总结 二分查找
     </h1>
   
 
-        <a href="/2017/03/07/leetcode-35-Search-Insert-Position/" class="archive-article-date">
-  	<time datetime="2017-03-07T08:16:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+        <a href="/2017/03/07/leetcode-分类总结-二分查找/" class="archive-article-date">
+  	<time datetime="2017-03-07T11:27:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Leetcode 算法题 35<br><strong>题名</strong>：Search Insert Position<br><a href="https://leetcode.com/problems/search-insert-position/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/search-insert-position/?tab=Description</a></p>
-<p><strong>题目描述</strong>：给定一个排序后的数组array和一个目标值target，如果target在array中出现的话，就返回其在array中的索引，如果没有的话就返回其在array中按顺序插入的话应该插入的位置。假定数组中没有重复的元素</p>
-<p><strong>解题思路</strong>：这是一个典型的二分查找的问题，二分查找要求数组有序，二分查找的思想是每次查找指定数组中间节点的值，将其和target进行比较，如果命中则返回其索引，如果中间节点的值比target大，则将指定数组往左转移，即查找左边的数组，如果中间节点的值比target小，则查找右边的数组。</p>
-<p><strong>Tips</strong>：对于没有命中的情况，由于中止了循环，意味着指定数组的右指针往左偏移超过了左指针，因此可以返回右节点加1的值作为target的索引值。<br>返回mid+1也可以，原因在于，通常在进行比较的时候比较到最后如果没有查找到的话只剩下一个元素则left=right，且nums[mid] 大于target，至于为什么大于，往上退一步到还剩两个元素时进行比较就知道了。此时right执行减一操作，而此时right的位置恰恰为target应该插入的节点的位置，因此返回时应返回right+1，同理返回mid+1或者left也可</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def searchInsert(self, nums, target):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        &quot;&quot;&quot;
-        left = 0
-        right = len(nums) - 1
-        mid = (left + right) / 2
+        <p>二分查找    Binary Search</p>
+<blockquote>
+<p>二分查找是一个很高效的查找算法，理论上其算法时间复杂度可以达到 O(logn), 同时也要求待查找序列为有序或者几近有序的序列。</p>
+</blockquote>
+<p><strong>Binary Search 题目汇总</strong>：</p>
+<ol>
+<li><p><a href="https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/">Search Insert Position</a></p>
+</li>
+<li><p>Find Minimum in Rotated Sorted Array</p>
+</li>
+<li><p>[难点,细节]Find Minimum in Rotated Sorted Array II</p>
+</li>
+<li><p>Search a 2D Matrix</p>
+</li>
+<li><p>Find Peak Element</p>
+</li>
+<li><p>Search in Rotated Sorted Array</p>
+</li>
+<li><p>[难点,细节]Search in Rotated Sorted Array II</p>
+</li>
+<li><p>Search for a Range</p>
+</li>
+<li><p>[略]Pow(x, n)</p>
+</li>
+<li><p>[略]Sqrt(x)</p>
+</li>
+<li><p>Count Complete Tree Nodes</p>
+</li>
+<li><p>[参见 LeetCode特殊解法总结]Divide Two Intergers</p>
+</li>
+</ol>
+<p>参考资料：<br><a href="http://nillhex.com/2015/07/06/leetcode-summary-binary-search/" target="_blank" rel="external">http://nillhex.com/2015/07/06/leetcode-summary-binary-search/</a></p>
 
-        while left &lt;= right:
-            if nums[mid] == target:
-                return mid
-            elif nums[mid] &gt; target:
-                right = mid - 1
-                mid = (left + right) / 2
-            elif nums[mid] &lt; target:
-                left = mid + 1
-                mid = (left + right) / 2
-        return right + 1
-</code></pre>
       
 
       
@@ -274,7 +307,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://minning.github.io/2017/03/07/leetcode-分类总结-二分查找/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -288,18 +321,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/07/leetcode-分类总结-二分查找/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          leetcode 分类总结 二分查找
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/07/leetcode-53-Maximumsubarray/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">leetcode 53 Maximumsubarray</div>
+    <a href="/2017/03/07/leetcode-35-Search-Insert-Position/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">leetcode 35 Search Insert Position</div>
       <i class="icon-circle-right"></i>
     </a>
   

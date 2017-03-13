@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2017-03-13T13:31:10.771Z</updated>
+  <updated>2017-03-13T14:02:59.321Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>172 Factorial Trailing Zeroes</title>
+    <link href="https://minning.github.io/2017/03/13/172-Factorial-Trailing-Zeroes/"/>
+    <id>https://minning.github.io/2017/03/13/172-Factorial-Trailing-Zeroes/</id>
+    <published>2017-03-13T14:02:20.000Z</published>
+    <updated>2017-03-13T14:02:59.321Z</updated>
+    
+    <content type="html"><![CDATA[<p>Leetcode 算法题 168<br><strong>题名</strong>：Excel Sheet Column Title<br><a href="https://leetcode.com/problems/excel-sheet-column-title/#/description" target="_blank" rel="external">https://leetcode.com/problems/excel-sheet-column-title/#/description</a></p>
+<p><strong>题目描述</strong>：给定一个正整数，求出其在Excel中对应的字符编号<br>Given a positive integer, return its corresponding column title as appear in an Excel sheet.</p>
+<p>For example:</p>
+<pre><code>1 -&gt; A
+2 -&gt; B
+3 -&gt; C
+...
+26 -&gt; Z
+27 -&gt; AA
+28 -&gt; AB 
+</code></pre><p><strong>解题思路</strong>：由于Excel中字符编号是26进制的，因此就相当于将数字转换为26进制的表示形式,然后使用Ascii碼的表示形式进行转化</p>
+<p><strong>Tips</strong>：进行进制转化时需要将数字转换成从0开始的形式</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def convertToTitle(self, n):
+        &quot;&quot;&quot;
+        :type n: int
+        :rtype: str
+        &quot;&quot;&quot;
+        ls = []
+
+        while n &gt; 0:
+            ls.insert(0, chr((n-1) % 26+65))
+            n = (n-1)/26
+
+        return &apos;&apos;.join(ls)
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Leetcode 算法题 168&lt;br&gt;&lt;strong&gt;题名&lt;/strong&gt;：Excel Sheet Column Title&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/excel-sheet-column-title/#/des
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Leetcode 168 Excel Sheet Column Title</title>
@@ -223,7 +267,7 @@ def dec2binStr(s):
     <link href="https://minning.github.io/2017/03/13/leetcode-%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-Math%E9%83%A8%E5%88%86/"/>
     <id>https://minning.github.io/2017/03/13/leetcode-分类总结-Math部分/</id>
     <published>2017-03-13T04:48:20.000Z</published>
-    <updated>2017-03-13T07:46:55.384Z</updated>
+    <updated>2017-03-13T13:38:04.544Z</updated>
     
     <content type="html"><![CDATA[<p>Leetcode Math部分<br>主要是一些Math和编程相结合的部分</p>
 <p>Math题目汇总：</p>
@@ -234,9 +278,9 @@ def dec2binStr(s):
 </li>
 <li><p><a href="https://minning.github.io/2017/03/13/Leetcode-29-Divide-Two-Integer/">Divide Two Integers 见二分查找</a></p>
 </li>
-<li><p>Excel Sheet Column Number</p>
+<li><p><a href="https://minning.github.io/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/">Excel Sheet Column Number</a></p>
 </li>
-<li><p>Excel Sheet Column Title</p>
+<li><p><a href="https://minning.github.io/2017/03/13/Leetcode-168-Excel-Sheet-Column-Title/">Excel Sheet Column Title</a></p>
 </li>
 <li><p>[重点]Factorial Trailing Zeroes</p>
 </li>

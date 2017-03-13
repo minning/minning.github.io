@@ -141,6 +141,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-172-Factorial-Trailing-Zeroes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/13/172-Factorial-Trailing-Zeroes/">172 Factorial Trailing Zeroes</a>
+    </h1>
+  
+
+        <a href="/2017/03/13/172-Factorial-Trailing-Zeroes/" class="archive-article-date">
+  	<time datetime="2017-03-13T14:02:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Leetcode 算法题 168<br><strong>题名</strong>：Excel Sheet Column Title<br><a href="https://leetcode.com/problems/excel-sheet-column-title/#/description" target="_blank" rel="external">https://leetcode.com/problems/excel-sheet-column-title/#/description</a></p>
+<p><strong>题目描述</strong>：给定一个正整数，求出其在Excel中对应的字符编号<br>Given a positive integer, return its corresponding column title as appear in an Excel sheet.</p>
+<p>For example:</p>
+<pre><code>1 -&gt; A
+2 -&gt; B
+3 -&gt; C
+...
+26 -&gt; Z
+27 -&gt; AA
+28 -&gt; AB 
+</code></pre><p><strong>解题思路</strong>：由于Excel中字符编号是26进制的，因此就相当于将数字转换为26进制的表示形式,然后使用Ascii碼的表示形式进行转化</p>
+<p><strong>Tips</strong>：进行进制转化时需要将数字转换成从0开始的形式</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def convertToTitle(self, n):
+        &quot;&quot;&quot;
+        :type n: int
+        :rtype: str
+        &quot;&quot;&quot;
+        ls = []
+
+        while n &gt; 0:
+            ls.insert(0, chr((n-1) % 26+65))
+            n = (n-1)/26
+
+        return &apos;&apos;.join(ls)
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/13/172-Factorial-Trailing-Zeroes/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Leetcode-168-Excel-Sheet-Column-Title" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -366,96 +440,6 @@ AB -&gt; 28
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/13/Leetcode-29-Divide-Two-Integer/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Leetcode-67-Add-Binary" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/Leetcode-67-Add-Binary/">Leetcode 67 Add Binary</a>
-    </h1>
-  
-
-        <a href="/2017/03/13/Leetcode-67-Add-Binary/" class="archive-article-date">
-  	<time datetime="2017-03-13T04:52:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Leetcode 算法题 67<br><strong>题名</strong>：Add Binary<br><a href="https://leetcode.com/problems/add-binary/#/description" target="_blank" rel="external">https://leetcode.com/problems/add-binary/#/description</a></p>
-<p><strong>题目描述</strong>：给定两个二进制字符串，返回他们的和（二进制字符串）</p>
-<p>Given two binary strings, return their sum (also a binary string).<br>For example,<br>a = “11”<br>b = “1”<br>Return “100”.</p>
-<p><strong>解题思路</strong>：这道题的解答方法有很多，我的思路是把二进制字符串转化为十进制的整数，然后相加，再把结果转化为二进制的字符串</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def addBinary(self, a, b):
-        &quot;&quot;&quot;
-        :type a: str
-        :type b: str
-        :rtype: str
-        &quot;&quot;&quot;
-
-        dec_a = str2dec(a)
-        dec_b = str2dec(b)
-        dec_c = dec_a + dec_b
-
-        return dec2binStr(dec_c)
-
-
-def str2dec(s):
-    sum = 0
-    for i in s:
-        sum = sum * 2 + int(i)
-    return sum
-
-
-def dec2binStr(s):
-    ls = []
-    while s:
-        rem = s % 2
-        s = s / 2
-        ls.insert(0, str(rem))
-    if len(ls) != 0:
-        return &apos;&apos;.join(ls)
-    else:
-        return &quot;0&quot;
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/13/Leetcode-67-Add-Binary/">展开全文 >></a>
         </p>
       
 

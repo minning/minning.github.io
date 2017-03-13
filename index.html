@@ -153,13 +153,39 @@
   
 
         <a href="/2017/03/13/Leetcode-168-Excel-Sheet-Column-Title/" class="archive-article-date">
-  	<time datetime="2017-03-13T13:16:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
+  	<time datetime="2017-03-13T13:30:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>Leetcode 算法题 168<br><strong>题名</strong>：Excel Sheet Column Title<br><a href="https://leetcode.com/problems/excel-sheet-column-title/#/description" target="_blank" rel="external">https://leetcode.com/problems/excel-sheet-column-title/#/description</a></p>
+<p><strong>题目描述</strong>：给定一个正整数，求出其在Excel中对应的字符编号<br>Given a positive integer, return its corresponding column title as appear in an Excel sheet.</p>
+<p>For example:</p>
+<pre><code>1 -&gt; A
+2 -&gt; B
+3 -&gt; C
+...
+26 -&gt; Z
+27 -&gt; AA
+28 -&gt; AB 
+</code></pre><p><strong>解题思路</strong>：由于Excel中字符编号是26进制的，因此就相当于将数字转换为26进制的表示形式,然后使用Ascii碼的表示形式进行转化</p>
+<p><strong>Tips</strong>：进行进制转化时需要将数字转换成从0开始的形式</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def convertToTitle(self, n):
+        &quot;&quot;&quot;
+        :type n: int
+        :rtype: str
+        &quot;&quot;&quot;
+        ls = []
+
+        while n &gt; 0:
+            ls.insert(0, chr((n-1) % 26+65))
+            n = (n-1)/26
+
+        return &apos;&apos;.join(ls)
+</code></pre>
       
 
       

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2017-03-13T07:23:04.763Z</updated>
+  <updated>2017-03-13T13:16:43.301Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -14,6 +14,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 168 Excel Sheet Column Title</title>
+    <link href="https://minning.github.io/2017/03/13/Leetcode-168-Excel-Sheet-Column-Title/"/>
+    <id>https://minning.github.io/2017/03/13/Leetcode-168-Excel-Sheet-Column-Title/</id>
+    <published>2017-03-13T13:16:43.000Z</published>
+    <updated>2017-03-13T13:16:43.301Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 171 Excel Sheet Column Number</title>
+    <link href="https://minning.github.io/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/"/>
+    <id>https://minning.github.io/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/</id>
+    <published>2017-03-13T12:11:46.000Z</published>
+    <updated>2017-03-13T12:19:11.705Z</updated>
+    
+    <content type="html"><![CDATA[<p>Leetcode 算法题 171<br><strong>题名</strong>：Excel Sheet Column Number<br><a href="https://leetcode.com/problems/divide-two-integers/#/description" target="_blank" rel="external">https://leetcode.com/problems/divide-two-integers/#/description</a></p>
+<p><strong>题目描述</strong>：给定Excel中列的字符串，求出其对应的列数<br>Given a column title as appear in an Excel sheet, return its corresponding column number.</p>
+<p>For example:</p>
+<pre><code>A -&gt; 1
+B -&gt; 2
+C -&gt; 3
+...
+Z -&gt; 26
+AA -&gt; 27
+AB -&gt; 28 
+</code></pre><p><strong>解题思路</strong>：首先可以知道英语字符一个周期是26,所以其实这就相当于一个26进制的数，每个字符又代表一个数字，对应的是Ａ对应于1,因此可以使用Ascii碼对英语字符进行转换，其中Ascii碼中Ａ对应65，因此可以转换后进行使用。</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def titleToNumber(self, s):
+        &quot;&quot;&quot;
+        :type s: str
+        :rtype: int
+        &quot;&quot;&quot;
+        sum = 0
+
+        for i in s:
+            sum = sum*26 + (ord(i)-64)
+
+        return sum
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Leetcode 算法题 171&lt;br&gt;&lt;strong&gt;题名&lt;/strong&gt;：Excel Sheet Column Number&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/divide-two-integers/#/descrip
+    
+    </summary>
+    
+    
+      <category term="Leetcode" scheme="https://minning.github.io/tags/Leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 29 Divide Two Integer</title>

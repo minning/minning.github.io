@@ -141,6 +141,155 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-leetcode-35-Search-Insert-Position" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/07/leetcode-35-Search-Insert-Position/">35、Search Insert Position</a>
+    </h1>
+  
+
+        <a href="/2017/03/07/leetcode-35-Search-Insert-Position/" class="archive-article-date">
+  	<time datetime="2017-03-07T08:16:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Leetcode 算法题 35<br><strong>题名</strong>：Search Insert Position<br><a href="https://leetcode.com/problems/search-insert-position/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/search-insert-position/?tab=Description</a></p>
+<p><strong>题目描述</strong>：给定一个排序后的数组array和一个目标值target，如果target在array中出现的话，就返回其在array中的索引，如果没有的话就返回其在array中按顺序插入的话应该插入的位置。假定数组中没有重复的元素</p>
+<p><strong>解题思路</strong>：这是一个典型的二分查找的问题，二分查找要求数组有序，二分查找的思想是每次查找指定数组中间节点的值，将其和target进行比较，如果命中则返回其索引，如果中间节点的值比target大，则将指定数组往左转移，即查找左边的数组，如果中间节点的值比target小，则查找右边的数组。</p>
+<p><strong>Tips</strong>：对于没有命中的情况，由于中止了循环，意味着指定数组的右指针往左偏移超过了左指针，因此可以返回右节点加1的值作为target的索引值。<br>返回mid+1也可以，原因在于，通常在进行比较的时候比较到最后如果没有查找到的话只剩下一个元素则left=right，且nums[mid] 大于target，至于为什么大于，往上退一步到还剩两个元素时进行比较就知道了。此时right执行减一操作，而此时right的位置恰恰为target应该插入的节点的位置，因此返回时应返回right+1，同理返回mid+1或者left也可</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def searchInsert(self, nums, target):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        &quot;&quot;&quot;
+        left = 0
+        right = len(nums) - 1
+        mid = (left + right) / 2
+
+        while left &lt;= right:
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] &gt; target:
+                right = mid - 1
+                mid = (left + right) / 2
+            elif nums[mid] &lt; target:
+                left = mid + 1
+                mid = (left + right) / 2
+        return right + 1
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/07/leetcode-35-Search-Insert-Position/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-leetcode-53-Maximumsubarray" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/07/leetcode-53-Maximumsubarray/">53、Maximumsubarray</a>
+    </h1>
+  
+
+        <a href="/2017/03/07/leetcode-53-Maximumsubarray/" class="archive-article-date">
+  	<time datetime="2017-03-07T07:18:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>leetcode算法题53：<br>求解最大连续子序列和<br><a href="https://leetcode.com/problems/maximum-subarray/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/maximum-subarray/?tab=Description</a></p>
+<p><strong>题目描述</strong>：找出一个序列的连续子序列元素相加最大值</p>
+<p><strong>解题思路</strong>：使用动态规划的思想，从左到右扫描序列，将新节点的值和之前的连续序列节点和相加与之前的连续节点和作比较，更大者作为最大值，如果相加后小于0,则将和设为0继续往后扫描，即舍弃之前节点。<br>注意点：最开始初始化sum值时应设为系统表示最小值，预防序列内节点均为负产生错误结果</p>
+<pre><code>class Solution(object):
+    def maxSubArray(self, nums):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :rtype: int
+        &quot;&quot;&quot;
+        maxans = -1*(sys.maxint)-1
+        sum = 0
+        for index in range(len(nums)):
+            sum = sum + nums[index]
+            maxans = max(sum, maxans)
+            if sum&lt;0:
+                sum = 0
+        return maxans
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/07/leetcode-53-Maximumsubarray/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-leetcode-001-TwoSum" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -249,140 +398,9 @@
 
 
   
-    <article id="post-数据挖掘讨论课《二》" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/23/数据挖掘讨论课《二》/">数据挖掘讨论课《二》  逻辑回归</a>
-    </h1>
-  
-
-        <a href="/2016/12/23/数据挖掘讨论课《二》/" class="archive-article-date">
-  	<time datetime="2016-12-23T03:17:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-23</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p></p><p>第一部分是之前搜集的一些题目，所以这次的标题就为《二》咯<br>这一部分主要是讲解线性回归、逻辑回归的原理和一些常见校招题。</p>
-<p>Logistic回归：<br>　　Logistic是用来分类的，是一种线性分类器，需要注意的地方有：<br>　　1. logistic函数表达式为：<br>　　<img src="http://chart.googleapis.com/chart?cht=tx&chl=\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" style="border:none;"><br>  <img src="http://www.forkosh.com/mathtex.cgi? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}"><br>  <img src="http://www.forkosh.com/mathtex.cgi? 在此处插入Latex公式"><br>　　其导数形式为：<br>　　<br>　　2. logsitc回归方法主要是用最大似然估计来学习的，所以单个样本的后验概率为：<br>　　<br>　　到整个样本的后验概率：<br>　　<br>　　其中：<br>　　<br>　　通过对数进一步化简为：<br>　　<br>　　3. 其实它的loss function为-l(θ)，因此我们需使loss function最小，可采用梯度下降法得到。梯度下降法公式为:<br>　　<br>　　<br>　　Logistic回归优点：<br>　　1、实现简单；<br>　　2、分类时计算量非常小，速度很快，存储资源低；<br>　　缺点：<br>　　1、容易欠拟合，一般准确度不太高<br>　　2、只能处理两分类问题（在此基础上衍生出来的softmax可以用于多分类），且必须线性可分；</p>
-<p>　　线性回归：<br>　　线性回归才是真正用于回归的，而不像logistic回归是用于分类，其基本思想是用梯度下降法对最小二乘法形式的误差函数进行优化，当然也可以用normal equation直接求得参数的解，结果为：<br>　　<br>　　而在LWLR（局部加权线性回归）中，参数的计算表达式为:<br>　　<br>　　因为此时优化的是：<br>　　<br>　　由此可见LWLR与LR不同，LWLR是一个非参数模型，因为每次进行回归计算都要遍历训练样本至少一次。<br>　　线性回归优点：<br>　　实现简单，计算简单；<br>　　缺点：<br>　　不能拟合非线性数据；</p>
-<p>参考资料：<br>[1] <a href="http://blog.sciencenet.cn/blog-520608-745856.html" target="_blank" rel="external">http://blog.sciencenet.cn/blog-520608-745856.html</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习校招/">机器学习校招</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/23/数据挖掘讨论课《二》/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-数据挖掘讨论课《一》" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/15/数据挖掘讨论课《一》/">数据挖掘讨论课《一》 校招题</a>
-    </h1>
-  
-
-        <a href="/2016/12/15/数据挖掘讨论课《一》/" class="archive-article-date">
-  	<time datetime="2016-12-15T03:17:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-15</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p></p><p>为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习</p>
-<h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><p></p><p>本次讨论课的题目及解答如下所示：<br><br></p>
-<p></p><h5>1、逻辑回归估计参数时的目标函数。[百度 2016 校招]<br>    <br>&emsp;&emsp;<a href="http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-Interview/" target="_blank" rel="external">http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-Interview/</a><p></p>
-<p></p><h5>2、逻辑回归估计参数时的目标函数 如果加上一个先验的服从高斯分布的假设，会是什么样<p></p>
-<p></p><h5>3、SVM在哪个地方引入的核函数<p></p>
-<p></p><h5>4、如果用高斯核可以升到多少维?<p></p>
-<p></p><h5>5、什么是贝叶斯估计<p></p>
-<p></p><h5>6、k折交叉验证 中k取值多少有什么关系，bias，variance是什么？<p></p>
-<p></p><h5>7、逻辑回归的值表示概率吗？<p></p>
-<p></p><h5>8、分类模型和回归模型的区别<p></p>
-<p></p><h5>9、分类模型可以做回归分析吗？反过来可以吗？<p></p>
-<p><br><br><br></p>
-<p></p><h5>1、SVM的原理推导   [美团 2016 校招]<br>    <br>&emsp;&emsp; <a href="http://blog.sina.com.cn/s/blog_4298002e010144k8.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_4298002e010144k8.html</a><p></p>
-<p></p><h5>2、讲一下random forest 和 GBDT的区别<p></p>
-<p></p><h5>3、特征选取怎么选？ 为什么信息增益可以用来选特征？<p></p>
-<p></p><h5>4、倒排索引的原理<p></p>
-<p><br><br></p>
-<p>考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？<br>A.SVM的VC维大于高斯混合模型的VC维<br>B.SVM的VC维小于高斯混合模型的VC维<br>C.两个分类器的结构风险值相同<br>D.这两个分类器的VC维相同</p>
-<p><br><br></p>
-<p>下面说法正确的是？<br>A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。<br>B.ＳＶＭ对噪声鲁棒。<br>C.当训练数据较多时更容易发生过拟合。<br>D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p></p><p>&emsp;&emsp;这一部分主要是近期整理的一些机器学习数据挖掘相关的校招题，日后大概每周会进行一次校招题讲解，旨在深入理解常用的机器学习算法，加强机器学习基本功。</p>
-<p></p></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习校招/">机器学习校招</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/15/数据挖掘讨论课《一》/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 

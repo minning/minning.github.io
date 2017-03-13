@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="minning">
-<meta property="og:url" content="https://minning.github.io/index.html">
+<meta property="og:url" content="https://minning.github.io/page/4/index.html">
 <meta property="og:site_name" content="minning">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="minning">
@@ -141,25 +141,29 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Leetcode-168-Excel-Sheet-Column-Title" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-数据挖掘讨论课《二》" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/Leetcode-168-Excel-Sheet-Column-Title/">Leetcode 168 Excel Sheet Column Title</a>
+      <a class="article-title" href="/2016/12/23/数据挖掘讨论课《二》/">数据挖掘讨论课《二》  逻辑回归</a>
     </h1>
   
 
-        <a href="/2017/03/13/Leetcode-168-Excel-Sheet-Column-Title/" class="archive-article-date">
-  	<time datetime="2017-03-13T13:16:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
+        <a href="/2016/12/23/数据挖掘讨论课《二》/" class="archive-article-date">
+  	<time datetime="2016-12-23T03:17:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-23</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p></p><p>第一部分是之前搜集的一些题目，所以这次的标题就为《二》咯<br>这一部分主要是讲解线性回归、逻辑回归的原理和一些常见校招题。</p>
+<p>Logistic回归：<br>　　Logistic是用来分类的，是一种线性分类器，需要注意的地方有：<br>　　1. logistic函数表达式为：<br>　　<img src="http://chart.googleapis.com/chart?cht=tx&chl=\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" style="border:none;"><br>  <img src="http://www.forkosh.com/mathtex.cgi? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}"><br>  <img src="http://www.forkosh.com/mathtex.cgi? 在此处插入Latex公式"><br>　　其导数形式为：<br>　　<br>　　2. logsitc回归方法主要是用最大似然估计来学习的，所以单个样本的后验概率为：<br>　　<br>　　到整个样本的后验概率：<br>　　<br>　　其中：<br>　　<br>　　通过对数进一步化简为：<br>　　<br>　　3. 其实它的loss function为-l(θ)，因此我们需使loss function最小，可采用梯度下降法得到。梯度下降法公式为:<br>　　<br>　　<br>　　Logistic回归优点：<br>　　1、实现简单；<br>　　2、分类时计算量非常小，速度很快，存储资源低；<br>　　缺点：<br>　　1、容易欠拟合，一般准确度不太高<br>　　2、只能处理两分类问题（在此基础上衍生出来的softmax可以用于多分类），且必须线性可分；</p>
+<p>　　线性回归：<br>　　线性回归才是真正用于回归的，而不像logistic回归是用于分类，其基本思想是用梯度下降法对最小二乘法形式的误差函数进行优化，当然也可以用normal equation直接求得参数的解，结果为：<br>　　<br>　　而在LWLR（局部加权线性回归）中，参数的计算表达式为:<br>　　<br>　　因为此时优化的是：<br>　　<br>　　由此可见LWLR与LR不同，LWLR是一个非参数模型，因为每次进行回归计算都要遍历训练样本至少一次。<br>　　线性回归优点：<br>　　实现简单，计算简单；<br>　　缺点：<br>　　不能拟合非线性数据；</p>
+<p>参考资料：<br>[1] <a href="http://blog.sciencenet.cn/blog-520608-745856.html" target="_blank" rel="external">http://blog.sciencenet.cn/blog-520608-745856.html</a></p>
+
       
 
       
@@ -167,11 +171,16 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习校招/">机器学习校招</a></li></ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/13/Leetcode-168-Excel-Sheet-Column-Title/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/12/23/数据挖掘讨论课《二》/">展开全文 >></a>
         </p>
       
 
@@ -189,49 +198,46 @@
 
 
   
-    <article id="post-Leetcode-171-Excel-Sheet-Column-Number" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-数据挖掘讨论课《一》" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/">Leetcode 171 Excel Sheet Column Number</a>
+      <a class="article-title" href="/2016/12/15/数据挖掘讨论课《一》/">数据挖掘讨论课《一》 校招题</a>
     </h1>
   
 
-        <a href="/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/" class="archive-article-date">
-  	<time datetime="2017-03-13T12:11:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
+        <a href="/2016/12/15/数据挖掘讨论课《一》/" class="archive-article-date">
+  	<time datetime="2016-12-15T03:17:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-15</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Leetcode 算法题 171<br><strong>题名</strong>：Excel Sheet Column Number<br><a href="https://leetcode.com/problems/divide-two-integers/#/description" target="_blank" rel="external">https://leetcode.com/problems/divide-two-integers/#/description</a></p>
-<p><strong>题目描述</strong>：给定Excel中列的字符串，求出其对应的列数<br>Given a column title as appear in an Excel sheet, return its corresponding column number.</p>
-<p>For example:</p>
-<pre><code>A -&gt; 1
-B -&gt; 2
-C -&gt; 3
-...
-Z -&gt; 26
-AA -&gt; 27
-AB -&gt; 28 
-</code></pre><p><strong>解题思路</strong>：首先可以知道英语字符一个周期是26,所以其实这就相当于一个26进制的数，每个字符又代表一个数字，对应的是Ａ对应于1,因此可以使用Ascii碼对英语字符进行转换，其中Ascii碼中Ａ对应65，因此可以转换后进行使用。</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def titleToNumber(self, s):
-        &quot;&quot;&quot;
-        :type s: str
-        :rtype: int
-        &quot;&quot;&quot;
-        sum = 0
-
-        for i in s:
-            sum = sum*26 + (ord(i)-64)
-
-        return sum
-</code></pre>
+        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p></p><p>为了增进对机器学习算法的学习，目前暂定一周一次讨论课，这里主要对课上的讨论结果进行记录，以增进记忆，方便日后查看学习</p>
+<h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><p></p><p>本次讨论课的题目及解答如下所示：<br><br></p>
+<p></p><h5>1、逻辑回归估计参数时的目标函数。[百度 2016 校招]<br>    <br>&emsp;&emsp;<a href="http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-Interview/" target="_blank" rel="external">http://kubicode.me/2015/08/16/Machine%20Learning/Algorithm-Summary-for-Interview/</a><p></p>
+<p></p><h5>2、逻辑回归估计参数时的目标函数 如果加上一个先验的服从高斯分布的假设，会是什么样<p></p>
+<p></p><h5>3、SVM在哪个地方引入的核函数<p></p>
+<p></p><h5>4、如果用高斯核可以升到多少维?<p></p>
+<p></p><h5>5、什么是贝叶斯估计<p></p>
+<p></p><h5>6、k折交叉验证 中k取值多少有什么关系，bias，variance是什么？<p></p>
+<p></p><h5>7、逻辑回归的值表示概率吗？<p></p>
+<p></p><h5>8、分类模型和回归模型的区别<p></p>
+<p></p><h5>9、分类模型可以做回归分析吗？反过来可以吗？<p></p>
+<p><br><br><br></p>
+<p></p><h5>1、SVM的原理推导   [美团 2016 校招]<br>    <br>&emsp;&emsp; <a href="http://blog.sina.com.cn/s/blog_4298002e010144k8.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_4298002e010144k8.html</a><p></p>
+<p></p><h5>2、讲一下random forest 和 GBDT的区别<p></p>
+<p></p><h5>3、特征选取怎么选？ 为什么信息增益可以用来选特征？<p></p>
+<p></p><h5>4、倒排索引的原理<p></p>
+<p><br><br></p>
+<p>考虑两个分类器：1）核函数取二次多项式的SVM分类器和2）没有约束的高斯混合模型（每个类别为一个高斯模型）。我们对R2空间的点进行两类分类。假设数据完全可分，SVM分类器中不加松弛惩罚项，并且假设有足够多的训练数据来训练高斯模型的协方差。下面说法正确的是？<br>A.SVM的VC维大于高斯混合模型的VC维<br>B.SVM的VC维小于高斯混合模型的VC维<br>C.两个分类器的结构风险值相同<br>D.这两个分类器的VC维相同</p>
+<p><br><br></p>
+<p>下面说法正确的是？<br>A.梯度下降有时会陷于局部极小值，但ＥＭ算法不会。<br>B.ＳＶＭ对噪声鲁棒。<br>C.当训练数据较多时更容易发生过拟合。<br>D.给定ｎ个数据点，如果其中一半用于训练，另一半用于测试，则训练误差和测试误差之间的差别会随着ｎ的增加而减小。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p></p><p>&emsp;&emsp;这一部分主要是近期整理的一些机器学习数据挖掘相关的校招题，日后大概每周会进行一次校招题讲解，旨在深入理解常用的机器学习算法，加强机器学习基本功。</p>
+<p></p></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5></h5>
       
 
       
@@ -241,195 +247,14 @@ AB -&gt; 28
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习校招/">机器学习校招</a></li></ul>
 	</div>
 
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Leetcode-29-Divide-Two-Integer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/Leetcode-29-Divide-Two-Integer/">Leetcode 29 Divide Two Integer</a>
-    </h1>
-  
-
-        <a href="/2017/03/13/Leetcode-29-Divide-Two-Integer/" class="archive-article-date">
-  	<time datetime="2017-03-13T07:13:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Leetcode 算法题 29<br><strong>题名</strong>：Divide Two Integers<br><a href="https://leetcode.com/problems/divide-two-integers/#/description" target="_blank" rel="external">https://leetcode.com/problems/divide-two-integers/#/description</a></p>
-<p><strong>题目描述</strong>：不使用乘除模运算来求两个整数的除法，越界的情况返回MAX_INT<br>Divide two integers without using multiplication, division and mod operator.</p>
-<p>If it is overflow, return MAX_INT.</p>
-<p><strong>解题思路</strong>：对于不能使用乘除元算来计算整数的除法问题，很显然有一个最容易想到的方法就是将被除数一直减去除数直到被除数小于0,计算相减的次数，但是这样的话复杂度就是Ｏ(n),复杂度太高。因此还可以使用简化的方法，整数int的最大值是2**31-1,可以使用位运算，将被除数减去一个较大的整数，保存减去的值。</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def divide(self, dividend, divisor):
-        &quot;&quot;&quot;
-        :type dividend: int
-        :type divisor: int
-        :rtype: int
-        &quot;&quot;&quot;
-        maxint = 2**31-1
-        size = 31
-        sum = 0
-
-        if divisor == 0:
-            return maxint
-
-
-        if (dividend &gt; 0 and divisor &lt; 0) or (dividend &lt; 0 and divisor &gt; 0):
-            sign = -1
-        else:
-            sign = 1
-
-        dividend, divisor = abs(dividend), abs(divisor)
-
-        while size &gt;= 0:
-            if dividend &gt;= divisor&lt;&lt;size:
-                sum += 1&lt;&lt;size
-                dividend -= divisor&lt;&lt;size
-            size -= 1
-
-        ret = sign * sum
-        if ret&gt;maxint or ret&lt;-1*maxint-1:
-            return maxint
-        else:
-            return ret
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/13/Leetcode-29-Divide-Two-Integer/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Leetcode-67-Add-Binary" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/Leetcode-67-Add-Binary/">Leetcode 67 Add Binary</a>
-    </h1>
-  
-
-        <a href="/2017/03/13/Leetcode-67-Add-Binary/" class="archive-article-date">
-  	<time datetime="2017-03-13T04:52:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Leetcode 算法题 67<br><strong>题名</strong>：Add Binary<br><a href="https://leetcode.com/problems/add-binary/#/description" target="_blank" rel="external">https://leetcode.com/problems/add-binary/#/description</a></p>
-<p><strong>题目描述</strong>：给定两个二进制字符串，返回他们的和（二进制字符串）</p>
-<p>Given two binary strings, return their sum (also a binary string).<br>For example,<br>a = “11”<br>b = “1”<br>Return “100”.</p>
-<p><strong>解题思路</strong>：这道题的解答方法有很多，我的思路是把二进制字符串转化为十进制的整数，然后相加，再把结果转化为二进制的字符串</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def addBinary(self, a, b):
-        &quot;&quot;&quot;
-        :type a: str
-        :type b: str
-        :rtype: str
-        &quot;&quot;&quot;
-
-        dec_a = str2dec(a)
-        dec_b = str2dec(b)
-        dec_c = dec_a + dec_b
-
-        return dec2binStr(dec_c)
-
-
-def str2dec(s):
-    sum = 0
-    for i in s:
-        sum = sum * 2 + int(i)
-    return sum
-
-
-def dec2binStr(s):
-    ls = []
-    while s:
-        rem = s % 2
-        s = s / 2
-        ls.insert(0, str(rem))
-    if len(ls) != 0:
-        return &apos;&apos;.join(ls)
-    else:
-        return &quot;0&quot;
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/13/Leetcode-67-Add-Binary/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/12/15/数据挖掘讨论课《一》/">展开全文 >></a>
         </p>
       
 
@@ -449,7 +274,7 @@ def dec2binStr(s):
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
     </nav>
   
 

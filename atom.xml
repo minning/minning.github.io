@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2017-03-13T04:59:01.772Z</updated>
+  <updated>2017-03-13T07:23:04.763Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -14,6 +14,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 29 Divide Two Integer</title>
+    <link href="https://minning.github.io/2017/03/13/Leetcode-29-Divide-Two-Integer/"/>
+    <id>https://minning.github.io/2017/03/13/Leetcode-29-Divide-Two-Integer/</id>
+    <published>2017-03-13T07:13:33.000Z</published>
+    <updated>2017-03-13T07:23:04.763Z</updated>
+    
+    <content type="html"><![CDATA[<p>Leetcode 算法题 29<br><strong>题名</strong>：Divide Two Integers<br><a href="https://leetcode.com/problems/divide-two-integers/#/description" target="_blank" rel="external">https://leetcode.com/problems/divide-two-integers/#/description</a></p>
+<p><strong>题目描述</strong>：不使用乘除模运算来求两个整数的除法，越界的情况返回MAX_INT<br>Divide two integers without using multiplication, division and mod operator.</p>
+<p>If it is overflow, return MAX_INT.</p>
+<p><strong>解题思路</strong>：对于不能使用乘除元算来计算整数的除法问题，很显然有一个最容易想到的方法就是将被除数一直减去除数直到被除数小于0,计算相减的次数，但是这样的话复杂度就是Ｏ(n),复杂度太高。因此还可以使用简化的方法，整数int的最大值是2**31-1,可以使用位运算，将被除数减去一个较大的整数，保存减去的值。</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def divide(self, dividend, divisor):
+        &quot;&quot;&quot;
+        :type dividend: int
+        :type divisor: int
+        :rtype: int
+        &quot;&quot;&quot;
+        maxint = 2**31-1
+        size = 31
+        sum = 0
+
+        if divisor == 0:
+            return maxint
+
+
+        if (dividend &gt; 0 and divisor &lt; 0) or (dividend &lt; 0 and divisor &gt; 0):
+            sign = -1
+        else:
+            sign = 1
+
+        dividend, divisor = abs(dividend), abs(divisor)
+
+        while size &gt;= 0:
+            if dividend &gt;= divisor&lt;&lt;size:
+                sum += 1&lt;&lt;size
+                dividend -= divisor&lt;&lt;size
+            size -= 1
+
+        ret = sign * sum
+        if ret&gt;maxint or ret&lt;-1*maxint-1:
+            return maxint
+        else:
+            return ret
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Leetcode 算法题 29&lt;br&gt;&lt;strong&gt;题名&lt;/strong&gt;：Divide Two Integers&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/divide-two-integers/#/description&quot; t
+    
+    </summary>
+    
+    
+      <category term="Leetcode" scheme="https://minning.github.io/tags/Leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 67 Add Binary</title>
@@ -77,12 +135,12 @@ def dec2binStr(s):
     <link href="https://minning.github.io/2017/03/13/leetcode-%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-Math%E9%83%A8%E5%88%86/"/>
     <id>https://minning.github.io/2017/03/13/leetcode-分类总结-Math部分/</id>
     <published>2017-03-13T04:48:20.000Z</published>
-    <updated>2017-03-13T04:51:42.212Z</updated>
+    <updated>2017-03-13T05:01:33.047Z</updated>
     
     <content type="html"><![CDATA[<p>Leetcode Math部分<br>主要是一些Math和编程相结合的部分</p>
 <p>Math题目汇总：</p>
 <ol>
-<li><p>Add Binary</p>
+<li><p><a href="https://minning.github.io/2017/03/13/Leetcode-67-Add-Binary/">Add Binary</a></p>
 </li>
 <li><p>[略]Add Two Numbers</p>
 </li>
@@ -109,6 +167,7 @@ def dec2binStr(s):
 <li><p>Count Primes</p>
 </li>
 </ol>
+<p>参考资料：<br><a href="http://nillhex.com/2015/07/31/leetcode-summary-math-part/" target="_blank" rel="external">http://nillhex.com/2015/07/31/leetcode-summary-math-part/</a></p>
 ]]></content>
     
     <summary type="html">
@@ -116,11 +175,7 @@ def dec2binStr(s):
       &lt;p&gt;Leetcode Math部分&lt;br&gt;主要是一些Math和编程相结合的部分&lt;/p&gt;
 &lt;p&gt;Math题目汇总：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Add Binary&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;[略]Add Two Numbers&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Di
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://minning.github.io/2017/03/13/Leetcode-67-Add-Bina
     
     </summary>
     
@@ -140,53 +195,6 @@ def dec2binStr(s):
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>153、Find Minimum in Rotated Sorted Array</title>
-    <link href="https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/"/>
-    <id>https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/</id>
-    <published>2017-03-07T11:27:15.000Z</published>
-    <updated>2017-03-07T13:55:24.140Z</updated>
-    
-    <content type="html"><![CDATA[<p>Leetcode算法题 153<br>题名：Find Minimum in Rotated Sorted Array<br><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description</a></p>
-<p><strong>题目</strong>：<br>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
-<p>(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).</p>
-<p>Find the minimum element.</p>
-<p>You may assume no duplicate exists in the array.</p>
-<p><strong>题目解读</strong>：<br>对于一个有序数组，将其在某一节点位置进行旋转，对于新的数组找出最小元素</p>
-<p><strong>解题思路</strong>：<br><strong>思路一</strong>：常规解法，对数组进行排序，使用升序排列，获取最小元素，时间复杂度O(n)<br><strong>思路二</strong>：二分查找法，查找数组中间元素，将其与数组右端点进行对比，如果中间值大于右节点的值，则将右节点的指针指向中间节点-1, 否则将左节点指向中间节点+1<br><strong>思考</strong>：二分查找的思想在很多题目中都有体现，主要包括几个部分<br>        1、设定左右指针，设置中间指针<br>        2、比较中间值和目标值，根据结果调整左右指针的位置<br>        3、设置循环条件保证左右指针交汇或者错开</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def findMin(self, nums):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: int
-        &quot;&quot;&quot;
-        left = 0
-        right = len(nums) - 1
-
-        ans = nums[0]
-
-        while left &lt;= right:
-            mid = (left + right) / 2
-            if nums[mid]&lt;nums[right]:
-                right = mid-1
-            else:
-                left = mid+1
-            ans = min(ans, nums[mid])
-        return ans
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Leetcode算法题 153&lt;br&gt;题名：Find Minimum in Rotated Sorted Array&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/find-minimum-in-rotated-sorted-array
-    
-    </summary>
-    
-    
-      <category term="Leetcode" scheme="https://minning.github.io/tags/Leetcode/"/>
     
   </entry>
   
@@ -242,6 +250,53 @@ def dec2binStr(s):
     
     
       <category term="leetcode" scheme="https://minning.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>153、Find Minimum in Rotated Sorted Array</title>
+    <link href="https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/"/>
+    <id>https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/</id>
+    <published>2017-03-07T11:27:15.000Z</published>
+    <updated>2017-03-07T13:55:24.140Z</updated>
+    
+    <content type="html"><![CDATA[<p>Leetcode算法题 153<br>题名：Find Minimum in Rotated Sorted Array<br><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description</a></p>
+<p><strong>题目</strong>：<br>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
+<p>(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).</p>
+<p>Find the minimum element.</p>
+<p>You may assume no duplicate exists in the array.</p>
+<p><strong>题目解读</strong>：<br>对于一个有序数组，将其在某一节点位置进行旋转，对于新的数组找出最小元素</p>
+<p><strong>解题思路</strong>：<br><strong>思路一</strong>：常规解法，对数组进行排序，使用升序排列，获取最小元素，时间复杂度O(n)<br><strong>思路二</strong>：二分查找法，查找数组中间元素，将其与数组右端点进行对比，如果中间值大于右节点的值，则将右节点的指针指向中间节点-1, 否则将左节点指向中间节点+1<br><strong>思考</strong>：二分查找的思想在很多题目中都有体现，主要包括几个部分<br>        1、设定左右指针，设置中间指针<br>        2、比较中间值和目标值，根据结果调整左右指针的位置<br>        3、设置循环条件保证左右指针交汇或者错开</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def findMin(self, nums):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :rtype: int
+        &quot;&quot;&quot;
+        left = 0
+        right = len(nums) - 1
+
+        ans = nums[0]
+
+        while left &lt;= right:
+            mid = (left + right) / 2
+            if nums[mid]&lt;nums[right]:
+                right = mid-1
+            else:
+                left = mid+1
+            ans = min(ans, nums[mid])
+        return ans
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Leetcode算法题 153&lt;br&gt;题名：Find Minimum in Rotated Sorted Array&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/find-minimum-in-rotated-sorted-array
+    
+    </summary>
+    
+    
+      <category term="Leetcode" scheme="https://minning.github.io/tags/Leetcode/"/>
     
   </entry>
   

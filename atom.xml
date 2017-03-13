@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2017-03-07T13:59:56.504Z</updated>
+  <updated>2017-03-13T04:59:01.772Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -14,6 +14,120 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 67 Add Binary</title>
+    <link href="https://minning.github.io/2017/03/13/Leetcode-67-Add-Binary/"/>
+    <id>https://minning.github.io/2017/03/13/Leetcode-67-Add-Binary/</id>
+    <published>2017-03-13T04:52:50.000Z</published>
+    <updated>2017-03-13T04:59:01.772Z</updated>
+    
+    <content type="html"><![CDATA[<p>Leetcode 算法题 67<br><strong>题名</strong>：Add Binary<br><a href="https://leetcode.com/problems/add-binary/#/description" target="_blank" rel="external">https://leetcode.com/problems/add-binary/#/description</a></p>
+<p><strong>题目描述</strong>：给定两个二进制字符串，返回他们的和（二进制字符串）</p>
+<p>Given two binary strings, return their sum (also a binary string).<br>For example,<br>a = “11”<br>b = “1”<br>Return “100”.</p>
+<p><strong>解题思路</strong>：这道题的解答方法有很多，我的思路是把二进制字符串转化为十进制的整数，然后相加，再把结果转化为二进制的字符串</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def addBinary(self, a, b):
+        &quot;&quot;&quot;
+        :type a: str
+        :type b: str
+        :rtype: str
+        &quot;&quot;&quot;
+
+        dec_a = str2dec(a)
+        dec_b = str2dec(b)
+        dec_c = dec_a + dec_b
+
+        return dec2binStr(dec_c)
+
+
+def str2dec(s):
+    sum = 0
+    for i in s:
+        sum = sum * 2 + int(i)
+    return sum
+
+
+def dec2binStr(s):
+    ls = []
+    while s:
+        rem = s % 2
+        s = s / 2
+        ls.insert(0, str(rem))
+    if len(ls) != 0:
+        return &apos;&apos;.join(ls)
+    else:
+        return &quot;0&quot;
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Leetcode 算法题 67&lt;br&gt;&lt;strong&gt;题名&lt;/strong&gt;：Add Binary&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/add-binary/#/description&quot; target=&quot;_blank&quot; rel
+    
+    </summary>
+    
+    
+      <category term="Leetcode" scheme="https://minning.github.io/tags/Leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode 分类总结　Math部分</title>
+    <link href="https://minning.github.io/2017/03/13/leetcode-%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-Math%E9%83%A8%E5%88%86/"/>
+    <id>https://minning.github.io/2017/03/13/leetcode-分类总结-Math部分/</id>
+    <published>2017-03-13T04:48:20.000Z</published>
+    <updated>2017-03-13T04:51:42.212Z</updated>
+    
+    <content type="html"><![CDATA[<p>Leetcode Math部分<br>主要是一些Math和编程相结合的部分</p>
+<p>Math题目汇总：</p>
+<ol>
+<li><p>Add Binary</p>
+</li>
+<li><p>[略]Add Two Numbers</p>
+</li>
+<li><p>Divide Two Integers 见二分查找</p>
+</li>
+<li><p>Excel Sheet Column Number</p>
+</li>
+<li><p>Excel Sheet Column Title</p>
+</li>
+<li><p>[重点]Factorial Trailing Zeroes</p>
+</li>
+<li><p>[重点， 难点]Fraction to Recurring Decimal</p>
+</li>
+<li><p>Happy Number</p>
+</li>
+<li><p>Reverse Integer</p>
+</li>
+<li><p>Rectangle Area</p>
+</li>
+<li><p>Plus one</p>
+</li>
+<li><p>Max Points on a Line</p>
+</li>
+<li><p>Count Primes</p>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Leetcode Math部分&lt;br&gt;主要是一些Math和编程相结合的部分&lt;/p&gt;
+&lt;p&gt;Math题目汇总：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Add Binary&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;[略]Add Two Numbers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Di
+    
+    </summary>
+    
+    
+      <category term="Leetcode" scheme="https://minning.github.io/tags/Leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 154 Find Minimum in Rotated Sorted Array II</title>
@@ -26,61 +140,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 分类总结 二分查找</title>
-    <link href="https://minning.github.io/2017/03/07/leetcode-%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
-    <id>https://minning.github.io/2017/03/07/leetcode-分类总结-二分查找/</id>
-    <published>2017-03-07T11:27:15.000Z</published>
-    <updated>2017-03-08T01:24:34.770Z</updated>
-    
-    <content type="html"><![CDATA[<p>二分查找    Binary Search</p>
-<blockquote>
-<p>二分查找是一种在有序数组中查找某一特定元素的搜索演算法。搜索过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜索过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半中查找，而且跟开始一样从中间元素开始比较。如果在某一步骤数组为空，则代表找不到。这种搜索算法每一次比较都使搜索范围缩小一半。</p>
-<p>二分查找是一个很高效的查找算法，理论上其算法时间复杂度可以达到 O(logn), 同时也要求待查找序列为有序或者几近有序的序列。</p>
-</blockquote>
-<p><strong>Binary Search 题目汇总</strong>：</p>
-<ol>
-<li><p><a href="https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/">Search Insert Position</a></p>
-</li>
-<li><p><a href="https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/">Find Minimum in Rotated Sorted Array</a></p>
-</li>
-<li><p>[难点,细节]Find Minimum in Rotated Sorted Array II</p>
-</li>
-<li><p>Search a 2D Matrix</p>
-</li>
-<li><p>Find Peak Element</p>
-</li>
-<li><p>Search in Rotated Sorted Array</p>
-</li>
-<li><p>[难点,细节]Search in Rotated Sorted Array II</p>
-</li>
-<li><p>Search for a Range</p>
-</li>
-<li><p>[略]Pow(x, n)</p>
-</li>
-<li><p>[略]Sqrt(x)</p>
-</li>
-<li><p>Count Complete Tree Nodes</p>
-</li>
-<li><p>[参见 LeetCode特殊解法总结]Divide Two Intergers</p>
-</li>
-</ol>
-<p>参考资料：<br><a href="http://nillhex.com/2015/07/06/leetcode-summary-binary-search/" target="_blank" rel="external">http://nillhex.com/2015/07/06/leetcode-summary-binary-search/</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;二分查找    Binary Search&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;二分查找是一种在有序数组中查找某一特定元素的搜索演算法。搜索过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜索过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://minning.github.io/tags/leetcode/"/>
     
   </entry>
   
@@ -128,6 +187,61 @@
     
     
       <category term="Leetcode" scheme="https://minning.github.io/tags/Leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode 分类总结 二分查找</title>
+    <link href="https://minning.github.io/2017/03/07/leetcode-%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    <id>https://minning.github.io/2017/03/07/leetcode-分类总结-二分查找/</id>
+    <published>2017-03-07T11:27:15.000Z</published>
+    <updated>2017-03-08T01:30:07.823Z</updated>
+    
+    <content type="html"><![CDATA[<p>二分查找    Binary Search</p>
+<blockquote>
+<p>二分查找是一种在有序数组中查找某一特定元素的搜索演算法。搜索过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜索过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半中查找，而且跟开始一样从中间元素开始比较。如果在某一步骤数组为空，则代表找不到。这种搜索算法每一次比较都使搜索范围缩小一半。</p>
+<p>二分查找是一个很高效的查找算法，理论上其算法时间复杂度可以达到 O(logn), 同时也要求待查找序列为有序或者几近有序的序列。</p>
+</blockquote>
+<p><strong>Binary Search 题目汇总</strong>：</p>
+<ol>
+<li><p><a href="https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/">Search Insert Position</a></p>
+</li>
+<li><p><a href="https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/">Find Minimum in Rotated Sorted Array</a></p>
+</li>
+<li><p><a href="https://minning.github.io/2017/03/07/Leetcode-154-Find-Minimum-in-Rotated-Sorted-Array-II/">Find Minimum in Rotated Sorted Array II</a>  [难点,细节]</p>
+</li>
+<li><p>Search a 2D Matrix</p>
+</li>
+<li><p>Find Peak Element</p>
+</li>
+<li><p>Search in Rotated Sorted Array</p>
+</li>
+<li><p>[难点,细节]Search in Rotated Sorted Array II</p>
+</li>
+<li><p>Search for a Range</p>
+</li>
+<li><p>[略]Pow(x, n)</p>
+</li>
+<li><p>[略]Sqrt(x)</p>
+</li>
+<li><p>Count Complete Tree Nodes</p>
+</li>
+<li><p>[参见 LeetCode特殊解法总结]Divide Two Intergers</p>
+</li>
+</ol>
+<p>参考资料：<br><a href="http://nillhex.com/2015/07/06/leetcode-summary-binary-search/" target="_blank" rel="external">http://nillhex.com/2015/07/06/leetcode-summary-binary-search/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;二分查找    Binary Search&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;二分查找是一种在有序数组中查找某一特定元素的搜索演算法。搜索过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜索过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://minning.github.io/tags/leetcode/"/>
     
   </entry>
   

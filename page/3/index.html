@@ -141,42 +141,58 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-leetcode-53-Maximumsubarray" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-leetcode-分类总结-二分查找" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/leetcode-53-Maximumsubarray/">53、Maximumsubarray</a>
+      <a class="article-title" href="/2017/03/07/leetcode-分类总结-二分查找/">leetcode 分类总结 二分查找</a>
     </h1>
   
 
-        <a href="/2017/03/07/leetcode-53-Maximumsubarray/" class="archive-article-date">
-  	<time datetime="2017-03-07T07:18:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+        <a href="/2017/03/07/leetcode-分类总结-二分查找/" class="archive-article-date">
+  	<time datetime="2017-03-07T11:27:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>leetcode算法题53：<br>求解最大连续子序列和<br><a href="https://leetcode.com/problems/maximum-subarray/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/maximum-subarray/?tab=Description</a></p>
-<p><strong>题目描述</strong>：找出一个序列的连续子序列元素相加最大值</p>
-<p><strong>解题思路</strong>：使用动态规划的思想，从左到右扫描序列，将新节点的值和之前的连续序列节点和相加与之前的连续节点和作比较，更大者作为最大值，如果相加后小于0,则将和设为0继续往后扫描，即舍弃之前节点。<br>注意点：最开始初始化sum值时应设为系统表示最小值，预防序列内节点均为负产生错误结果</p>
-<pre><code>class Solution(object):
-    def maxSubArray(self, nums):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: int
-        &quot;&quot;&quot;
-        maxans = -1*(sys.maxint)-1
-        sum = 0
-        for index in range(len(nums)):
-            sum = sum + nums[index]
-            maxans = max(sum, maxans)
-            if sum&lt;0:
-                sum = 0
-        return maxans
-</code></pre>
+        <p>二分查找    Binary Search</p>
+<blockquote>
+<p>二分查找是一种在有序数组中查找某一特定元素的搜索演算法。搜索过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜索过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半中查找，而且跟开始一样从中间元素开始比较。如果在某一步骤数组为空，则代表找不到。这种搜索算法每一次比较都使搜索范围缩小一半。</p>
+<p>二分查找是一个很高效的查找算法，理论上其算法时间复杂度可以达到 O(logn), 同时也要求待查找序列为有序或者几近有序的序列。</p>
+</blockquote>
+<p><strong>Binary Search 题目汇总</strong>：</p>
+<ol>
+<li><p><a href="https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/">Search Insert Position</a></p>
+</li>
+<li><p><a href="https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/">Find Minimum in Rotated Sorted Array</a></p>
+</li>
+<li><p><a href="https://minning.github.io/2017/03/07/Leetcode-154-Find-Minimum-in-Rotated-Sorted-Array-II/">Find Minimum in Rotated Sorted Array II</a>  [难点,细节]</p>
+</li>
+<li><p>Search a 2D Matrix</p>
+</li>
+<li><p>Find Peak Element</p>
+</li>
+<li><p>Search in Rotated Sorted Array</p>
+</li>
+<li><p>[难点,细节]Search in Rotated Sorted Array II</p>
+</li>
+<li><p>Search for a Range</p>
+</li>
+<li><p>[略]Pow(x, n)</p>
+</li>
+<li><p>[略]Sqrt(x)</p>
+</li>
+<li><p>Count Complete Tree Nodes</p>
+</li>
+<li><p>[参见 LeetCode特殊解法总结]Divide Two Intergers</p>
+</li>
+</ol>
+<p>参考资料：<br><a href="http://nillhex.com/2015/07/06/leetcode-summary-binary-search/" target="_blank" rel="external">http://nillhex.com/2015/07/06/leetcode-summary-binary-search/</a></p>
+
       
 
       
@@ -193,7 +209,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/07/leetcode-53-Maximumsubarray/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/03/07/leetcode-分类总结-二分查找/">展开全文 >></a>
         </p>
       
 
@@ -211,40 +227,50 @@
 
 
   
-    <article id="post-leetcode-001-TwoSum" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-leetcode-35-Search-Insert-Position" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/leetcode-001-TwoSum/">1、 TwoSum</a>
+      <a class="article-title" href="/2017/03/07/leetcode-35-Search-Insert-Position/">35、Search Insert Position</a>
     </h1>
   
 
-        <a href="/2017/03/07/leetcode-001-TwoSum/" class="archive-article-date">
-  	<time datetime="2017-03-07T04:56:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+        <a href="/2017/03/07/leetcode-35-Search-Insert-Position/" class="archive-article-date">
+  	<time datetime="2017-03-07T08:16:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>准备开始刷leetcode上的算法题，并对相关内容进行记录<br>今天记录的是leetcode上编号为1的题目TwoSum<br>leetcode链接如下：<a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="external">https://leetcode.com/problems/two-sum/</a></p>
-<p><strong>题目描述</strong>：给定一个只包含整数的数组，返回由数组中两个数相加之和为target的下标，假定该数组中有且只有一个解，且每个元素只能使用一次<br>举例： nums=[2, 7, 11, 15], target = 9,<br>      返回[0,1]<br><strong>解题思路</strong>：<br>思路一：暴力解法，两次循环，复杂度n^2，不能通过<br>思路二：新建一个字典，将元素放进去，查找target-x是否在字典中，复杂度n<br>    以下给出了思路二的解法</p>
+        <p>Leetcode 算法题 35<br><strong>题名</strong>：Search Insert Position<br><a href="https://leetcode.com/problems/search-insert-position/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/search-insert-position/?tab=Description</a></p>
+<p><strong>题目描述</strong>：给定一个排序后的数组array和一个目标值target，如果target在array中出现的话，就返回其在array中的索引，如果没有的话就返回其在array中按顺序插入的话应该插入的位置。假定数组中没有重复的元素</p>
+<p><strong>解题思路</strong>：这是一个典型的二分查找的问题，二分查找要求数组有序，二分查找的思想是每次查找指定数组中间节点的值，将其和target进行比较，如果命中则返回其索引，如果中间节点的值比target大，则将指定数组往左转移，即查找左边的数组，如果中间节点的值比target小，则查找右边的数组。</p>
+<p><strong>Tips</strong>：对于没有命中的情况，由于中止了循环，意味着指定数组的右指针往左偏移超过了左指针，因此可以返回右节点加1的值作为target的索引值。<br>返回mid+1也可以，原因在于，通常在进行比较的时候比较到最后如果没有查找到的话只剩下一个元素则left=right，且nums[mid] 大于target，至于为什么大于，往上退一步到还剩两个元素时进行比较就知道了。此时right执行减一操作，而此时right的位置恰恰为target应该插入的节点的位置，因此返回时应返回right+1，同理返回mid+1或者left也可</p>
+<p><strong>Python代码如下</strong></p>
 <pre><code>class Solution(object):
-    def twoSum(self, nums, target):
+    def searchInsert(self, nums, target):
         &quot;&quot;&quot;
         :type nums: List[int]
         :type target: int
-        :rtype: List[int]
+        :rtype: int
         &quot;&quot;&quot;
-        ret = []
-        for i in range(len(nums)):
-            for j in range(i + 1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    ret = [i, j]
-                    return ret
-        return ret
+        left = 0
+        right = len(nums) - 1
+        mid = (left + right) / 2
+
+        while left &lt;= right:
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] &gt; target:
+                right = mid - 1
+                mid = (left + right) / 2
+            elif nums[mid] &lt; target:
+                left = mid + 1
+                mid = (left + right) / 2
+        return right + 1
 </code></pre>
       
 
@@ -262,7 +288,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/07/leetcode-001-TwoSum/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/03/07/leetcode-35-Search-Insert-Position/">展开全文 >></a>
         </p>
       
 
@@ -282,7 +308,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -342,15 +368,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">leetcode</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">机器学习校招</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">Leetcode</a>
               </li>
             
             <div class="clearfix"></div>

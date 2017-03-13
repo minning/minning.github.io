@@ -135,7 +135,7 @@ def dec2binStr(s):
     <link href="https://minning.github.io/2017/03/13/leetcode-%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-Math%E9%83%A8%E5%88%86/"/>
     <id>https://minning.github.io/2017/03/13/leetcode-分类总结-Math部分/</id>
     <published>2017-03-13T04:48:20.000Z</published>
-    <updated>2017-03-13T05:01:33.047Z</updated>
+    <updated>2017-03-13T07:46:55.384Z</updated>
     
     <content type="html"><![CDATA[<p>Leetcode Math部分<br>主要是一些Math和编程相结合的部分</p>
 <p>Math题目汇总：</p>
@@ -144,7 +144,7 @@ def dec2binStr(s):
 </li>
 <li><p>[略]Add Two Numbers</p>
 </li>
-<li><p>Divide Two Integers 见二分查找</p>
+<li><p><a href="https://minning.github.io/2017/03/13/Leetcode-29-Divide-Two-Integer/">Divide Two Integers 见二分查找</a></p>
 </li>
 <li><p>Excel Sheet Column Number</p>
 </li>

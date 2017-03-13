@@ -153,38 +153,28 @@
   
 
         <a href="/2017/03/13/172-Factorial-Trailing-Zeroes/" class="archive-article-date">
-  	<time datetime="2017-03-13T14:02:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
+  	<time datetime="2017-03-13T14:17:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Leetcode 算法题 168<br><strong>题名</strong>：Excel Sheet Column Title<br><a href="https://leetcode.com/problems/excel-sheet-column-title/#/description" target="_blank" rel="external">https://leetcode.com/problems/excel-sheet-column-title/#/description</a></p>
-<p><strong>题目描述</strong>：给定一个正整数，求出其在Excel中对应的字符编号<br>Given a positive integer, return its corresponding column title as appear in an Excel sheet.</p>
-<p>For example:</p>
-<pre><code>1 -&gt; A
-2 -&gt; B
-3 -&gt; C
-...
-26 -&gt; Z
-27 -&gt; AA
-28 -&gt; AB 
-</code></pre><p><strong>解题思路</strong>：由于Excel中字符编号是26进制的，因此就相当于将数字转换为26进制的表示形式,然后使用Ascii碼的表示形式进行转化</p>
-<p><strong>Tips</strong>：进行进制转化时需要将数字转换成从0开始的形式</p>
+        <p>Leetcode 算法题 172<br><strong>题名</strong>：Factorial Trailing Zeroes<br><a href="https://leetcode.com/problems/factorial-trailing-zeroes/#/description" target="_blank" rel="external">https://leetcode.com/problems/factorial-trailing-zeroes/#/description</a></p>
+<p><strong>题目描述</strong>：给定一个正整数n，求出n的阶乘的尾数中0的个数<br>Given an integer n, return the number of trailing zeroes in n!.</p>
+<p>Note: Your solution should be in logarithmic time complexity.</p>
+<p><strong>解题思路</strong>：最简单的思路是直接求出ｎ的阶乘，然后统计出尾数0的个数，然而复杂度太高，简单一点的做法是思考尾数出现0的情况．0的出现是2*5的结果，因此只需要统计ｎ的阶乘中出现了多少个（2，5）序列对，由于阶乘运算中偶数很多，所以２通常是很多的，只需要统计阶乘中５的个数．因此只需要计算出floor(n/5)的值，不过中间还有一些数会导致５的个数变得多，比如25，125，因此还得加上floor(5^2), floor(5^3)…</p>
 <p><strong>Python代码如下</strong></p>
 <pre><code>class Solution(object):
-    def convertToTitle(self, n):
+    def trailingZeroes(self, n):
         &quot;&quot;&quot;
         :type n: int
-        :rtype: str
+        :rtype: int
         &quot;&quot;&quot;
-        ls = []
-
-        while n &gt; 0:
-            ls.insert(0, chr((n-1) % 26+65))
-            n = (n-1)/26
-
-        return &apos;&apos;.join(ls)
+        sum = 0
+        while n&gt;0:
+            sum += n/5
+            n = n/5
+        return sum
 </code></pre>
       
 

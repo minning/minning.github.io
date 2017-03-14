@@ -141,96 +141,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Leetcode-67-Add-Binary" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/Leetcode-67-Add-Binary/">Leetcode 67 Add Binary</a>
-    </h1>
-  
-
-        <a href="/2017/03/13/Leetcode-67-Add-Binary/" class="archive-article-date">
-  	<time datetime="2017-03-13T04:52:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Leetcode 算法题 67<br><strong>题名</strong>：Add Binary<br><a href="https://leetcode.com/problems/add-binary/#/description" target="_blank" rel="external">https://leetcode.com/problems/add-binary/#/description</a></p>
-<p><strong>题目描述</strong>：给定两个二进制字符串，返回他们的和（二进制字符串）</p>
-<p>Given two binary strings, return their sum (also a binary string).<br>For example,<br>a = “11”<br>b = “1”<br>Return “100”.</p>
-<p><strong>解题思路</strong>：这道题的解答方法有很多，我的思路是把二进制字符串转化为十进制的整数，然后相加，再把结果转化为二进制的字符串</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def addBinary(self, a, b):
-        &quot;&quot;&quot;
-        :type a: str
-        :type b: str
-        :rtype: str
-        &quot;&quot;&quot;
-
-        dec_a = str2dec(a)
-        dec_b = str2dec(b)
-        dec_c = dec_a + dec_b
-
-        return dec2binStr(dec_c)
-
-
-def str2dec(s):
-    sum = 0
-    for i in s:
-        sum = sum * 2 + int(i)
-    return sum
-
-
-def dec2binStr(s):
-    ls = []
-    while s:
-        rem = s % 2
-        s = s / 2
-        ls.insert(0, str(rem))
-    if len(ls) != 0:
-        return &apos;&apos;.join(ls)
-    else:
-        return &quot;0&quot;
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/13/Leetcode-67-Add-Binary/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-leetcode-分类总结-Math部分" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -432,6 +342,86 @@ def dec2binStr(s):
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/07/leetcode-分类总结-二分查找/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/">153、Find Minimum in Rotated Sorted Array</a>
+    </h1>
+  
+
+        <a href="/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/" class="archive-article-date">
+  	<time datetime="2017-03-07T11:27:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Leetcode算法题 153<br>题名：Find Minimum in Rotated Sorted Array<br><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description</a></p>
+<p><strong>题目</strong>：<br>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
+<p>(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).</p>
+<p>Find the minimum element.</p>
+<p>You may assume no duplicate exists in the array.</p>
+<p><strong>题目解读</strong>：<br>对于一个有序数组，将其在某一节点位置进行旋转，对于新的数组找出最小元素</p>
+<p><strong>解题思路</strong>：<br><strong>思路一</strong>：常规解法，对数组进行排序，使用升序排列，获取最小元素，时间复杂度O(n)<br><strong>思路二</strong>：二分查找法，查找数组中间元素，将其与数组右端点进行对比，如果中间值大于右节点的值，则将右节点的指针指向中间节点-1, 否则将左节点指向中间节点+1<br><strong>思考</strong>：二分查找的思想在很多题目中都有体现，主要包括几个部分<br>        1、设定左右指针，设置中间指针<br>        2、比较中间值和目标值，根据结果调整左右指针的位置<br>        3、设置循环条件保证左右指针交汇或者错开</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def findMin(self, nums):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :rtype: int
+        &quot;&quot;&quot;
+        left = 0
+        right = len(nums) - 1
+
+        ans = nums[0]
+
+        while left &lt;= right:
+            mid = (left + right) / 2
+            if nums[mid]&lt;nums[right]:
+                right = mid-1
+            else:
+                left = mid+1
+            ans = min(ans, nums[mid])
+        return ans
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/">展开全文 >></a>
         </p>
       
 

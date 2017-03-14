@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2017-03-13T14:17:21.120Z</updated>
+  <updated>2017-03-13T13:31:10.771Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -14,40 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>172 Factorial Trailing Zeroes</title>
-    <link href="https://minning.github.io/2017/03/13/172-Factorial-Trailing-Zeroes/"/>
-    <id>https://minning.github.io/2017/03/13/172-Factorial-Trailing-Zeroes/</id>
-    <published>2017-03-13T14:17:12.000Z</published>
-    <updated>2017-03-13T14:17:21.120Z</updated>
-    
-    <content type="html"><![CDATA[<p>Leetcode 算法题 172<br><strong>题名</strong>：Factorial Trailing Zeroes<br><a href="https://leetcode.com/problems/factorial-trailing-zeroes/#/description" target="_blank" rel="external">https://leetcode.com/problems/factorial-trailing-zeroes/#/description</a></p>
-<p><strong>题目描述</strong>：给定一个正整数n，求出n的阶乘的尾数中0的个数<br>Given an integer n, return the number of trailing zeroes in n!.</p>
-<p>Note: Your solution should be in logarithmic time complexity.</p>
-<p><strong>解题思路</strong>：最简单的思路是直接求出ｎ的阶乘，然后统计出尾数0的个数，然而复杂度太高，简单一点的做法是思考尾数出现0的情况．0的出现是2*5的结果，因此只需要统计ｎ的阶乘中出现了多少个（2，5）序列对，由于阶乘运算中偶数很多，所以２通常是很多的，只需要统计阶乘中５的个数．因此只需要计算出floor(n/5)的值，不过中间还有一些数会导致５的个数变得多，比如25，125，因此还得加上floor(5^2), floor(5^3)…</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def trailingZeroes(self, n):
-        &quot;&quot;&quot;
-        :type n: int
-        :rtype: int
-        &quot;&quot;&quot;
-        sum = 0
-        while n&gt;0:
-            sum += n/5
-            n = n/5
-        return sum
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Leetcode 算法题 172&lt;br&gt;&lt;strong&gt;题名&lt;/strong&gt;：Factorial Trailing Zeroes&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/factorial-trailing-zeroes/#/d
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Leetcode 168 Excel Sheet Column Title</title>
@@ -424,8 +390,8 @@ def dec2binStr(s):
   
   <entry>
     <title>35、Search Insert Position</title>
-    <link href="https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/"/>
-    <id>https://minning.github.io/2017/03/07/leetcode-35-Search-Insert-Position/</id>
+    <link href="https://minning.github.io/2017/03/07/Leetcode-35-Search-Insert-Position/"/>
+    <id>https://minning.github.io/2017/03/07/Leetcode-35-Search-Insert-Position/</id>
     <published>2017-03-07T08:16:31.000Z</published>
     <updated>2017-03-07T13:56:19.857Z</updated>
     
@@ -470,8 +436,8 @@ def dec2binStr(s):
   
   <entry>
     <title>53、Maximumsubarray</title>
-    <link href="https://minning.github.io/2017/03/07/leetcode-53-Maximumsubarray/"/>
-    <id>https://minning.github.io/2017/03/07/leetcode-53-Maximumsubarray/</id>
+    <link href="https://minning.github.io/2017/03/07/Leetcode-53-Maximumsubarray/"/>
+    <id>https://minning.github.io/2017/03/07/Leetcode-53-Maximumsubarray/</id>
     <published>2017-03-07T07:18:03.000Z</published>
     <updated>2017-03-07T13:56:43.201Z</updated>
     
@@ -507,8 +473,8 @@ def dec2binStr(s):
   
   <entry>
     <title>1、 TwoSum</title>
-    <link href="https://minning.github.io/2017/03/07/leetcode-001-TwoSum/"/>
-    <id>https://minning.github.io/2017/03/07/leetcode-001-TwoSum/</id>
+    <link href="https://minning.github.io/2017/03/07/Leetcode-001-TwoSum/"/>
+    <id>https://minning.github.io/2017/03/07/Leetcode-001-TwoSum/</id>
     <published>2017-03-07T04:56:45.000Z</published>
     <updated>2017-03-07T13:56:02.768Z</updated>
     

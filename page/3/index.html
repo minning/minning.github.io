@@ -141,98 +141,18 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Leetcode-35-Search-Insert-Position" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/">153、Find Minimum in Rotated Sorted Array</a>
+      <a class="article-title" href="/2017/03/07/Leetcode-35-Search-Insert-Position/">35、Search Insert Position</a>
     </h1>
   
 
-        <a href="/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/" class="archive-article-date">
-  	<time datetime="2017-03-07T11:27:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Leetcode算法题 153<br>题名：Find Minimum in Rotated Sorted Array<br><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description</a></p>
-<p><strong>题目</strong>：<br>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
-<p>(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).</p>
-<p>Find the minimum element.</p>
-<p>You may assume no duplicate exists in the array.</p>
-<p><strong>题目解读</strong>：<br>对于一个有序数组，将其在某一节点位置进行旋转，对于新的数组找出最小元素</p>
-<p><strong>解题思路</strong>：<br><strong>思路一</strong>：常规解法，对数组进行排序，使用升序排列，获取最小元素，时间复杂度O(n)<br><strong>思路二</strong>：二分查找法，查找数组中间元素，将其与数组右端点进行对比，如果中间值大于右节点的值，则将右节点的指针指向中间节点-1, 否则将左节点指向中间节点+1<br><strong>思考</strong>：二分查找的思想在很多题目中都有体现，主要包括几个部分<br>        1、设定左右指针，设置中间指针<br>        2、比较中间值和目标值，根据结果调整左右指针的位置<br>        3、设置循环条件保证左右指针交汇或者错开</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def findMin(self, nums):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: int
-        &quot;&quot;&quot;
-        left = 0
-        right = len(nums) - 1
-
-        ans = nums[0]
-
-        while left &lt;= right:
-            mid = (left + right) / 2
-            if nums[mid]&lt;nums[right]:
-                right = mid-1
-            else:
-                left = mid+1
-            ans = min(ans, nums[mid])
-        return ans
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-leetcode-35-Search-Insert-Position" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/leetcode-35-Search-Insert-Position/">35、Search Insert Position</a>
-    </h1>
-  
-
-        <a href="/2017/03/07/leetcode-35-Search-Insert-Position/" class="archive-article-date">
+        <a href="/2017/03/07/Leetcode-35-Search-Insert-Position/" class="archive-article-date">
   	<time datetime="2017-03-07T08:16:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
 </a>
       </header>
@@ -282,7 +202,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/07/leetcode-35-Search-Insert-Position/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/03/07/Leetcode-35-Search-Insert-Position/">展开全文 >></a>
         </p>
       
 
@@ -300,18 +220,18 @@
 
 
   
-    <article id="post-leetcode-53-Maximumsubarray" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Leetcode-53-Maximumsubarray" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/leetcode-53-Maximumsubarray/">53、Maximumsubarray</a>
+      <a class="article-title" href="/2017/03/07/Leetcode-53-Maximumsubarray/">53、Maximumsubarray</a>
     </h1>
   
 
-        <a href="/2017/03/07/leetcode-53-Maximumsubarray/" class="archive-article-date">
+        <a href="/2017/03/07/Leetcode-53-Maximumsubarray/" class="archive-article-date">
   	<time datetime="2017-03-07T07:18:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
 </a>
       </header>
@@ -352,7 +272,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/07/leetcode-53-Maximumsubarray/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/03/07/Leetcode-53-Maximumsubarray/">展开全文 >></a>
         </p>
       
 
@@ -370,18 +290,18 @@
 
 
   
-    <article id="post-leetcode-001-TwoSum" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Leetcode-001-TwoSum" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/leetcode-001-TwoSum/">1、 TwoSum</a>
+      <a class="article-title" href="/2017/03/07/Leetcode-001-TwoSum/">1、 TwoSum</a>
     </h1>
   
 
-        <a href="/2017/03/07/leetcode-001-TwoSum/" class="archive-article-date">
+        <a href="/2017/03/07/Leetcode-001-TwoSum/" class="archive-article-date">
   	<time datetime="2017-03-07T04:56:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
 </a>
       </header>
@@ -421,7 +341,46 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/07/leetcode-001-TwoSum/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/03/07/Leetcode-001-TwoSum/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-20161123" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p></p><p></p>
+<p></p><h5>1、k折交叉验证 中k取值多少有什么关系（ML19.6)，bias，variance是什么(ML4.3)？<h5><br>    &ensp;&ensp;答：一般来说，对于机器学习任务，都会将数据集分为训练数据、验证数据。然而如何对数据集划分却要考虑很多方面的问题，如划分比例、数据成分统计特性等。这里提问中的K主要指的是划分比例的问题范畴。<br>    &ensp;&ensp;首先这里的K指的是将数据等分为k份，然后将其中的k-1份作为训练数据，一份做测试数据。<br>    &ensp;&ensp;然后，在对数据进行划分时得确保训练集和验证集的数据分布相同，即确保其统计特性一致。<br>    &ensp;&ensp;我们可以想象一下，一般来说，k越大训练数据越多，验证数据越少，即模型训练越充分,但是验证结果就越不精准，极端情况下k和样本数相同，即只留一个验证数据，leave one out。那样验证结果就很不精确了。所以k折交叉验证中验证结果好坏随着k增大而增大，然后再随着k增大而减小。<br>    &ensp;&ensp;在k折交叉验证中还有一种常见的方法就是，随机挑选出k-1份当训练、下次再随机挑选出k-1个做训练，这样经过多次k-1份的训练从而增加模型的效果。<br>    &ensp;&ensp;那么bias、variance又是什么呢，与此相对应的还有一个概念叫error，error指的是模型预测结果与实际值之间的误差，通常<br>error=bias+variance 。<br>Bias反映的是模型在样本上的输出与真实值之间的误差，即模型本身的精准度，Variance反映的是模型每一次输出结果与模型输出期望之间的误差，即模型的稳定性。<p></p>
+<p></p><h5>2、分类模型和回归模型的区别？（ML2.6）<h5><br>    &ensp;&ensp;1）首先分类模型和回归模型都是有监督学习<br>    &ensp;&ensp;2）从预测结果上来看，分类模型的结果是离散值，回归模型是连续值<br>    &ensp;&ensp;3）从训练数据上看，分类模型的标记是离散值，回归模型的标记是连续值<br>    &ensp;&ensp;4）一定程度上讲，分类和回归是可以相互转化的<p></p>
+<p></p><h5>3、分类模型可以做回归分析吗？反过来可以吗？ML2.6<h5><br>    &ensp;&ensp;分类模型可以做回归分析，回归模型也可以做分类<br>    &ensp;&ensp;1）对于分类模型，如果把分类标签划分的足够多，足够细，即可类似转化为回归模型<br>    &ensp;&ensp;2）对于回归模型，只需要将回归预测结果划分到一定范围，属于该范围的回归值就划分到该分类区，通过这种方法就可以将回归模型转化为分类模型。<p></p>
+</h5></h5></h5></h5></h5></h5>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/24/20161123/">展开全文 >></a>
         </p>
       
 

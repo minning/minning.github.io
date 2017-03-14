@@ -6,21 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://minning.github.io">
-  <title>172 Factorial Trailing Zeroes | minning</title>
+  <title>53、Maximumsubarray | minning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Leetcode 算法题 172题名：Factorial Trailing Zeroeshttps://leetcode.com/problems/factorial-trailing-zeroes/#/description
-题目描述：给定一个正整数n，求出n的阶乘的尾数中0的个数Given an integer n, return the number of trailing zeroes i">
+  <meta name="description" content="leetcode算法题53：求解最大连续子序列和https://leetcode.com/problems/maximum-subarray/?tab=Description
+题目描述：找出一个序列的连续子序列元素相加最大值
+解题思路：使用动态规划的思想，从左到右扫描序列，将新节点的值和之前的连续序列节点和相加与之前的连续节点和作比较，更大者作为最大值，如果相加后小于0,则将和设为0继续往后扫描，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="172 Factorial Trailing Zeroes">
-<meta property="og:url" content="https://minning.github.io/2017/03/13/172-Factorial-Trailing-Zeroes/index.html">
+<meta property="og:title" content="53、Maximumsubarray">
+<meta property="og:url" content="https://minning.github.io/2017/03/07/Leetcode-53-Maximumsubarray/index.html">
 <meta property="og:site_name" content="minning">
-<meta property="og:description" content="Leetcode 算法题 172题名：Factorial Trailing Zeroeshttps://leetcode.com/problems/factorial-trailing-zeroes/#/description
-题目描述：给定一个正整数n，求出n的阶乘的尾数中0的个数Given an integer n, return the number of trailing zeroes i">
-<meta property="og:updated_time" content="2017-03-13T14:17:21.120Z">
+<meta property="og:description" content="leetcode算法题53：求解最大连续子序列和https://leetcode.com/problems/maximum-subarray/?tab=Description
+题目描述：找出一个序列的连续子序列元素相加最大值
+解题思路：使用动态规划的思想，从左到右扫描序列，将新节点的值和之前的连续序列节点和相加与之前的连续节点和作比较，更大者作为最大值，如果相加后小于0,则将和设为0继续往后扫描，">
+<meta property="og:updated_time" content="2017-03-07T13:56:43.201Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="172 Factorial Trailing Zeroes">
-<meta name="twitter:description" content="Leetcode 算法题 172题名：Factorial Trailing Zeroeshttps://leetcode.com/problems/factorial-trailing-zeroes/#/description
-题目描述：给定一个正整数n，求出n的阶乘的尾数中0的个数Given an integer n, return the number of trailing zeroes i">
+<meta name="twitter:title" content="53、Maximumsubarray">
+<meta name="twitter:description" content="leetcode算法题53：求解最大连续子序列和https://leetcode.com/problems/maximum-subarray/?tab=Description
+题目描述：找出一个序列的连续子序列元素相加最大值
+解题思路：使用动态规划的思想，从左到右扫描序列，将新节点的值和之前的连续序列节点和相加与之前的连续节点和作比较，更大者作为最大值，如果相加后小于0,则将和设为0继续往后扫描，">
   
     <link rel="alternative" href="/atom.xml" title="minning" type="application/atom+xml">
   
@@ -146,40 +149,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-172-Factorial-Trailing-Zeroes" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Leetcode-53-Maximumsubarray" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      172 Factorial Trailing Zeroes
+      53、Maximumsubarray
     </h1>
   
 
-        <a href="/2017/03/13/172-Factorial-Trailing-Zeroes/" class="archive-article-date">
-  	<time datetime="2017-03-13T14:17:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
+        <a href="/2017/03/07/Leetcode-53-Maximumsubarray/" class="archive-article-date">
+  	<time datetime="2017-03-07T07:18:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Leetcode 算法题 172<br><strong>题名</strong>：Factorial Trailing Zeroes<br><a href="https://leetcode.com/problems/factorial-trailing-zeroes/#/description" target="_blank" rel="external">https://leetcode.com/problems/factorial-trailing-zeroes/#/description</a></p>
-<p><strong>题目描述</strong>：给定一个正整数n，求出n的阶乘的尾数中0的个数<br>Given an integer n, return the number of trailing zeroes in n!.</p>
-<p>Note: Your solution should be in logarithmic time complexity.</p>
-<p><strong>解题思路</strong>：最简单的思路是直接求出ｎ的阶乘，然后统计出尾数0的个数，然而复杂度太高，简单一点的做法是思考尾数出现0的情况．0的出现是2*5的结果，因此只需要统计ｎ的阶乘中出现了多少个（2，5）序列对，由于阶乘运算中偶数很多，所以２通常是很多的，只需要统计阶乘中５的个数．因此只需要计算出floor(n/5)的值，不过中间还有一些数会导致５的个数变得多，比如25，125，因此还得加上floor(5^2), floor(5^3)…</p>
-<p><strong>Python代码如下</strong></p>
+        <p>leetcode算法题53：<br>求解最大连续子序列和<br><a href="https://leetcode.com/problems/maximum-subarray/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/maximum-subarray/?tab=Description</a></p>
+<p><strong>题目描述</strong>：找出一个序列的连续子序列元素相加最大值</p>
+<p><strong>解题思路</strong>：使用动态规划的思想，从左到右扫描序列，将新节点的值和之前的连续序列节点和相加与之前的连续节点和作比较，更大者作为最大值，如果相加后小于0,则将和设为0继续往后扫描，即舍弃之前节点。<br>注意点：最开始初始化sum值时应设为系统表示最小值，预防序列内节点均为负产生错误结果</p>
 <pre><code>class Solution(object):
-    def trailingZeroes(self, n):
+    def maxSubArray(self, nums):
         &quot;&quot;&quot;
-        :type n: int
+        :type nums: List[int]
         :rtype: int
         &quot;&quot;&quot;
+        maxans = -1*(sys.maxint)-1
         sum = 0
-        while n&gt;0:
-            sum += n/5
-            n = n/5
-        return sum
+        for index in range(len(nums)):
+            sum = sum + nums[index]
+            maxans = max(sum, maxans)
+            if sum&lt;0:
+                sum = 0
+        return maxans
 </code></pre>
       
 
@@ -209,6 +213,11 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
+	</div>
+
       
 
       
@@ -259,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://minning.github.io/2017/03/13/172-Factorial-Trailing-Zeroes/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://minning.github.io/2017/03/07/Leetcode-53-Maximumsubarray/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -273,9 +282,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2017/03/07/Leetcode-35-Search-Insert-Position/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          35、Search Insert Position
+        
+      </div>
+    </a>
   
-    <a href="/2017/03/13/Leetcode-168-Excel-Sheet-Column-Title/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Leetcode 168 Excel Sheet Column Title</div>
+  
+    <a href="/2017/03/07/Leetcode-001-TwoSum/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">1、 TwoSum</div>
       <i class="icon-circle-right"></i>
     </a>
   

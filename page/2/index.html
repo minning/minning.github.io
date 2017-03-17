@@ -141,90 +141,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-leetcode-分类总结-Math部分" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/leetcode-分类总结-Math部分/">leetcode 分类总结　Math部分</a>
-    </h1>
-  
-
-        <a href="/2017/03/13/leetcode-分类总结-Math部分/" class="archive-article-date">
-  	<time datetime="2017-03-13T04:48:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Leetcode Math部分<br>主要是一些Math和编程相结合的部分</p>
-<p>Math题目汇总：</p>
-<ol>
-<li><p><a href="https://minning.github.io/2017/03/13/Leetcode-67-Add-Binary/">Add Binary</a></p>
-</li>
-<li><p>[略]Add Two Numbers</p>
-</li>
-<li><p><a href="https://minning.github.io/2017/03/13/Leetcode-29-Divide-Two-Integer/">Divide Two Integers 见二分查找</a></p>
-</li>
-<li><p><a href="https://minning.github.io/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/">Excel Sheet Column Number</a></p>
-</li>
-<li><p><a href="https://minning.github.io/2017/03/13/Leetcode-168-Excel-Sheet-Column-Title/">Excel Sheet Column Title</a></p>
-</li>
-<li><p>[重点]Factorial Trailing Zeroes</p>
-</li>
-<li><p>[重点， 难点]Fraction to Recurring Decimal</p>
-</li>
-<li><p>Happy Number</p>
-</li>
-<li><p>Reverse Integer</p>
-</li>
-<li><p>Rectangle Area</p>
-</li>
-<li><p>Plus one</p>
-</li>
-<li><p>Max Points on a Line</p>
-</li>
-<li><p>Count Primes</p>
-</li>
-</ol>
-<p>参考资料：<br><a href="http://nillhex.com/2015/07/31/leetcode-summary-math-part/" target="_blank" rel="external">http://nillhex.com/2015/07/31/leetcode-summary-math-part/</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/13/leetcode-分类总结-Math部分/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-Leetcode-154-Find-Minimum-in-Rotated-Sorted-Array-II" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -256,6 +172,86 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/07/Leetcode-154-Find-Minimum-in-Rotated-Sorted-Array-II/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/">153、Find Minimum in Rotated Sorted Array</a>
+    </h1>
+  
+
+        <a href="/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/" class="archive-article-date">
+  	<time datetime="2017-03-07T11:27:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Leetcode算法题 153<br>题名：Find Minimum in Rotated Sorted Array<br><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description</a></p>
+<p><strong>题目</strong>：<br>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
+<p>(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).</p>
+<p>Find the minimum element.</p>
+<p>You may assume no duplicate exists in the array.</p>
+<p><strong>题目解读</strong>：<br>对于一个有序数组，将其在某一节点位置进行旋转，对于新的数组找出最小元素</p>
+<p><strong>解题思路</strong>：<br><strong>思路一</strong>：常规解法，对数组进行排序，使用升序排列，获取最小元素，时间复杂度O(n)<br><strong>思路二</strong>：二分查找法，查找数组中间元素，将其与数组右端点进行对比，如果中间值大于右节点的值，则将右节点的指针指向中间节点-1, 否则将左节点指向中间节点+1<br><strong>思考</strong>：二分查找的思想在很多题目中都有体现，主要包括几个部分<br>        1、设定左右指针，设置中间指针<br>        2、比较中间值和目标值，根据结果调整左右指针的位置<br>        3、设置循环条件保证左右指针交汇或者错开</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def findMin(self, nums):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :rtype: int
+        &quot;&quot;&quot;
+        left = 0
+        right = len(nums) - 1
+
+        ans = nums[0]
+
+        while left &lt;= right:
+            mid = (left + right) / 2
+            if nums[mid]&lt;nums[right]:
+                right = mid-1
+            else:
+                left = mid+1
+            ans = min(ans, nums[mid])
+        return ans
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/">展开全文 >></a>
         </p>
       
 
@@ -359,51 +355,50 @@
 
 
   
-    <article id="post-Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Leetcode-35-Search-Insert-Position" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/">153、Find Minimum in Rotated Sorted Array</a>
+      <a class="article-title" href="/2017/03/07/Leetcode-35-Search-Insert-Position/">35、Search Insert Position</a>
     </h1>
   
 
-        <a href="/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/" class="archive-article-date">
-  	<time datetime="2017-03-07T11:27:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+        <a href="/2017/03/07/Leetcode-35-Search-Insert-Position/" class="archive-article-date">
+  	<time datetime="2017-03-07T08:16:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Leetcode算法题 153<br>题名：Find Minimum in Rotated Sorted Array<br><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description</a></p>
-<p><strong>题目</strong>：<br>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
-<p>(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).</p>
-<p>Find the minimum element.</p>
-<p>You may assume no duplicate exists in the array.</p>
-<p><strong>题目解读</strong>：<br>对于一个有序数组，将其在某一节点位置进行旋转，对于新的数组找出最小元素</p>
-<p><strong>解题思路</strong>：<br><strong>思路一</strong>：常规解法，对数组进行排序，使用升序排列，获取最小元素，时间复杂度O(n)<br><strong>思路二</strong>：二分查找法，查找数组中间元素，将其与数组右端点进行对比，如果中间值大于右节点的值，则将右节点的指针指向中间节点-1, 否则将左节点指向中间节点+1<br><strong>思考</strong>：二分查找的思想在很多题目中都有体现，主要包括几个部分<br>        1、设定左右指针，设置中间指针<br>        2、比较中间值和目标值，根据结果调整左右指针的位置<br>        3、设置循环条件保证左右指针交汇或者错开</p>
+        <p>Leetcode 算法题 35<br><strong>题名</strong>：Search Insert Position<br><a href="https://leetcode.com/problems/search-insert-position/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/search-insert-position/?tab=Description</a></p>
+<p><strong>题目描述</strong>：给定一个排序后的数组array和一个目标值target，如果target在array中出现的话，就返回其在array中的索引，如果没有的话就返回其在array中按顺序插入的话应该插入的位置。假定数组中没有重复的元素</p>
+<p><strong>解题思路</strong>：这是一个典型的二分查找的问题，二分查找要求数组有序，二分查找的思想是每次查找指定数组中间节点的值，将其和target进行比较，如果命中则返回其索引，如果中间节点的值比target大，则将指定数组往左转移，即查找左边的数组，如果中间节点的值比target小，则查找右边的数组。</p>
+<p><strong>Tips</strong>：对于没有命中的情况，由于中止了循环，意味着指定数组的右指针往左偏移超过了左指针，因此可以返回右节点加1的值作为target的索引值。<br>返回mid+1也可以，原因在于，通常在进行比较的时候比较到最后如果没有查找到的话只剩下一个元素则left=right，且nums[mid] 大于target，至于为什么大于，往上退一步到还剩两个元素时进行比较就知道了。此时right执行减一操作，而此时right的位置恰恰为target应该插入的节点的位置，因此返回时应返回right+1，同理返回mid+1或者left也可</p>
 <p><strong>Python代码如下</strong></p>
 <pre><code>class Solution(object):
-    def findMin(self, nums):
+    def searchInsert(self, nums, target):
         &quot;&quot;&quot;
         :type nums: List[int]
+        :type target: int
         :rtype: int
         &quot;&quot;&quot;
         left = 0
         right = len(nums) - 1
-
-        ans = nums[0]
+        mid = (left + right) / 2
 
         while left &lt;= right:
-            mid = (left + right) / 2
-            if nums[mid]&lt;nums[right]:
-                right = mid-1
-            else:
-                left = mid+1
-            ans = min(ans, nums[mid])
-        return ans
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] &gt; target:
+                right = mid - 1
+                mid = (left + right) / 2
+            elif nums[mid] &lt; target:
+                left = mid + 1
+                mid = (left + right) / 2
+        return right + 1
 </code></pre>
       
 
@@ -414,14 +409,14 @@
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
 	</div>
 
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/03/07/Leetcode-35-Search-Insert-Position/">展开全文 >></a>
         </p>
       
 

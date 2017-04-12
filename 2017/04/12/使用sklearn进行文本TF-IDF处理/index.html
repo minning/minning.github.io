@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://minning.github.io">
-  <title>tags | minning</title>
+  <title>使用sklearn进行文本TF-IDF处理 | minning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://minning.github.io/tags/index.html">
+  <meta name="description" content="使用sklearn进行文本TF-IDF处理　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．
+ 　在一份給定的文件裡，詞頻（term frequency，tf）指的是某一個給定的詞語在該文件中出現的频率。這個數字是对词数（term count）的归一化，以防止它偏向長的文件。（同一個詞語在長文件裡可能會比短文件有更高的詞数，而不管該詞語重要與否。）對於在某一特定文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用sklearn进行文本TF-IDF处理">
+<meta property="og:url" content="https://minning.github.io/2017/04/12/使用sklearn进行文本TF-IDF处理/index.html">
 <meta property="og:site_name" content="minning">
-<meta property="og:updated_time" content="2016-12-15T05:15:41.147Z">
+<meta property="og:description" content="使用sklearn进行文本TF-IDF处理　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．
+ 　在一份給定的文件裡，詞頻（term frequency，tf）指的是某一個給定的詞語在該文件中出現的频率。這個數字是对词数（term count）的归一化，以防止它偏向長的文件。（同一個詞語在長文件裡可能會比短文件有更高的詞数，而不管該詞語重要與否。）對於在某一特定文">
+<meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/05f25eceb713717766dd0b8ef4fd7d4a2f1a7a30">
+<meta property="og:updated_time" content="2017-04-12T13:18:58.580Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="使用sklearn进行文本TF-IDF处理">
+<meta name="twitter:description" content="使用sklearn进行文本TF-IDF处理　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．
+ 　在一份給定的文件裡，詞頻（term frequency，tf）指的是某一個給定的詞語在該文件中出現的频率。這個數字是对词数（term count）的归一化，以防止它偏向長的文件。（同一個詞語在長文件裡可能會比短文件有更高的詞数，而不管該詞語重要與否。）對於在某一特定文">
+<meta name="twitter:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/05f25eceb713717766dd0b8ef4fd7d4a2f1a7a30">
   
     <link rel="alternative" href="/atom.xml" title="minning" type="application/atom+xml">
   
@@ -140,25 +148,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-undefined" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-使用sklearn进行文本TF-IDF处理" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      tags
+      使用sklearn进行文本TF-IDF处理
     </h1>
   
 
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2016-12-15T05:14:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-15</time>
+        <a href="/2017/04/12/使用sklearn进行文本TF-IDF处理/" class="archive-article-date">
+  	<time datetime="2017-04-12T13:10:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p><strong>使用sklearn进行文本TF-IDF处理</strong><br>　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．</p>
+<p> 　在一份給定的文件裡，詞頻（term frequency，tf）指的是某一個給定的詞語在該文件中出現的频率。這個數字是对词数（term count）的归一化，以防止它偏向長的文件。（同一個詞語在長文件裡可能會比短文件有更高的詞数，而不管該詞語重要與否。）對於在某一特定文件裡的詞語 ti來說，它的重要性可表示為：<br>  <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/05f25eceb713717766dd0b8ef4fd7d4a2f1a7a30" alt=""></p>
+<p><strong>题目描述</strong>：</p>
+<p><strong>解题思路</strong>：</p>
+<p><strong>Tips</strong>：</p>
+<p><strong>Python代码如下</strong></p>
+
       
 
       
@@ -187,6 +201,11 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sklearn/">Sklearn</a></li></ul>
+	</div>
+
       
 
       
@@ -237,7 +256,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://minning.github.io/tags/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://minning.github.io/2017/04/12/使用sklearn进行文本TF-IDF处理/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -249,6 +268,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Leetcode 171 Excel Sheet Column Number</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 
 
@@ -277,7 +306,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

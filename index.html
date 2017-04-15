@@ -141,6 +141,57 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-议论文篇章结构自动评价研究记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/15/议论文篇章结构自动评价研究记录/">议论文篇章结构自动评价研究记录</a>
+    </h1>
+  
+
+        <a href="/2017/04/15/议论文篇章结构自动评价研究记录/" class="archive-article-date">
+  	<time datetime="2017-04-15T03:09:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-15</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>基于篇章结构的议论文自动评价</strong></p>
+<p>1) 文章自动评价的作用，自动评价的意义<br>2）文章自动评价的相关要素，进行自动评价主要包括哪些方面的（流畅性　连贯性　篇章结构）<br>3) 重点介绍对议论文进行篇章结构分析时前人的进展<br>4）自己做议论文篇章结构自动评价时可以做出哪些改进</p>
+<p>　　既然是写论文，那就需要讲好一个故事．想比前人而言，我做的东西有哪些吸引人的地方呢，现如今，人工智能的目标是使得越来越多的东西变得更加智能化，对文章进行自动评价同样是一个十分吸引人的研究点．现在无论是进行专业写作还是考试需要或者是个人爱好，都会有很多需要进行文学创作的地方，好的文章能够快速的传达作者的意图，不好的文章只会耽误读者的时间．</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/15/议论文篇章结构自动评价研究记录/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-使用sklearn进行文本TF-IDF处理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -359,96 +410,6 @@ AB -&gt; 28
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/13/Leetcode-29-Divide-Two-Integer/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Leetcode-67-Add-Binary" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/Leetcode-67-Add-Binary/">Leetcode 67 Add Binary</a>
-    </h1>
-  
-
-        <a href="/2017/03/13/Leetcode-67-Add-Binary/" class="archive-article-date">
-  	<time datetime="2017-03-13T04:52:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Leetcode 算法题 67<br><strong>题名</strong>：Add Binary<br><a href="https://leetcode.com/problems/add-binary/#/description" target="_blank" rel="external">https://leetcode.com/problems/add-binary/#/description</a></p>
-<p><strong>题目描述</strong>：给定两个二进制字符串，返回他们的和（二进制字符串）</p>
-<p>Given two binary strings, return their sum (also a binary string).<br>For example,<br>a = “11”<br>b = “1”<br>Return “100”.</p>
-<p><strong>解题思路</strong>：这道题的解答方法有很多，我的思路是把二进制字符串转化为十进制的整数，然后相加，再把结果转化为二进制的字符串</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def addBinary(self, a, b):
-        &quot;&quot;&quot;
-        :type a: str
-        :type b: str
-        :rtype: str
-        &quot;&quot;&quot;
-
-        dec_a = str2dec(a)
-        dec_b = str2dec(b)
-        dec_c = dec_a + dec_b
-
-        return dec2binStr(dec_c)
-
-
-def str2dec(s):
-    sum = 0
-    for i in s:
-        sum = sum * 2 + int(i)
-    return sum
-
-
-def dec2binStr(s):
-    ls = []
-    while s:
-        rem = s % 2
-        s = s / 2
-        ls.insert(0, str(rem))
-    if len(ls) != 0:
-        return &apos;&apos;.join(ls)
-    else:
-        return &quot;0&quot;
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/13/Leetcode-67-Add-Binary/">展开全文 >></a>
         </p>
       
 

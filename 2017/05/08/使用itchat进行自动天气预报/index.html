@@ -28,7 +28,7 @@
 
 实现第一步、用和风天气 API 获取天气数据
 城市接口： https://api.h">
-<meta property="og:updated_time" content="2017-05-08T07:46:22.855Z">
+<meta property="og:updated_time" content="2017-05-08T07:47:54.041Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用itchat进行自动天气预报">
 <meta name="twitter:description" content="北京的天气变化比较大，而且经常有恶劣天气，因此需要经常查看天气预报，不过每次手动百度太麻烦了，不妨采用点自动化的方法，首先调用一个天气网站的API，然后使用Python的一个第三方模块itchat来自动发送天气信息到微信上．
@@ -189,9 +189,7 @@
 <li>将天气数据使用itchat发送给自己</li>
 </ol>
 <p>实现<br>第一步、用和风天气 API 获取天气数据</p>
-<p>城市接口： <a href="https://api.heweather.com/x3/weather?cityid" target="_blank" rel="external">https://api.heweather.com/x3/weather?cityid</a> = 城市 ID&amp;key = 你的认证 key</p>
-<p>2016-11-08 和风天气的 API11 月初改版了，所以上述接口地址需要更换成新的，看了下就加了个 “free-”，后面代码加上就好了。</p>
-<p>接口地址变了<br>首先得注册登录和风天气 <a href="http://www.heweather.com/documents/api" target="_blank" rel="external">http://www.heweather.com/documents/api</a> 获得 key, 在城市代码里面找到想要查的城市 ID，以北京为例：CN101010100<br>则　url = ‘<a href="https://api.heweather.com/x3/weather?cityid=CN101010100&amp;key=12d3f43d4b9c48eb9d1d7e8902795aa2" target="_blank" rel="external">https://api.heweather.com/x3/weather?cityid=CN101010100&amp;key=12d3f43d4b9c48eb9d1d7e8902795aa2</a>‘<br>然后就可以获取天气数据</p>
+<p>城市接口： <a href="https://api.heweather.com/x3/weather?cityid" target="_blank" rel="external">https://api.heweather.com/x3/weather?cityid</a> = 城市 ID&amp;key = 你的认证 key<br>首先得注册登录和风天气 <a href="http://www.heweather.com/documents/api" target="_blank" rel="external">http://www.heweather.com/documents/api</a> 获得 key, 在城市代码里面找到想要查的城市 ID，以北京为例：CN101010100<br>则　url = ‘<a href="https://api.heweather.com/x3/weather?cityid=CN101010100&amp;key=12d3f43d4b9c48eb9d1d7e8902795aa2" target="_blank" rel="external">https://api.heweather.com/x3/weather?cityid=CN101010100&amp;key=12d3f43d4b9c48eb9d1d7e8902795aa2</a>‘<br>然后就可以获取天气数据</p>
 <p>第二步、调用itchat发送天气信息<br>    首先安装itchat </p>
 <pre><code>pip install itchat
 </code></pre><p>itchat示例如下</p>
@@ -201,7 +199,7 @@
 itchat.login()
 # 发送消息
 itchat.send(u&apos;你好&apos;, &apos;filehelper&apos;)
-</code></pre><p>获取第一步的天气数据后使用itchat.send给filehelper即可，手机微信上就会受到数据</p>
+</code></pre><p>获取第一步的天气数据后使用itchat.send给filehelper即可，手机微信上就会收到数据</p>
 <p><strong>Python完整实现代码如下</strong></p>
 <pre><code># coding:utf-8
 # !/usr/bin/env python

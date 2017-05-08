@@ -298,6 +298,62 @@ while True:
 
 
   
+    <article id="post-议论文篇章结构自动评价研究记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/15/议论文篇章结构自动评价研究记录/">议论文篇章结构自动评价研究记录</a>
+    </h1>
+  
+
+        <a href="/2017/04/15/议论文篇章结构自动评价研究记录/" class="archive-article-date">
+  	<time datetime="2017-04-15T03:09:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-15</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> <strong>基于篇章结构的议论文自动评价</strong></p>
+<p>1) 文章自动评价的作用，自动评价的意义<br>2）文章自动评价的相关要素，进行自动评价主要包括哪些方面的（流畅性　连贯性　篇章结构）<br>3) 重点介绍对议论文进行篇章结构分析时前人的进展<br>4）自己做议论文篇章结构自动评价时可以做出哪些改进</p>
+<p>　　既然是写论文，那就需要讲好一个故事．想比前人而言，我做的东西有哪些吸引人的地方呢，现如今，人工智能的目标是使得越来越多的东西变得更加智能化，对文章进行自动评价同样是一个十分吸引人的研究点．现在无论是进行专业写作还是考试需要或者是个人爱好，都会有很多需要进行文学创作的地方，好的文章能够快速的传达作者的意图，不好的文章只会耽误读者的时间．而对每一篇文章进行人工手动评价是一个十分耗时的工作，因此文章的自动评价的重要性不言而喻．<br>　　那么自动评价的主要内容包括哪些方面呢，根据前人的研究，对于文章的自动评价主要包括文章连贯性，文章结构，语法相关度等方面</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Paper/">Paper</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/15/议论文篇章结构自动评价研究记录/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-使用sklearn进行文本TF-IDF处理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -442,97 +498,6 @@ AB -&gt; 28
 
 
   
-    <article id="post-Leetcode-29-Divide-Two-Integer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/Leetcode-29-Divide-Two-Integer/">Leetcode 29 Divide Two Integer</a>
-    </h1>
-  
-
-        <a href="/2017/03/13/Leetcode-29-Divide-Two-Integer/" class="archive-article-date">
-  	<time datetime="2017-03-13T07:13:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Leetcode 算法题 29<br><strong>题名</strong>：Divide Two Integers<br><a href="https://leetcode.com/problems/divide-two-integers/#/description" target="_blank" rel="external">https://leetcode.com/problems/divide-two-integers/#/description</a></p>
-<p><strong>题目描述</strong>：不使用乘除模运算来求两个整数的除法，越界的情况返回MAX_INT<br>Divide two integers without using multiplication, division and mod operator.</p>
-<p>If it is overflow, return MAX_INT.</p>
-<p><strong>解题思路</strong>：对于不能使用乘除元算来计算整数的除法问题，很显然有一个最容易想到的方法就是将被除数一直减去除数直到被除数小于0,计算相减的次数，但是这样的话复杂度就是Ｏ(n),复杂度太高。因此还可以使用简化的方法，整数int的最大值是2**31-1,可以使用位运算，将被除数减去一个较大的整数，保存减去的值。</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def divide(self, dividend, divisor):
-        &quot;&quot;&quot;
-        :type dividend: int
-        :type divisor: int
-        :rtype: int
-        &quot;&quot;&quot;
-        maxint = 2**31-1
-        size = 31
-        sum = 0
-
-        if divisor == 0:
-            return maxint
-
-
-        if (dividend &gt; 0 and divisor &lt; 0) or (dividend &lt; 0 and divisor &gt; 0):
-            sign = -1
-        else:
-            sign = 1
-
-        dividend, divisor = abs(dividend), abs(divisor)
-
-        while size &gt;= 0:
-            if dividend &gt;= divisor&lt;&lt;size:
-                sum += 1&lt;&lt;size
-                dividend -= divisor&lt;&lt;size
-            size -= 1
-
-        ret = sign * sum
-        if ret&gt;maxint or ret&lt;-1*maxint-1:
-            return maxint
-        else:
-            return ret
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/13/Leetcode-29-Divide-Two-Integer/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -612,6 +577,14 @@ AB -&gt; 28
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">hello</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">paper</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Paper</a>
               </li>
             
             <div class="clearfix"></div>

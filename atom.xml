@@ -143,6 +143,30 @@ while True:
   </entry>
   
   <entry>
+    <title>议论文篇章结构自动评价研究记录</title>
+    <link href="https://minning.github.io/2017/04/15/%E8%AE%AE%E8%AE%BA%E6%96%87%E7%AF%87%E7%AB%A0%E7%BB%93%E6%9E%84%E8%87%AA%E5%8A%A8%E8%AF%84%E4%BB%B7%E7%A0%94%E7%A9%B6%E8%AE%B0%E5%BD%95/"/>
+    <id>https://minning.github.io/2017/04/15/议论文篇章结构自动评价研究记录/</id>
+    <published>2017-04-15T03:09:23.000Z</published>
+    <updated>2017-05-08T08:04:54.894Z</updated>
+    
+    <content type="html"><![CDATA[<p> <strong>基于篇章结构的议论文自动评价</strong></p>
+<p>1) 文章自动评价的作用，自动评价的意义<br>2）文章自动评价的相关要素，进行自动评价主要包括哪些方面的（流畅性　连贯性　篇章结构）<br>3) 重点介绍对议论文进行篇章结构分析时前人的进展<br>4）自己做议论文篇章结构自动评价时可以做出哪些改进</p>
+<p>　　既然是写论文，那就需要讲好一个故事．想比前人而言，我做的东西有哪些吸引人的地方呢，现如今，人工智能的目标是使得越来越多的东西变得更加智能化，对文章进行自动评价同样是一个十分吸引人的研究点．现在无论是进行专业写作还是考试需要或者是个人爱好，都会有很多需要进行文学创作的地方，好的文章能够快速的传达作者的意图，不好的文章只会耽误读者的时间．而对每一篇文章进行人工手动评价是一个十分耗时的工作，因此文章的自动评价的重要性不言而喻．<br>　　那么自动评价的主要内容包括哪些方面呢，根据前人的研究，对于文章的自动评价主要包括文章连贯性，文章结构，语法相关度等方面</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt; &lt;strong&gt;基于篇章结构的议论文自动评价&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1) 文章自动评价的作用，自动评价的意义&lt;br&gt;2）文章自动评价的相关要素，进行自动评价主要包括哪些方面的（流畅性　连贯性　篇章结构）&lt;br&gt;3) 重点介绍对议论文进行篇章结构分析时前人的进展&lt;
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://minning.github.io/tags/Paper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用sklearn进行文本TF-IDF处理</title>
     <link href="https://minning.github.io/2017/04/12/%E4%BD%BF%E7%94%A8sklearn%E8%BF%9B%E8%A1%8C%E6%96%87%E6%9C%ACTF-IDF%E5%A4%84%E7%90%86/"/>
     <id>https://minning.github.io/2017/04/12/使用sklearn进行文本TF-IDF处理/</id>

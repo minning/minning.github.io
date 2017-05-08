@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minning.github.io/"/>
-  <updated>2017-04-15T03:09:54.782Z</updated>
+  <updated>2017-05-08T07:35:17.390Z</updated>
   <id>https://minning.github.io/</id>
   
   <author>
@@ -16,24 +16,110 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>议论文篇章结构自动评价研究记录</title>
-    <link href="https://minning.github.io/2017/04/15/%E8%AE%AE%E8%AE%BA%E6%96%87%E7%AF%87%E7%AB%A0%E7%BB%93%E6%9E%84%E8%87%AA%E5%8A%A8%E8%AF%84%E4%BB%B7%E7%A0%94%E7%A9%B6%E8%AE%B0%E5%BD%95/"/>
-    <id>https://minning.github.io/2017/04/15/议论文篇章结构自动评价研究记录/</id>
-    <published>2017-04-15T03:09:23.000Z</published>
-    <updated>2017-04-15T03:09:54.782Z</updated>
+    <title>使用itchat进行自动天气预报</title>
+    <link href="https://minning.github.io/2017/05/08/%E4%BD%BF%E7%94%A8itchat%E8%BF%9B%E8%A1%8C%E8%87%AA%E5%8A%A8%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/"/>
+    <id>https://minning.github.io/2017/05/08/使用itchat进行自动天气预报/</id>
+    <published>2017-05-08T07:29:44.000Z</published>
+    <updated>2017-05-08T07:35:17.390Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>基于篇章结构的议论文自动评价</strong></p>
-<p>1) 文章自动评价的作用，自动评价的意义<br>2）文章自动评价的相关要素，进行自动评价主要包括哪些方面的（流畅性　连贯性　篇章结构）<br>3) 重点介绍对议论文进行篇章结构分析时前人的进展<br>4）自己做议论文篇章结构自动评价时可以做出哪些改进</p>
-<p>　　既然是写论文，那就需要讲好一个故事．想比前人而言，我做的东西有哪些吸引人的地方呢，现如今，人工智能的目标是使得越来越多的东西变得更加智能化，对文章进行自动评价同样是一个十分吸引人的研究点．现在无论是进行专业写作还是考试需要或者是个人爱好，都会有很多需要进行文学创作的地方，好的文章能够快速的传达作者的意图，不好的文章只会耽误读者的时间．</p>
-]]></content>
+    <content type="html"><![CDATA[<p>  北京的天气变化比较大，而且经常有恶劣天气，因此需要经常查看天气预报，不过每次手动百度太麻烦了，不妨采用点自动化的方法，首先调用一个天气网站的API，然后使用Python的一个第三方模块itchat来自动发送天气信息到微信上．<br>  因此得先安装好Python和itchat</p>
+<pre><code>pip install itchat
+</code></pre><p><strong>Python完整实现代码如下</strong></p>
+<pre><code># coding:utf-8
+# !/usr/bin/env python
+# PyCharm Python2.7
+# Created on 17-5-7
+__Author__ = &apos;minning&apos;
+
+
+import json
+import sys
+import time
+import urllib2
+
+import itchat
+
+reload(sys)  # Python2.5 初始化后会删除 sys.setdefaultencoding 这个方法，我们需要重新载入
+sys.setdefaultencoding(&apos;utf-8&apos;)  # 这个是解决合成中文文本的时候，Unicode 和 utf-8 编码问题的，可以尝试注释掉会不会报错
+
+newInstance = itchat.new_instance()
+newInstance.auto_login(hotReload=True, statusStorageDir=&apos;newInstance.pkl&apos;)
+# itchat.auto_login(hotReload=True)
+newInstance.login()
+# newInstance.run()
+
+while True:
+    # 调用和风天气的 API
+    url = &apos;https://api.heweather.com/x3/weather?cityid=CN101010100&amp;key=12d3f43d4b9c48eb9d1d7e8902795aa2&apos;
+    req = urllib2.Request(url)
+    resp = urllib2.urlopen(req).read()
+    # itchat.send(u&apos;你好　minning&apos;, &apos;filehelper&apos;)
+
+    # 将 JSON 转化为 Python 的数据结构
+    json_data = json.loads(resp)
+    data = json_data[&apos;HeWeather data service 3.0&apos;][0]
+
+    # 获取 PM2.5 的值
+    pm25 = data[&apos;aqi&apos;][&apos;city&apos;][&apos;pm25&apos;]
+
+    # 获取空气质量
+    air_quality = data[&apos;aqi&apos;][&apos;city&apos;][&apos;qlty&apos;]
+
+    # 获取城市
+    city = data[&apos;basic&apos;][&apos;city&apos;]
+
+    # 获取现在的天气、温度、体感温度、风向、风力等级
+    now_weather = data[&apos;now&apos;][&apos;cond&apos;][&apos;txt&apos;]
+    now_tmp = data[&apos;now&apos;][&apos;tmp&apos;]
+    now_fl = data[&apos;now&apos;][&apos;fl&apos;]
+    now_wind_dir = data[&apos;now&apos;][&apos;wind&apos;][&apos;dir&apos;]
+    now_wind_sc = data[&apos;now&apos;][&apos;wind&apos;][&apos;sc&apos;]
+
+    # 今天的天气
+    today = data[&apos;daily_forecast&apos;][0]
+    weather_day = today[&apos;cond&apos;][&apos;txt_d&apos;]
+    weather_night = today[&apos;cond&apos;][&apos;txt_n&apos;]
+    tmp_high = today[&apos;tmp&apos;][&apos;max&apos;]
+    tmp_low = today[&apos;tmp&apos;][&apos;min&apos;]
+    wind_dir = today[&apos;wind&apos;][&apos;dir&apos;]
+    wind_sc = today[&apos;wind&apos;][&apos;sc&apos;]
+    # 天气建议
+
+    # 舒适度
+    comf = data[&apos;suggestion&apos;][&apos;comf&apos;][&apos;brf&apos;]
+    comf_txt = data[&apos;suggestion&apos;][&apos;comf&apos;][&apos;txt&apos;]
+
+    # 流感指数
+    flu = data[&apos;suggestion&apos;][&apos;flu&apos;][&apos;brf&apos;]
+    flu_txt = data[&apos;suggestion&apos;][&apos;flu&apos;][&apos;txt&apos;]
+
+    # 穿衣指数
+    drsg = data[&apos;suggestion&apos;][&apos;drsg&apos;][&apos;brf&apos;]
+    drsg_txt = data[&apos;suggestion&apos;][&apos;drsg&apos;][&apos;txt&apos;]
+
+    newInstance.send(&quot;开始天气预报&quot;, &apos;filehelper&apos;)
+    time.sleep(1)
+    newInstance.send(&quot;{}&quot;.format(time.strftime(&apos;%Y年%m月%d日 %H：%M&apos;,time.localtime(time.time()))), &apos;filehelper&apos;)
+    time.sleep(1)
+    newInstance.send(&quot;地址 : {}&quot;.format(&apos;北京&apos;), &apos;filehelper&apos;)
+    newInstance.send(&quot;pm25 : {}&quot;.format(pm25), &apos;filehelper&apos;)
+    newInstance.send(&quot;空气质量 : {}&quot;.format(air_quality), &apos;filehelper&apos;)
+    newInstance.send(&quot;天气 : {}&quot;.format(now_weather), &apos;filehelper&apos;)
+    newInstance.send(&quot;温度 : {}摄氏度&quot;.format(now_tmp), &apos;filehelper&apos;)
+    newInstance.send(&quot;气温 : {}&quot;.format(drsg), &apos;filehelper&apos;)
+    time.sleep(1)
+    newInstance.send(&quot;本次天气预报报道完毕&quot;, &apos;filehelper&apos;)
+    time.sleep(3600)
+</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;基于篇章结构的议论文自动评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1) 文章自动评价的作用，自动评价的意义&lt;br&gt;2）文章自动评价的相关要素，进行自动评价主要包括哪些方面的（流畅性　连贯性　篇章结构）&lt;br&gt;3) 重点介绍对议论文进行篇章结构分析时前人的进展&lt;b
+      &lt;p&gt;  北京的天气变化比较大，而且经常有恶劣天气，因此需要经常查看天气预报，不过每次手动百度太麻烦了，不妨采用点自动化的方法，首先调用一个天气网站的API，然后使用Python的一个第三方模块itchat来自动发送天气信息到微信上．&lt;br&gt;  因此得先安装好Python和itc
     
     </summary>
     
+    
+      <category term="Python" scheme="https://minning.github.io/tags/Python/"/>
     
   </entry>
   

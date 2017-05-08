@@ -6,14 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://minning.github.io">
-  <title>Archives: 2017 | minning</title>
+  <title>使用itchat进行自动天气预报 | minning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="minning">
-<meta property="og:url" content="https://minning.github.io/archives/2017/index.html">
+  <meta name="description" content="北京的天气变化比较大，而且经常有恶劣天气，因此需要经常查看天气预报，不过每次手动百度太麻烦了，不妨采用点自动化的方法，首先调用一个天气网站的API，然后使用Python的一个第三方模块itchat来自动发送天气信息到微信上．  因此得先安装好Python和itchat
+pip install itchat
+Python完整实现代码如下
+# coding:utf-8
+# !/usr/bin/en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用itchat进行自动天气预报">
+<meta property="og:url" content="https://minning.github.io/2017/05/08/使用itchat进行自动天气预报/index.html">
 <meta property="og:site_name" content="minning">
+<meta property="og:description" content="北京的天气变化比较大，而且经常有恶劣天气，因此需要经常查看天气预报，不过每次手动百度太麻烦了，不妨采用点自动化的方法，首先调用一个天气网站的API，然后使用Python的一个第三方模块itchat来自动发送天气信息到微信上．  因此得先安装好Python和itchat
+pip install itchat
+Python完整实现代码如下
+# coding:utf-8
+# !/usr/bin/en">
+<meta property="og:updated_time" content="2017-05-08T07:35:17.390Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="minning">
+<meta name="twitter:title" content="使用itchat进行自动天气预报">
+<meta name="twitter:description" content="北京的天气变化比较大，而且经常有恶劣天气，因此需要经常查看天气预报，不过每次手动百度太麻烦了，不妨采用点自动化的方法，首先调用一个天气网站的API，然后使用Python的一个第三方模块itchat来自动发送天气信息到微信上．  因此得先安装好Python和itchat
+pip install itchat
+Python完整实现代码如下
+# coding:utf-8
+# !/usr/bin/en">
   
     <link rel="alternative" href="/atom.xml" title="minning" type="application/atom+xml">
   
@@ -139,154 +155,224 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-使用itchat进行自动天气预报" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/08/使用itchat进行自动天气预报/" class="archive-article-date">
-  	<time datetime="2017-05-08T07:29:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/08/使用itchat进行自动天气预报/">使用itchat进行自动天气预报</a>
+    <h1 class="article-title" itemprop="name">
+      使用itchat进行自动天气预报
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <a href="/2017/05/08/使用itchat进行自动天气预报/" class="archive-article-date">
+  	<time datetime="2017-05-08T07:29:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-08</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  北京的天气变化比较大，而且经常有恶劣天气，因此需要经常查看天气预报，不过每次手动百度太麻烦了，不妨采用点自动化的方法，首先调用一个天气网站的API，然后使用Python的一个第三方模块itchat来自动发送天气信息到微信上．<br>  因此得先安装好Python和itchat</p>
+<pre><code>pip install itchat
+</code></pre><p><strong>Python完整实现代码如下</strong></p>
+<pre><code># coding:utf-8
+# !/usr/bin/env python
+# PyCharm Python2.7
+# Created on 17-5-7
+__Author__ = &apos;minning&apos;
+
+
+import json
+import sys
+import time
+import urllib2
+
+import itchat
+
+reload(sys)  # Python2.5 初始化后会删除 sys.setdefaultencoding 这个方法，我们需要重新载入
+sys.setdefaultencoding(&apos;utf-8&apos;)  # 这个是解决合成中文文本的时候，Unicode 和 utf-8 编码问题的，可以尝试注释掉会不会报错
+
+newInstance = itchat.new_instance()
+newInstance.auto_login(hotReload=True, statusStorageDir=&apos;newInstance.pkl&apos;)
+# itchat.auto_login(hotReload=True)
+newInstance.login()
+# newInstance.run()
+
+while True:
+    # 调用和风天气的 API
+    url = &apos;https://api.heweather.com/x3/weather?cityid=CN101010100&amp;key=12d3f43d4b9c48eb9d1d7e8902795aa2&apos;
+    req = urllib2.Request(url)
+    resp = urllib2.urlopen(req).read()
+    # itchat.send(u&apos;你好　minning&apos;, &apos;filehelper&apos;)
+
+    # 将 JSON 转化为 Python 的数据结构
+    json_data = json.loads(resp)
+    data = json_data[&apos;HeWeather data service 3.0&apos;][0]
+
+    # 获取 PM2.5 的值
+    pm25 = data[&apos;aqi&apos;][&apos;city&apos;][&apos;pm25&apos;]
+
+    # 获取空气质量
+    air_quality = data[&apos;aqi&apos;][&apos;city&apos;][&apos;qlty&apos;]
+
+    # 获取城市
+    city = data[&apos;basic&apos;][&apos;city&apos;]
+
+    # 获取现在的天气、温度、体感温度、风向、风力等级
+    now_weather = data[&apos;now&apos;][&apos;cond&apos;][&apos;txt&apos;]
+    now_tmp = data[&apos;now&apos;][&apos;tmp&apos;]
+    now_fl = data[&apos;now&apos;][&apos;fl&apos;]
+    now_wind_dir = data[&apos;now&apos;][&apos;wind&apos;][&apos;dir&apos;]
+    now_wind_sc = data[&apos;now&apos;][&apos;wind&apos;][&apos;sc&apos;]
+
+    # 今天的天气
+    today = data[&apos;daily_forecast&apos;][0]
+    weather_day = today[&apos;cond&apos;][&apos;txt_d&apos;]
+    weather_night = today[&apos;cond&apos;][&apos;txt_n&apos;]
+    tmp_high = today[&apos;tmp&apos;][&apos;max&apos;]
+    tmp_low = today[&apos;tmp&apos;][&apos;min&apos;]
+    wind_dir = today[&apos;wind&apos;][&apos;dir&apos;]
+    wind_sc = today[&apos;wind&apos;][&apos;sc&apos;]
+    # 天气建议
+
+    # 舒适度
+    comf = data[&apos;suggestion&apos;][&apos;comf&apos;][&apos;brf&apos;]
+    comf_txt = data[&apos;suggestion&apos;][&apos;comf&apos;][&apos;txt&apos;]
+
+    # 流感指数
+    flu = data[&apos;suggestion&apos;][&apos;flu&apos;][&apos;brf&apos;]
+    flu_txt = data[&apos;suggestion&apos;][&apos;flu&apos;][&apos;txt&apos;]
+
+    # 穿衣指数
+    drsg = data[&apos;suggestion&apos;][&apos;drsg&apos;][&apos;brf&apos;]
+    drsg_txt = data[&apos;suggestion&apos;][&apos;drsg&apos;][&apos;txt&apos;]
+
+    newInstance.send(&quot;开始天气预报&quot;, &apos;filehelper&apos;)
+    time.sleep(1)
+    newInstance.send(&quot;{}&quot;.format(time.strftime(&apos;%Y年%m月%d日 %H：%M&apos;,time.localtime(time.time()))), &apos;filehelper&apos;)
+    time.sleep(1)
+    newInstance.send(&quot;地址 : {}&quot;.format(&apos;北京&apos;), &apos;filehelper&apos;)
+    newInstance.send(&quot;pm25 : {}&quot;.format(pm25), &apos;filehelper&apos;)
+    newInstance.send(&quot;空气质量 : {}&quot;.format(air_quality), &apos;filehelper&apos;)
+    newInstance.send(&quot;天气 : {}&quot;.format(now_weather), &apos;filehelper&apos;)
+    newInstance.send(&quot;温度 : {}摄氏度&quot;.format(now_tmp), &apos;filehelper&apos;)
+    newInstance.send(&quot;气温 : {}&quot;.format(drsg), &apos;filehelper&apos;)
+    time.sleep(1)
+    newInstance.send(&quot;本次天气预报报道完毕&quot;, &apos;filehelper&apos;)
+    time.sleep(3600)
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://minning.github.io/2017/05/08/使用itchat进行自动天气预报/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/12/使用sklearn进行文本TF-IDF处理/" class="archive-article-date">
-  	<time datetime="2017-04-12T13:10:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/12/使用sklearn进行文本TF-IDF处理/">使用sklearn进行文本TF-IDF处理</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sklearn/">Sklearn</a></li></ul>
-	</div>
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/12/使用sklearn进行文本TF-IDF处理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用sklearn进行文本TF-IDF处理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/" class="archive-article-date">
-  	<time datetime="2017-03-13T12:11:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/">Leetcode 171 Excel Sheet Column Number</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/13/Leetcode-29-Divide-Two-Integer/" class="archive-article-date">
-  	<time datetime="2017-03-13T07:13:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/13/Leetcode-29-Divide-Two-Integer/">Leetcode 29 Divide Two Integer</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="page-number" href="/archives/2017/page/3/">3</a><a class="extend next" rel="next" href="/archives/2017/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -309,8 +395,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

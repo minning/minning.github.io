@@ -171,9 +171,9 @@ while True:
     <link href="https://minning.github.io/2017/04/12/%E4%BD%BF%E7%94%A8sklearn%E8%BF%9B%E8%A1%8C%E6%96%87%E6%9C%ACTF-IDF%E5%A4%84%E7%90%86/"/>
     <id>https://minning.github.io/2017/04/12/使用sklearn进行文本TF-IDF处理/</id>
     <published>2017-04-12T13:10:24.000Z</published>
-    <updated>2017-04-13T03:03:13.189Z</updated>
+    <updated>2017-06-12T00:38:31.581Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>使用sklearn进行文本TF-IDF处理</strong><br>　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．</p>
+    <content type="html"><![CDATA[<p><strong>使用sklearn进行文本TF-IDF处理</strong><br>参考资料：<br><a href="https://zhuanlan.zhihu.com/p/27330205?group_id=857373762461515776" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/27330205?group_id=857373762461515776</a><br>一个不错的介绍，可以优先看看这个<br>　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．</p>
 <p> 给一个维基百科上的描述<br> 　在一份給定的文件裡，詞頻（term frequency，tf）指的是某一個給定的詞語在該文件中出現的频率。這個數字是对词数（term count）的归一化，以防止它偏向長的文件。（同一個詞語在長文件裡可能會比短文件有更高的詞数，而不管該詞語重要與否。）對於在某一特定文件裡的詞語 ti來說，它的重要性可表示為：<br>  <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/05f25eceb713717766dd0b8ef4fd7d4a2f1a7a30" alt=""><br>  以上式子中  n{i,j}是該詞在文件 d{j}中的出現次數，而分母則是在文件d{j}中所有字詞的出現次數之和。<br>逆向文件頻率（inverse document frequency，idf）是一個詞語普遍重要性的度量。某一特定詞語的 idf，可以由總文件數目除以包含該詞語之文件的數目，再將得到的商取對數得到：<br><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/732293caf31dae6e14c0aea986bf4a951187796b" alt=""><br>|D|：語料庫中的文件總數<br>分母包含詞語 t{i} 的文件數目<br>以上出自<a href="https://zh.wikipedia.org/wiki/Tf-idf" target="_blank" rel="external">维基百科</a>,具体内容可以点击进去细看</p>
 <p><strong>题目描述</strong>：<br>在使用TF-IDF时，对于不熟悉sklearn的同学通常都会手动统计每个词的频率进行计算．不过其实sklearn已经对其进行了封装</p>
 <pre><code>from sklearn.feature_extraction.text import TfidfVectorizer
@@ -191,8 +191,7 @@ print X_test
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;使用sklearn进行文本TF-IDF处理&lt;/strong&gt;&lt;br&gt;　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．&lt;/p&gt;
-&lt;p&gt; 给一个维基百科上的描述&lt;br&gt; 　在一份給定的文件裡，詞頻（term frequency
+      &lt;p&gt;&lt;strong&gt;使用sklearn进行文本TF-IDF处理&lt;/strong&gt;&lt;br&gt;参考资料：&lt;br&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/27330205?group_id=857373762461515776&quot; target=&quot;_b
     
     </summary>
     
@@ -429,53 +428,6 @@ def dec2binStr(s):
   </entry>
   
   <entry>
-    <title>153、Find Minimum in Rotated Sorted Array</title>
-    <link href="https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/"/>
-    <id>https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/</id>
-    <published>2017-03-07T11:27:15.000Z</published>
-    <updated>2017-03-07T13:55:24.140Z</updated>
-    
-    <content type="html"><![CDATA[<p>Leetcode算法题 153<br>题名：Find Minimum in Rotated Sorted Array<br><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description</a></p>
-<p><strong>题目</strong>：<br>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
-<p>(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).</p>
-<p>Find the minimum element.</p>
-<p>You may assume no duplicate exists in the array.</p>
-<p><strong>题目解读</strong>：<br>对于一个有序数组，将其在某一节点位置进行旋转，对于新的数组找出最小元素</p>
-<p><strong>解题思路</strong>：<br><strong>思路一</strong>：常规解法，对数组进行排序，使用升序排列，获取最小元素，时间复杂度O(n)<br><strong>思路二</strong>：二分查找法，查找数组中间元素，将其与数组右端点进行对比，如果中间值大于右节点的值，则将右节点的指针指向中间节点-1, 否则将左节点指向中间节点+1<br><strong>思考</strong>：二分查找的思想在很多题目中都有体现，主要包括几个部分<br>        1、设定左右指针，设置中间指针<br>        2、比较中间值和目标值，根据结果调整左右指针的位置<br>        3、设置循环条件保证左右指针交汇或者错开</p>
-<p><strong>Python代码如下</strong></p>
-<pre><code>class Solution(object):
-    def findMin(self, nums):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: int
-        &quot;&quot;&quot;
-        left = 0
-        right = len(nums) - 1
-
-        ans = nums[0]
-
-        while left &lt;= right:
-            mid = (left + right) / 2
-            if nums[mid]&lt;nums[right]:
-                right = mid-1
-            else:
-                left = mid+1
-            ans = min(ans, nums[mid])
-        return ans
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Leetcode算法题 153&lt;br&gt;题名：Find Minimum in Rotated Sorted Array&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/find-minimum-in-rotated-sorted-array
-    
-    </summary>
-    
-    
-      <category term="Leetcode" scheme="https://minning.github.io/tags/Leetcode/"/>
-    
-  </entry>
-  
-  <entry>
     <title>leetcode 分类总结 二分查找</title>
     <link href="https://minning.github.io/2017/03/07/leetcode-%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
     <id>https://minning.github.io/2017/03/07/leetcode-分类总结-二分查找/</id>
@@ -527,6 +479,53 @@ def dec2binStr(s):
     
     
       <category term="leetcode" scheme="https://minning.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>153、Find Minimum in Rotated Sorted Array</title>
+    <link href="https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/"/>
+    <id>https://minning.github.io/2017/03/07/Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/</id>
+    <published>2017-03-07T11:27:15.000Z</published>
+    <updated>2017-03-07T13:55:24.140Z</updated>
+    
+    <content type="html"><![CDATA[<p>Leetcode算法题 153<br>题名：Find Minimum in Rotated Sorted Array<br><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description" target="_blank" rel="external">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/?tab=Description</a></p>
+<p><strong>题目</strong>：<br>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
+<p>(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).</p>
+<p>Find the minimum element.</p>
+<p>You may assume no duplicate exists in the array.</p>
+<p><strong>题目解读</strong>：<br>对于一个有序数组，将其在某一节点位置进行旋转，对于新的数组找出最小元素</p>
+<p><strong>解题思路</strong>：<br><strong>思路一</strong>：常规解法，对数组进行排序，使用升序排列，获取最小元素，时间复杂度O(n)<br><strong>思路二</strong>：二分查找法，查找数组中间元素，将其与数组右端点进行对比，如果中间值大于右节点的值，则将右节点的指针指向中间节点-1, 否则将左节点指向中间节点+1<br><strong>思考</strong>：二分查找的思想在很多题目中都有体现，主要包括几个部分<br>        1、设定左右指针，设置中间指针<br>        2、比较中间值和目标值，根据结果调整左右指针的位置<br>        3、设置循环条件保证左右指针交汇或者错开</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def findMin(self, nums):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :rtype: int
+        &quot;&quot;&quot;
+        left = 0
+        right = len(nums) - 1
+
+        ans = nums[0]
+
+        while left &lt;= right:
+            mid = (left + right) / 2
+            if nums[mid]&lt;nums[right]:
+                right = mid-1
+            else:
+                left = mid+1
+            ans = min(ans, nums[mid])
+        return ans
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Leetcode算法题 153&lt;br&gt;题名：Find Minimum in Rotated Sorted Array&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/find-minimum-in-rotated-sorted-array
+    
+    </summary>
+    
+    
+      <category term="Leetcode" scheme="https://minning.github.io/tags/Leetcode/"/>
     
   </entry>
   

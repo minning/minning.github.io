@@ -8,21 +8,21 @@
   <link rel="dns-prefetch" href="https://minning.github.io">
   <title>使用sklearn进行文本TF-IDF处理 | minning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用sklearn进行文本TF-IDF处理　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．
- 给一个维基百科上的描述 　在一份給定的文件裡，詞頻（term frequency，tf）指的是某一個給定的詞語在該文件中出現的频率。這個數字是对词数（term count）的归一化，以防止它偏向長的文件。（同一個詞語在長文件裡可能會比短文件有更高的詞数，而不管該詞語重要">
+  <meta name="description" content="使用sklearn进行文本TF-IDF处理参考资料：https://zhuanlan.zhihu.com/p/27330205?group_id=857373762461515776一个不错的介绍，可以优先看看这个　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．
+ 给一个维基百科上的描述 　在一份給定的文件裡，詞頻（term frequency，tf）指的是某一">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用sklearn进行文本TF-IDF处理">
 <meta property="og:url" content="https://minning.github.io/2017/04/12/使用sklearn进行文本TF-IDF处理/index.html">
 <meta property="og:site_name" content="minning">
-<meta property="og:description" content="使用sklearn进行文本TF-IDF处理　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．
- 给一个维基百科上的描述 　在一份給定的文件裡，詞頻（term frequency，tf）指的是某一個給定的詞語在該文件中出現的频率。這個數字是对词数（term count）的归一化，以防止它偏向長的文件。（同一個詞語在長文件裡可能會比短文件有更高的詞数，而不管該詞語重要">
+<meta property="og:description" content="使用sklearn进行文本TF-IDF处理参考资料：https://zhuanlan.zhihu.com/p/27330205?group_id=857373762461515776一个不错的介绍，可以优先看看这个　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．
+ 给一个维基百科上的描述 　在一份給定的文件裡，詞頻（term frequency，tf）指的是某一">
 <meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/05f25eceb713717766dd0b8ef4fd7d4a2f1a7a30">
 <meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/732293caf31dae6e14c0aea986bf4a951187796b">
-<meta property="og:updated_time" content="2017-04-13T03:03:13.189Z">
+<meta property="og:updated_time" content="2017-06-12T00:38:31.581Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用sklearn进行文本TF-IDF处理">
-<meta name="twitter:description" content="使用sklearn进行文本TF-IDF处理　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．
- 给一个维基百科上的描述 　在一份給定的文件裡，詞頻（term frequency，tf）指的是某一個給定的詞語在該文件中出現的频率。這個數字是对词数（term count）的归一化，以防止它偏向長的文件。（同一個詞語在長文件裡可能會比短文件有更高的詞数，而不管該詞語重要">
+<meta name="twitter:description" content="使用sklearn进行文本TF-IDF处理参考资料：https://zhuanlan.zhihu.com/p/27330205?group_id=857373762461515776一个不错的介绍，可以优先看看这个　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．
+ 给一个维基百科上的描述 　在一份給定的文件裡，詞頻（term frequency，tf）指的是某一">
 <meta name="twitter:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/05f25eceb713717766dd0b8ef4fd7d4a2f1a7a30">
   
     <link rel="alternative" href="/atom.xml" title="minning" type="application/atom+xml">
@@ -167,7 +167,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>使用sklearn进行文本TF-IDF处理</strong><br>　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．</p>
+        <p><strong>使用sklearn进行文本TF-IDF处理</strong><br>参考资料：<br><a href="https://zhuanlan.zhihu.com/p/27330205?group_id=857373762461515776" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/27330205?group_id=857373762461515776</a><br>一个不错的介绍，可以优先看看这个<br>　在进行自然预言处理中的文本处理任务中经常会使用到TF-IDF,在这里进行简单记录．</p>
 <p> 给一个维基百科上的描述<br> 　在一份給定的文件裡，詞頻（term frequency，tf）指的是某一個給定的詞語在該文件中出現的频率。這個數字是对词数（term count）的归一化，以防止它偏向長的文件。（同一個詞語在長文件裡可能會比短文件有更高的詞数，而不管該詞語重要與否。）對於在某一特定文件裡的詞語 ti來說，它的重要性可表示為：<br>  <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/05f25eceb713717766dd0b8ef4fd7d4a2f1a7a30" alt=""><br>  以上式子中  n{i,j}是該詞在文件 d{j}中的出現次數，而分母則是在文件d{j}中所有字詞的出現次數之和。<br>逆向文件頻率（inverse document frequency，idf）是一個詞語普遍重要性的度量。某一特定詞語的 idf，可以由總文件數目除以包含該詞語之文件的數目，再將得到的商取對數得到：<br><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/732293caf31dae6e14c0aea986bf4a951187796b" alt=""><br>|D|：語料庫中的文件總數<br>分母包含詞語 t{i} 的文件數目<br>以上出自<a href="https://zh.wikipedia.org/wiki/Tf-idf" target="_blank" rel="external">维基百科</a>,具体内容可以点击进去细看</p>
 <p><strong>题目描述</strong>：<br>在使用TF-IDF时，对于不熟悉sklearn的同学通常都会手动统计每个词的频率进行计算．不过其实sklearn已经对其进行了封装</p>
 <pre><code>from sklearn.feature_extraction.text import TfidfVectorizer
@@ -363,11 +363,11 @@ print X_test
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">Python</a>
+                <a href="javascript:void(0)">Sklearn</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">Sklearn</a>
+                <a href="javascript:void(0)">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -375,15 +375,11 @@ print X_test
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">hello</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">paper</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">Paper</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">hello</a>
               </li>
             
             <div class="clearfix"></div>

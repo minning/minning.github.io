@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://minning.github.io/2017/07/01/Python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%BF01%E7%BB%AA%E8%AE%BA/</loc>
+    
+    <lastmod>2017-07-01T02:44:49.072Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://minning.github.io/2017/04/12/%E4%BD%BF%E7%94%A8sklearn%E8%BF%9B%E8%A1%8C%E6%96%87%E6%9C%ACTF-IDF%E5%A4%84%E7%90%86/</loc>
     
     <lastmod>2017-06-12T00:38:31.581Z</lastmod>

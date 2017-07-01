@@ -141,6 +141,83 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Leetcode-171-Excel-Sheet-Column-Number" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/">Leetcode 171 Excel Sheet Column Number</a>
+    </h1>
+  
+
+        <a href="/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/" class="archive-article-date">
+  	<time datetime="2017-03-13T12:11:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Leetcode 算法题 171<br><strong>题名</strong>：Excel Sheet Column Number<br><a href="https://leetcode.com/problems/divide-two-integers/#/description" target="_blank" rel="external">https://leetcode.com/problems/divide-two-integers/#/description</a></p>
+<p><strong>题目描述</strong>：给定Excel中列的字符串，求出其对应的列数<br>Given a column title as appear in an Excel sheet, return its corresponding column number.</p>
+<p>For example:</p>
+<pre><code>A -&gt; 1
+B -&gt; 2
+C -&gt; 3
+...
+Z -&gt; 26
+AA -&gt; 27
+AB -&gt; 28 
+</code></pre><p><strong>解题思路</strong>：首先可以知道英语字符一个周期是26,所以其实这就相当于一个26进制的数，每个字符又代表一个数字，对应的是Ａ对应于1,因此可以使用Ascii碼对英语字符进行转换，其中Ascii碼中Ａ对应65，因此可以转换后进行使用。</p>
+<p><strong>Python代码如下</strong></p>
+<pre><code>class Solution(object):
+    def titleToNumber(self, s):
+        &quot;&quot;&quot;
+        :type s: str
+        :rtype: int
+        &quot;&quot;&quot;
+        sum = 0
+
+        for i in s:
+            sum = sum*26 + (ord(i)-64)
+
+        return sum
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/13/Leetcode-171-Excel-Sheet-Column-Number/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Leetcode-29-Divide-Two-Integer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -406,57 +483,9 @@ def dec2binStr(s):
 
 
   
-    <article id="post-Leetcode-154-Find-Minimum-in-Rotated-Sorted-Array-II" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/Leetcode-154-Find-Minimum-in-Rotated-Sorted-Array-II/">Leetcode 154 Find Minimum in Rotated Sorted Array II</a>
-    </h1>
-  
-
-        <a href="/2017/03/07/Leetcode-154-Find-Minimum-in-Rotated-Sorted-Array-II/" class="archive-article-date">
-  	<time datetime="2017-03-07T13:59:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/07/Leetcode-154-Find-Minimum-in-Rotated-Sorted-Array-II/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -520,11 +549,11 @@ def dec2binStr(s):
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">Sklearn</a>
+                <a href="javascript:void(0)">Python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">Python</a>
+                <a href="javascript:void(0)">Sklearn</a>
               </li>
              
               <li class="article-tag-list-item">
